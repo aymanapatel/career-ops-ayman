@@ -61,6 +61,15 @@ July 2019 - February 2022
 - Designed CI/CD pipeline to deploy Angular.js application using Grunt.js and Jenkins
 - Developed and maintained Hardware Security Module (HSM) integration for mobile encryption using MDES tokenisation, securing card data transmission across payment flows
 
+### Mastercard -- Vadodara, India
+**Software Engineering Intern**  
+January 2019 - June 2019
+
+- Implemented a backend image-serving service for MDES's CardArt project, improving delivery efficiency for serving card images in MDES APIs
+- Optimized image delivery with ImageMagick compression before serving, reducing payload size and improving response times
+- Enabled non-blocking image delivery using Spring WebFlux and Reactive Streams to support scalable, asynchronous request handling
+- Practiced Test-Driven Development (TDD) to define expected behavior upfront, improve code reliability, reduce regressions, and support safe refactorings
+
 ## Education
 
 - **MSc Advanced Computer Science**, Queen Mary University of London (September 2025 - September 2026)
@@ -69,6 +78,7 @@ July 2019 - February 2022
 ## Projects
 
 - **[Nebius Project](https://github.com/aymanapatel/nebius-project)** -- Built a Repository Summarizer service using FastAPI and LLMs that generates human-readable summaries of GitHub repositories. Extracts code skeletons via AST and Tree-sitter to fit within token budgets, intelligently prioritizes source files, and assembles context within a 7000-token limit. This project secured admission into the Nebius AI Engineering Fellowship
+- **Credit Card Fraud Analytics ([Report](https://github.com/aymanapatel/qmul-all-projects/blob/main/data-analytics/coursework1/credit-card-report.pdf), [Notebook](https://github.com/aymanapatel/qmul-all-projects/blob/main/data-analytics/coursework1/credit-card-notebook.ipynb))** -- Built a fraud-detection analysis on the IEEE-CIS credit card dataset, merging 590,540 transactions across 434 transaction and identity features, identifying severe class imbalance at a 3.5% fraud rate, and reducing the feature space to the strongest predictors such as card, product, amount, identity, and temporal signals. Tuned Random Forest models with SMOTE variants and threshold optimization; the best model achieved 96.9% test accuracy, 0.503 F1, 0.541 precision, 0.470 recall, and 0.879 ROC-AUC on a strict chronological test split.
 - **[Java CLI using GraalVM](https://github.com/aymanapatel/java-cli)** -- Built a Java CLI tool using the Picocli framework to query the Stack Overflow API, then compiled it to a native binary with GraalVM for zero-JVM-startup execution
 - **[LGTM Observability](https://aymanace2049.hashnode.dev/grafana-one-observability-tool-to-rule-them-all) -- Implement an end-to-end observability with tracing (Tempo), Logs (Loki), Graph (Grafana) and Metrics (Memir). Add modern profiling such as flamegraphs and eBPF for user and kernel level observibility.
 - **[Go Microservices](https://github.com/aymanapatel/golang-microservices)** -- Built an end-to-end cloud-native microservice in Go, implementing service discovery, distributed tracing, and containerized deployment
@@ -88,7 +98,14 @@ July 2019 - February 2022
   - Authored 40+ technical articles featured in the eBPF newsletter; key pieces include eBPF - Unleash the Linux kernel, Microfrontends - Decoupling Frontends, and Change Data Capture in Microservices
   - Wrote AI/LLM-focused articles: End to End RAG with Postgres, Observability in LLMs, and OpenRouter - One Proxy to Rule them All
   - Covered infrastructure and data topics: Grafana - One Observability Tool to Rule them All, Redis is not just a Cache, Infrastructure as Code - A History Primer, and Localstack: Running AWS Locally
-- **Whitepapers** -- Produced company-wide engineering whitepapers on Accessibility and Microfrontend architecture; earned CTO recognition, were adopted as internal reference material, and were circulated to 200 engineers
+- **Frontend engineering whitepapers** -- Produced company-wide whitepapers on Accessibility and Microfrontend architecture; earned CTO recognition, were adopted as internal frontend engineering reference material, and were circulated to 200 engineers
+- **Undergraduate project - Recommendation System for Github [Project Link](https://drive.google.com/file/d/1iKV_xFES7ByKqhxLe3ffbDuWSnKmVFsI/view?usp=sharing)}** -- Build a recommender systems for GitHub users. Use techniques like
+collaborative filtering techniques. Used PySpark on Github repos to match
+user’s contributions with the repositories they should be recommended. 
+- **Undergraduate seminar -  Kafka [Report Link](https://drive.google.com/file/d/1txqBQZaRxxT7wu5csBuIHUfi8DrRvUMU/view?usp=sharing)}** -- Delivered college seminar on Event Driven Architecture using Apache Kafka which
+included topics such as Kafka Architecture, AMQP, Kafka Streams and Kafka
+Connect
+
 
 ## Talks / Seminars
 

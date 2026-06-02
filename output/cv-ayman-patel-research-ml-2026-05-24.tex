@@ -1,0 +1,194 @@
+%-------------------------
+% Research/ML oriented CV - Ayman Patel
+%-------------------------
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome}
+\usepackage{multicol}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+
+\titleformat{\section}{
+  \vspace{-7pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{0pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{
+  \item\small{{#1 \vspace{-3pt}}}
+}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-3pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeProjectHeading}[2]{
+  \vspace{-3pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\begin{document}
+
+\begin{center}
+    {\Huge\scshape Ayman Patel}
+    \\ London, UK\\
+    \small
+    \href{mailto:ayman.patel97@gmail.com}{\raisebox{-0.2\height}\faEnvelope\ \underline{ayman.patel97@gmail.com}} ~
+    \href{https://linkedin.com/in/aymanapatel}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/aymanapatel}} ~
+    \href{https://github.com/aymanapatel}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/aymanapatel}} ~
+    \href{https://aymanace2049.hashnode.dev}{\raisebox{-0.2\height}\faGlobe\ \underline{aymanace2049.hashnode.dev}}
+\end{center}
+
+\section{Professional Summary}
+\small{
+AI/ML-oriented software engineer with 6+ years of production engineering experience and current MSc Advanced Computer Science training at Queen Mary University of London. Hands-on across LLM systems, RAG, model evaluation, transformer inference, feature engineering, and imbalanced classification, with a strong base in scalable backend systems and observability. Research communication strength through 40+ technical articles and internal whitepapers adopted as engineering reference material.
+}
+
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Queen Mary University of London}{Sep 2025 - Sep 2026}
+      {MSc Advanced Computer Science}{London, UK}
+      \resumeItemListStart
+        \resumeItem{Research-oriented postgraduate study in advanced computer science, AI/ML systems, and data analytics.}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Sardar Vallabhbhai Institute of Technology}{Jul 2015 - May 2019}
+      {Bachelor of Computer Science}{GPA: 7.9/10}
+  \resumeSubHeadingListEnd
+
+\section{Core Competencies}
+\vspace{-7pt}
+\begin{itemize}[leftmargin=0.15in, label={}]\small{\item{
+\textbf{Applied ML:} supervised learning, imbalanced classification, feature engineering, PCA, threshold tuning, ROC-AUC, F1, precision/recall \\
+\textbf{LLM Systems:} RAG pipelines, LLM APIs, reasoning workflows, vector databases, transformer inference, LoRA, vLLM \\
+\textbf{Research Practice:} experiment design, model comparison, chronological validation, technical writing, whitepapers, stakeholder explanation
+}}
+\end{itemize}
+
+\section{Work Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Nebius Academy}{Mar 2025 - May 2025}
+      {AI Engineering Fellow}{London, UK}
+      \resumeItemListStart
+        \resumeItem{Built AI agents using LLM APIs, reasoning pipelines, and RAG for factual retrieval, with focus on grounded outputs and reliable retrieval context.}
+        \resumeItem{Studied transformer architectures, attention mechanisms, KV-cache, Mixture-of-Experts, RoPE, and LoRA fine-tuning for applied AI engineering.}
+        \resumeItem{Deployed LLM inference workloads with vLLM, Docker, and Kubernetes on Nvidia H100 infrastructure using Nebius cloud.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Mastercard}{Mar 2024 - Aug 2025}
+      {Senior Software Engineer}{Vadodara, India}
+      \resumeItemListStart
+        \resumeItem{Built product analytics dashboards in Mixpanel, translating behavioral and operational data into KPI views for product and engineering stakeholders.}
+        \resumeItem{Owned frontend observability using Grafana and OpenTelemetry to surface client-side performance, traceability, and reliability signals.}
+        \resumeItem{Owned load and performance testing with k6 and InfluxDB to track performance trends, regressions, and system behavior over time.}
+        \resumeItem{Developed backend APIs with Spring, Spring Data JPA, and Hibernate, applying API Gateway and Event Sourcing patterns across production systems.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Mastercard}{Jul 2019 - Feb 2024}
+      {Software Engineer I/II}{Vadodara, India}
+      \resumeItemListStart
+        \resumeItem{Built greenfield React and Spring applications, with production ownership across performance, accessibility, testing, and release quality.}
+        \resumeItem{Reduced CI end-to-end suite runtime from 8 hours to 3 hours through test splitting, parallel execution, selective retries, and environment-level caching.}
+        \resumeItem{Developed and maintained Hardware Security Module integration for mobile encryption using MDES tokenisation, securing card data transmission across payment flows.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\section{Personal Projects}
+\resumeSubHeadingListStart
+  \resumeProjectHeading{Nebius Repository Summarizer}{LLMs, FastAPI, AST, Tree-sitter}
+    \resumeItemListStart
+      \resumeItem{Built a repository understanding system with FastAPI and LLMs to study code summarization under context-window constraints.}
+      \resumeItem{Extracted code skeletons with AST and Tree-sitter, ranked source files by relevance, and assembled repository context within a 7000-token limit before generating grounded summaries.}
+      \resumeItem{Project secured admission into the Nebius AI Engineering Fellowship.}
+    \resumeItemListEnd
+  \resumeProjectHeading{Credit Card Fraud Analytics}{Python, scikit-learn, imbalanced-learn}
+    \resumeItemListStart
+      \resumeItem{Ran an ML fraud-detection study on the IEEE-CIS dataset, merging 590,540 transactions across 434 transaction and identity features.}
+      \resumeItem{Identified severe class imbalance at a 3.5\% fraud rate and selected predictive card, product, amount, identity, and temporal signals.}
+      \resumeItem{Compared Logistic Regression, PCA, Random Forest, SMOTE, SMOTE-ENN, and SMOTE-Tomek with threshold tuning; best tuned Random Forest achieved 96.9\% test accuracy, 0.503 F1, 0.541 precision, 0.470 recall, and 0.879 ROC-AUC on a strict chronological split.}
+    \resumeItemListEnd
+  \resumeProjectHeading{Recommendation System for Github}{Python, PySpark, ALS, collaborative filtering}
+    \resumeItemListStart
+      \resumeItem{Built a GitHub repository recommender using a Kaggle dataset of 980 top-starred open-source repositories, preprocessing repository metadata, languages, tags, descriptions, stars, and URLs into feature matrices for recommendation.}
+      \resumeItem{Implemented neighbourhood-based collaborative filtering with Euclidean distance, cosine similarity, and Pearson correlation, then extended the system with PySpark ALS for implicit-feedback recommendations and ID-to-repository mapping.}
+      \resumeItem{Evaluated recommender quality with Surprise using RMSE and MAE; cosine similarity and Pearson baseline produced comparable RMSE of 0.7733, with Pearson showing lower standard deviation across folds.}
+    \resumeItemListEnd
+  \resumeProjectHeading{RL Accessibility}{Reinforcement learning, WCAG}
+    \resumeItemListStart
+      \resumeItem{Applied reinforcement learning to improve web accessibility by training agents to identify and remediate WCAG violations automatically.}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\section{Writing \& Research Communication}
+\resumeSubHeadingListStart
+  \resumeProjectHeading{Blog}{40+ published technical articles}
+    \resumeItemListStart
+      \resumeItem{Published 40+ technical articles translating complex engineering and AI topics into implementation-oriented explanations for practitioners.}
+      \resumeItem{Covered AI and data systems topics including End to End RAG with Postgres, Observability in LLMs, OpenRouter, Redis beyond caching, DuckDB/Parquet-style analytics workflows, and infrastructure for local/cloud experimentation.}
+      \resumeItem{Wrote systems research-style explainers on eBPF, microfrontends, change data capture, infrastructure as code, Localstack, Grafana observability, and backend architecture; articles have been featured in specialist newsletters such as eBPF.}
+      \resumeItem{Use writing as a research discipline: break down papers, tools, production incidents, and architecture patterns into reproducible mental models, diagrams, trade-offs, and implementation notes.}
+    \resumeItemListEnd
+  \resumeProjectHeading{Whitepapers at Mastercard}{Accessibility and microfrontend architecture}
+    \resumeItemListStart
+      \resumeItem{Authored internal whitepapers on Accessibility and Microfrontend architecture that became company-wide engineering reference material.}
+      \resumeItem{Accessibility whitepaper consolidated WCAG guidance, testing practices, remediation patterns, and implementation checklists for product teams; supported accessibility initiatives that lifted WCAG compliance scores by 40\%.}
+      \resumeItem{Microfrontend architecture whitepaper documented design principles, module federation trade-offs, independent deployment boundaries, integration contracts, and governance patterns for a 10+ module platform.}
+      \resumeItem{Earned CTO recognition and distribution to 200 engineers, demonstrating ability to turn hands-on engineering research into reusable organizational knowledge.}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\section{Technical Skills}
+\vspace{-7pt}
+\begin{itemize}
+[leftmargin=0.15in, label={}]\small{\item{
+\textbf{ML:} PyTorch, scikit-learn, Pandas, NumPy, imbalanced-learn, PCA, feature engineering, ROC-AUC, F1, precision/recall, threshold tuning \\
+\textbf{LLM/AI:} LLM APIs, RAG, Langchain, Chroma, vector databases, Transformers, LoRA, vLLM, MLFlow \\
+\textbf{Backend:} Python, Java, Spring, FastAPI, Go, REST APIs, microservices, event sourcing \\
+\textbf{Data:} PostgreSQL, Redis, Kafka, MongoDB, DuckDB, Parquet, Polars \\
+\textbf{Cloud/MLOps:} Docker, Kubernetes, AWS, Jenkins, Grafana, OpenTelemetry, Splunk, Dynatrace \\
+\textbf{Frontend:} React, TypeScript, Redux Toolkit, Next.js, Webpack, Module Federation
+}}
+\end{itemize}
+
+\end{document}

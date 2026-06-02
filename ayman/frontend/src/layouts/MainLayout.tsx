@@ -40,6 +40,16 @@ export function MainLayout({ compileStatus, children }: Props) {
           >
             Viewer
           </Link>
+          <Link
+            to="/xlsx"
+            className={`px-3 py-1.5 text-sm font-medium rounded-md transition-colors ${
+              location.pathname === '/xlsx'
+                ? 'bg-primary text-white'
+                : 'text-slate-600 hover:bg-slate-100'
+            }`}
+          >
+            XLSX
+          </Link>
         </nav>
         <div className="flex-1" />
         <span className="text-xs text-slate-400">{companies.length} companies</span>
