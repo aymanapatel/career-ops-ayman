@@ -15,9 +15,15 @@ Export a tailored, ATS-optimized CV as a `.tex` file and compile it to PDF via `
 9. Reorder experience bullets by JD relevance
 10. Inject keywords naturally into existing achievements
 11. Generate the `.tex` file using `templates/cv-template.tex`
-12. Write to `output/cv-{candidate}-{company}-{YYYY-MM-DD}.tex`
-13. Run: `node generate-latex.mjs output/cv-{candidate}-{company}-{YYYY-MM-DD}.tex output/cv-{candidate}-{company}-{YYYY-MM-DD}.pdf`
-14. Report: .tex path, .pdf path, file sizes, section count, keyword coverage %
+12. Determine `{company}` (kebab-case company slug, e.g. "JPMorgan" → "jpmorgan")
+13. Extract `{job-id}` if available:
+    - From URL: Greenhouse `/jobs/12345`, Lever `/jobs/abc123`, Ashby `/jobs/xyz-789`, Workday `/job/12345`, etc.
+    - From JD text: look for "Job ID:", "Requisition ID:", "Posting ID:", "Req ID:", "Reference:"
+    - If no job-id, use sequential numbering `01`, `02`, etc. counting existing folders in `output/{company}/`
+14. Create directory `output/{company}/{job-id}/` (use `node lib/get-output-dir.mjs "{company}" [job-id]` to get the path and create it)
+15. Write `.tex` to `output/{company}/{job-id}/cv.tex`
+16. Run: `node generate-latex.mjs output/{company}/{job-id}/cv.tex output/{company}/{job-id}/cv.pdf`
+17. Report: .tex path, .pdf path, file sizes, section count, keyword coverage %
 
 **Requires:** `tectonic` (preferred — `brew install tectonic`, auto-downloads packages) or `pdflatex` (MiKTeX / TeX Live) on PATH.
 

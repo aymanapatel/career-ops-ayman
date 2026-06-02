@@ -184,7 +184,7 @@ Donde `{company-slug}` es el nombre de empresa en lowercase, sin espacios, con g
 **Score:** {X/5}
 **Legitimacy:** {High Confidence | Proceed with Caution | Suspicious}
 **URL:** {URL de la oferta original}
-**PDF:** career-ops/output/cv-candidate-{company-slug}-{{DATE}}.pdf
+**PDF:** career-ops/output/{company-slug}/{job-id}/cv.pdf
 **Batch ID:** {{ID}}
 
 ---
@@ -228,16 +228,18 @@ Donde `{company-slug}` es el nombre de empresa en lowercase, sin espacios, con g
 8. Reordena bullets de experiencia por relevancia al JD
 9. Construye competency grid (6-8 keyword phrases)
 10. Inyecta keywords en logros existentes (**NUNCA inventa**)
-11. Genera HTML completo desde template (lee `templates/cv-template.html`)
-12. Escribe HTML a `/tmp/cv-candidate-{company-slug}.html`
-13. Ejecuta:
+11. Determina `{job-id}` de la URL o del JD (ver reglas en `modes/pdf.md`). Si no hay job-id, usa `01`, `02`, etc.
+12. Crea directorio `output/{company-slug}/{job-id}/`
+13. Genera HTML completo desde template (lee `templates/cv-template.html`)
+14. Escribe HTML a `output/{company-slug}/{job-id}/cv.html`
+15. Ejecuta:
 ```bash
 node generate-pdf.mjs \
-  /tmp/cv-candidate-{company-slug}.html \
-  output/cv-candidate-{company-slug}-{{DATE}}.pdf \
+  output/{company-slug}/{job-id}/cv.html \
+  output/{company-slug}/{job-id}/cv.pdf \
   --format={letter|a4}
 ```
-14. Reporta: ruta PDF, nº páginas, % cobertura keywords
+16. Reporta: ruta PDF, nº páginas, % cobertura keywords
 
 **Reglas ATS:**
 - Single-column (sin sidebars)

@@ -46,7 +46,7 @@ To rollback: `node update-system.mjs rollback`
 
 ## What is career-ops
 
-AI-powered, CLI-agnostic job search automation: pipeline tracking, offer evaluation, CV generation, portal scanning, batch processing. Runs on any AI coding CLI that follows the [open agent skill standard](https://agentskills.io) (Claude Code, Codex, Gemini, OpenCode, Qwen, Copilot, Kimi).
+AI-powered, CLI-agnostic job search automation: pipeline tracking, offer evaluation, CV generation, portal scanning, batch processing. Runs on any AI coding CLI that follows the [open agent skill standard](https://agentskills.io) (Claude Code, Codex, OpenCode, Qwen, Copilot, Kimi).
 
 ### Main Files
 
@@ -265,7 +265,6 @@ When spawning headless workers for batch processing, use the appropriate command
 | CLI | Command |
 |-----|---------|
 | Claude Code | `claude -p "prompt"` |
-| Gemini CLI | `gemini -p "prompt"` |
 | Copilot CLI | `copilot -p "prompt"` |
 | Codex | `codex exec "prompt"` |
 | OpenCode | `opencode run "prompt"` |

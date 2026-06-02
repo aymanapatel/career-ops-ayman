@@ -5,7 +5,8 @@
 **Phone:** +447900626876  
 **LinkedIn:** linkedin.com/in/aymanapatel  
 **GitHub:** github.com/aymanapatel  
-**Website:** aymanace2049.hashnode.dev
+**Website:** aymanace2049.hashnode.dev  
+**Portfolio:** patelofthought.com/me
 
 ## Professional Summary
 

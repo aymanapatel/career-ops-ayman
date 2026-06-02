@@ -29,6 +29,8 @@ Read `config/profile.yml`. Check `cv.output_format`:
 - If `"latex"`, execute the full pipeline from `modes/latex.md`
 - Otherwise (default), execute the full pipeline from `modes/pdf.md`
 
+In both cases, write outputs to `output/{company}/{job-id}/` following the folder structure defined in those modes.
+
 ## Paso 4 — Draft Application Answers (solo si score >= 4.5)
 
 Si el score final es >= 4.5, generar borrador de respuestas para el formulario de aplicación:

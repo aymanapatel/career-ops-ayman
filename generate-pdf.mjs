@@ -22,6 +22,14 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 mkdirSync(resolve(__dirname, 'output'), { recursive: true });
 
 /**
+ * Ensure parent directories exist for any output path.
+ */
+function ensureDir(filePath) {
+  const dir = dirname(filePath);
+  if (dir) mkdirSync(dir, { recursive: true });
+}
+
+/**
  * Normalize text for ATS compatibility by converting problematic Unicode.
  *
  * ATS parsers and legacy systems often fail on em-dashes, smart quotes,
@@ -160,6 +168,7 @@ async function generatePDF() {
     });
 
     // Write PDF
+    ensureDir(outputPath);
     const { writeFile } = await import('fs/promises');
     await writeFile(outputPath, pdfBuffer);
 
