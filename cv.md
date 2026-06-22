@@ -10,7 +10,7 @@
 
 ## Professional Summary
 
-Senior Full-Stack Engineer with 6+ years of production experience across Java/Spring, React/TypeScript, microfrontend architecture, and cloud-native microservices. Communicate technical depth beyond code: author of 40+ published articles on backend/frontend architecture and system design, and internal whitepapers on accessibility and microfrontend architecture adopted as company-wide reference material. Currently completing an MSc in Computer Science at Queen Mary University of London.
+Senior Full-Stack Engineer with 6+ years of production experience building systems at Mastercard, from fraud-detection ML pipelines to microfrontend platforms serving 10+ product modules. Recently spent three months at the Nebius AI Engineering Fellowship, where I built a transformer language model from scratch to understand why pre-norm trains more stably than post-norm, implemented LoRA on GPT-2 and observed a 124M-parameter model shift to Shakespearean prose using only 0.65% trainable adapters, and optimized LLM inference from 0.94s to 0.14s for 128 tokens by replacing redundant full-sequence attention with KV caching. I write about this work — 40+ articles on system design and architecture — because explaining technical decisions forces clarity. Currently completing an MSc in Computer Science at Queen Mary University of London.
 
 ## Work Experience
 
@@ -18,9 +18,32 @@ Senior Full-Stack Engineer with 6+ years of production experience across Java/Sp
 **AI Engineering Fellow**  
 March 2025 - May 2025
 
-- Built AI agents using LLM APIs and MCPs with test-time compute scaling, reasoning pipelines, and RAG for factual retrieval
-- Studied transformer architectures, attention mechanisms, and inference optimization (KV-cache, MoE, RoPE); explored fine-tuning with LoRA
-- Deployed production-ready LLM inference with vLLM, Docker, and Kubernetes on Nvidia's H100 using Nebius cloud
+*Intensive 4-module AI/ML engineering fellowship covering LLM architectures, AI agents, MLOps, and GPU performance engineering — completed 12+ hands-on assignments on Nvidia H100 infrastructure.*
+
+**Module 1 — LLM Architectures:**
+- Built a complete transformer language model from scratch to understand why pre-norm (LayerNorm before each sublayer) trains more stably than the original post-norm layout. This meant implementing multi-head causal self-attention, position-wise feed-forward networks, and autoregressive generation with KV caching — then verifying causality by perturbing the last input token and confirming earlier outputs did not change.
+- Implemented LoRA (Low-Rank Adaptation) from scratch and injected it into GPT-2. The insight was that freezing 124M base parameters and training only ~811K (0.65%) adapter parameters is enough to shift model behaviour: the model went from generic modern prose to pseudo-Elizabethan diction ("thou", "thee", "lord"). The outcome was a 3 MB adapter file versus a 500 MB full model checkpoint, making fine-tuning feasible on limited GPU memory.
+- Built a Mixture of Experts (MoE) transformer with fine-grained experts and top-K routing. The challenge was load imbalance: some experts receive far more tokens than others. I added expert capacity limits and token dropping, tracking a drop-rate metric. The outcome was a system that maintains the same compute budget as a dense model while allowing selective specialization per token.
+- Implemented Rotary Position Embeddings (RoPE) from scratch. The insight was that rotation matrices preserve vector norms, so position information can be injected directly into Q and K without adding learned positional embedding parameters. I verified this with a unit test confirming `‖q_rot‖ = ‖q‖` to within 1e-5.
+- Conducted hyperparameter grid searches across learning rate and batch size on SST-2 sentiment classification. The outcome was a clear trade-off: small batches (50) give noisy gradients that act as implicit regularization, while large batches (200) need higher learning rates or more epochs to converge. I also found that L1 regularization drives weights toward exact zero (sparsity), whereas L2 only shrinks them exponentially — a distinction that matters when you want to eliminate weak features entirely.
+
+**Module 2 — AI Agents & Sovereign Systems:**
+- Built a LangGraph ReAct research agent that plans its own tool-calling sequence. The insight was that autonomous agents hallucinate facts unless every claim is traceable back to a tool call. I added a dataflow integrity check that verifies every number in the final output (venue price, weather, headcount) against the tool log. The outcome was a system where fabricated outputs are caught automatically rather than passed to the user.
+- Implemented a Rasa Pro CALM deterministic booking flow. The insight was that LLMs should handle language understanding while Python enforces hard business rules (deposit caps, party-size limits, time-based cutoffs). The outcome was an auditable, deterministic confirmation system where every decision is traceable — essential when "every word could cost money" in a commercial transaction.
+- Designed an MCP (Model Context Protocol) shared tool layer. The insight was that multiple agent clients (LangGraph, Rasa, voice pipeline) should not duplicate tool logic. By registering tools once in an MCP server, all clients discover and call them dynamically. The outcome was that changing a venue's status from "available" to "full" updated all clients instantly without code changes.
+- Built a bidirectional handoff bridge between an exploratory agent (LangGraph) and a deterministic agent (Rasa). The insight was that open-ended research and rigid confirmation need different architectures, but they must pass state reliably. I used atomic file IPC so only one handoff file exists at any time, preventing race conditions. The outcome was a loop that can reject and re-research (e.g., party size too large → find a new venue) without human intervention.
+- Implemented a voice pipeline (STT → Agent → TTS). The practical insight was that production agents need graceful degradation: if the Speechmatics API key is missing, the system falls back to text mode with a visible warning rather than crashing. This mirrors real-world production where external services fail.
+
+**Module 3 — MLOps & Distributed Training:**
+- Deployed distributed data parallel (DDP) training on Kubernetes across 2× Nvidia H100 nodes. The insight was that infrastructure should be code: the entire pipeline — from Docker image to Kubernetes job spec — is version-controlled, so local debugging and cloud execution use identical environments. I used SkyPilot to abstract Kubernetes complexity, declaring resources (2 nodes, H100:1, 60GB+ RAM) and letting it handle pod scheduling and `torchrun` coordination. The outcome was reproducible training without "works on my machine" issues.
+- Containerized training pipelines with Docker and pushed to Nebius Container Registry. The insight was that environment-driven configuration (all tunables in `train_job.yaml`, none hardcoded in Python) enables rapid experimentation without code changes. The outcome was that adjusting batch size, learning rate, or mixed precision (bf16) required only a YAML edit and a container rebuild.
+- Monitored NCCL network initialization across nodes. The insight was that distributed training failures often hide in network setup, not model code. I tracked GPU Direct RDMA fallback (socket transport when InfiniBand is unavailable) and node IP reporting. The outcome was identifying that loss divergence on OPT-1.3B was caused by a learning rate too high for the dataset, not a hardware or networking bug.
+
+**Module 4 — Performance Engineering & GPU Inference:**
+- Profiled GPU kernels using CUDA events and `torch.profiler`. The insight was that before optimizing, you must know whether you are memory-bound or compute-bound. I plotted kernels on a roofline model and found that naive eager-mode element-wise loops sit at 0.083 FLOP/Byte (deeply memory-bound) because each Python loop iteration launches separate kernels and materializes intermediates in global memory. The outcome was a clear optimization target: reduce data movement, not add compute.
+- Achieved 6.69× speedup in LLM inference. The insight was that the naive autoregressive loop passes the entire growing sequence every decode step, forcing redundant attention computation. I implemented KV caching so each decode step passes only the latest token while reusing cached keys and values from previous positions, plus preallocated sequence buffers to eliminate `torch.cat` reallocations. The outcome was dropping generation time from 0.943s to 0.141s for 128 tokens.
+- Analyzed kernel fusion with `torch.compile`. The insight was that keeping loop intermediates in registers instead of global memory changes the arithmetic intensity entirely: a fused loop reached 32 FLOP/Byte (approaching compute-bound) versus 0.083 FLOP/Byte unfused. The outcome was understanding that compiler-level fusion can be more impactful than algorithmic changes for small, repetitive operations.
+- Studied production inference engine design (vLLM-style). The insight was that inference engines are memory managers first: paged KV memory prevents fragmentation, prefix caching avoids redundant prefill computation for repeated prompts, and continuous batching keeps GPUs busy by dynamically mixing prefill and decode work. The outcome was a mental model for evaluating serving systems not just by model accuracy but by throughput, latency, and memory efficiency.
 
 ### Mastercard -- Vadodara, India
 **Senior Software Engineer**  
@@ -121,6 +144,9 @@ Connect
 - **Cloud & DevOps:** AWS (S3, Lambda, EC2), Docker, Kubernetes, Terraform, Localstack, Ansible, PCF, Jenkins, Gradle
 - **Testing:** JUnit, Mockito, Jest, React Testing Library, Cypress, Playwright, Testcontainers
 - **Observability:** Grafana, Prometheus, Splunk, Dynatrace, OpenTelemetry, eBPF
-- **Machine Learning:** PyTorch, LLM APIs, Langchain, Chroma, RAG, Vector Databases, Transformers, LoRA, MLFlow
+- **Machine Learning:** PyTorch, Scikit-learn, Transformers, LoRA, Mixture of Experts (MoE), RoPE, KV Cache, Attention Mechanisms, Fine-tuning, Random Forest, SMOTE
+- **AI/LLM Engineering:** LLM APIs, Langchain, Chroma, RAG, Vector Databases, Multi-Agent Systems, ReAct Pattern, MCP (Model Context Protocol)
+- **MLOps & Distributed Training:** DDP, torchrun, NCCL, Kubernetes (Nebius MK8S), SkyPilot, Docker, Container Registry, bf16 Mixed Precision
+- **GPU Performance:** CUDA Profiling, Roofline Model, Kernel Fusion, torch.compile, Memory-Bound vs Compute-Bound Optimization, H100 Inference Optimization
 - **Big Data:** Pandas, Polar, DuckDB, Parquet
 - **Other:** Camunda, BPMN, DMN, CMMN, Mixpanel, CDN

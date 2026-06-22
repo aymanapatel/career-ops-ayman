@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ayman Patel - CV</title>
+<style>
+  @font-face {
+    font-family: 'Space Grotesk';
+    src: url('./fonts/space-grotesk-latin.woff2') format('woff2');
+    font-weight: 300 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'DM Sans';
+    src: url('./fonts/dm-sans-latin.woff2') format('woff2');
+    font-weight: 100 1000;
+    font-style: normal;
+    font-display: swap;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body {
+    font-family: 'DM Sans', Arial, sans-serif;
+    font-size: 10.5px;
+    line-height: 1.45;
+    color: #1a1a2e;
+    background: #ffffff;
+  }
+  .page { width: 100%; max-width: 210mm; margin: 0 auto; padding: 0; }
+  .header { margin-bottom: 14px; }
+  .header h1 {
+    font-family: 'Space Grotesk', Arial, sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 5px;
+    line-height: 1.1;
+  }
+  .header-gradient {
+    height: 2px;
+    background: linear-gradient(to right, hsl(187, 74%, 32%), hsl(270, 70%, 45%));
+    border-radius: 1px;
+    margin-bottom: 8px;
+  }
+  .contact-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px 10px;
+    font-size: 9.8px;
+    line-height: 1.35;
+    color: #555;
+  }
+  .contact-row a { color: #555; text-decoration: none; white-space: nowrap; }
+  .separator { color: #ccc; }
+  .section { margin-bottom: 12px; }
+  .section-title {
+    font-family: 'Space Grotesk', Arial, sans-serif;
+    font-size: 11.3px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: hsl(187, 74%, 32%);
+    border-bottom: 1.2px solid #e2e2e2;
+    padding-bottom: 3px;
+    margin-bottom: 7px;
+    line-height: 1.2;
+  }
+  .summary-text { font-size: 10.5px; line-height: 1.55; color: #2f2f2f; }
+  .competencies-grid { display: flex; flex-wrap: wrap; gap: 6px; }
+  .competency-tag {
+    font-size: 9.3px;
+    font-weight: 500;
+    color: hsl(187, 74%, 28%);
+    background: hsl(187, 40%, 95%);
+    padding: 3px 8px;
+    border-radius: 3px;
+    border: 1px solid hsl(187, 40%, 88%);
+  }
+  .job { margin-bottom: 10px; break-inside: avoid; page-break-inside: avoid; }
+  .job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 3px;
+  }
+  .job-company {
+    font-family: 'Space Grotesk', Arial, sans-serif;
+    font-size: 11.6px;
+    font-weight: 600;
+    color: hsl(270, 70%, 45%);
+  }
+  .job-period { font-size: 9.7px; color: #777; white-space: nowrap; }
+  .job-role { font-size: 10.4px; font-weight: 600; color: #333; margin-bottom: 4px; }
+  .job ul { padding-left: 16px; margin-top: 4px; }
+  .job li { font-size: 9.9px; line-height: 1.45; color: #333; margin-bottom: 3px; }
+  .project { margin-bottom: 8px; break-inside: avoid; page-break-inside: avoid; }
+  .project-title {
+    font-family: 'Space Grotesk', Arial, sans-serif;
+    font-size: 10.8px;
+    font-weight: 600;
+    color: hsl(270, 70%, 45%);
+  }
+  .project-desc { font-size: 9.9px; color: #444; margin-top: 2px; line-height: 1.42; }
+  .edu-item { margin-bottom: 5px; break-inside: avoid; page-break-inside: avoid; }
+  .edu-header { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .edu-title { font-weight: 600; font-size: 10.4px; color: #333; }
+  .edu-org { color: hsl(270, 70%, 45%); font-weight: 500; }
+  .edu-year { font-size: 9.5px; color: #777; white-space: nowrap; }
+  .skills-grid { display: flex; flex-wrap: wrap; gap: 5px 12px; }
+  .skill-item { font-size: 9.8px; color: #444; }
+  .skill-category { font-weight: 600; color: #333; font-size: 9.8px; }
+  @media print { .page { padding: 0; } }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="header">
+    <h1>Ayman Patel</h1>
+    <div class="header-gradient"></div>
+    <div class="contact-row">
+      <span>+447900626876</span><span class="separator">|</span>
+      <span>ayman.patel97@gmail.com</span><span class="separator">|</span>
+      <a href="https://linkedin.com/in/aymanapatel">linkedin.com/in/aymanapatel</a><span class="separator">|</span>
+      <a href="https://patelofthought.com/me">patelofthought.com/me</a><span class="separator">|</span>
+      <a href="https://github.com/aymanapatel">github.com/aymanapatel</a><span class="separator">|</span>
+      <span>London, UK</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Professional Summary</div>
+    <div class="summary-text">Software developer and applied AI engineer with 6+ years of production experience building full-stack systems at Mastercard, plus recent AI engineering work across LLM architectures, AI agents, MLOps, distributed training, and inference optimisation. Strong fit for Ultrapanel's KTP project through hands-on experience in software development, data collection and analysis, API integration, project delivery, and technical dissemination. Currently completing an MSc in Advanced Computer Science at Queen Mary University of London.</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Core Competencies</div>
+    <div class="competencies-grid">
+      <span class="competency-tag">Software Development</span>
+      <span class="competency-tag">Applied AI and ML</span>
+      <span class="competency-tag">Data Collection and Analysis</span>
+      <span class="competency-tag">API Integration</span>
+      <span class="competency-tag">Data Engineering</span>
+      <span class="competency-tag">Project Delivery</span>
+      <span class="competency-tag">Technical Writing</span>
+      <span class="competency-tag">Testing and Observability</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Work Experience</div>
+
+    <div class="job">
+      <div class="job-header"><div class="job-company">Nebius Academy</div><div class="job-period">March 2025 - May 2025</div></div>
+      <div class="job-role">AI Engineering Fellow - London, UK</div>
+      <ul>
+        <li>Completed an intensive AI engineering fellowship covering LLM architectures, AI agents, MLOps, distributed training, and GPU performance engineering on Nvidia H100 infrastructure.</li>
+        <li>Built a complete transformer language model from scratch, implementing multi-head causal self-attention, feed-forward networks, autoregressive generation, and KV caching while validating causality with targeted tests.</li>
+        <li>Built a LangGraph ReAct research agent and added a dataflow integrity check so final outputs could be traced back to tool calls, reducing the risk of unsupported AI-generated claims.</li>
+        <li>Deployed distributed data parallel training on Kubernetes across 2 Nvidia H100 nodes using Docker, SkyPilot, and torchrun, keeping configuration version-controlled and reproducible.</li>
+        <li>Optimised LLM inference from 0.943s to 0.141s for 128 tokens by implementing KV caching and preallocated sequence buffers.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header"><div class="job-company">Mastercard</div><div class="job-period">March 2024 - August 2025</div></div>
+      <div class="job-role">Senior Software Engineer - Vadodara, India</div>
+      <ul>
+        <li>Owned translation of product manager requirements into technical specifications, user stories, and acceptance criteria for cross-functional engineering teams.</li>
+        <li>Developed backend APIs with Spring, Spring Data JPA, and Hibernate, applying API Gateway and Event Sourcing patterns across production systems.</li>
+        <li>Owned React and TypeScript frontend delivery using Redux Toolkit and RTK Query for scalable state management and API data-fetching layers.</li>
+        <li>Introduced Redis as a cache layer for frequently accessed API data and implemented Resilience4j circuit breaker and retry patterns across 5+ microservices, improving availability by 15%.</li>
+        <li>Used PostgreSQL JSONB for flexible dynamic form handling and built Mixpanel analytics dashboards to surface product KPIs for stakeholders.</li>
+        <li>Owned production diagnosis with Splunk, Grafana, Dynatrace, and OpenTelemetry, reducing mean time to resolution from days to hours.</li>
+        <li>Led cross-country delivery as de facto frontend architect, UX designer, and product manager, aligning teams around architecture, delivery trade-offs, and stakeholder outcomes.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header"><div class="job-company">Mastercard</div><div class="job-period">March 2022 - February 2024</div></div>
+      <div class="job-role">Software Engineer II - Vadodara, India</div>
+      <ul>
+        <li>Built greenfield applications in React, Redux, JavaScript, and Spring, serving as core maintainer for performance, code quality, accessibility, and test standards.</li>
+        <li>Wrote unit tests with Jest and React Testing Library and end-to-end tests with Playwright and Cypress, achieving 95% test coverage and reducing CI e2e runtime from 8 hours to 3 hours.</li>
+        <li>Designed high-fidelity Figma prototypes to align product managers and stakeholders, creating UX direction in 2 days where no dedicated UX designer was available.</li>
+        <li>Steered RBAC and status-based access control across 5+ products under urgent delivery pressure within 2 weeks.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header"><div class="job-company">Mastercard</div><div class="job-period">January 2019 - February 2022</div></div>
+      <div class="job-role">Software Engineer I / Software Engineering Intern - Vadodara, India</div>
+      <ul>
+        <li>Designed and implemented RESTful APIs to automate BPM workflows using Camunda, BPMN, DMN, and CMMN.</li>
+        <li>Built CI/CD pipelines with Grunt.js and Jenkins and maintained Angular.js application delivery.</li>
+        <li>Developed Hardware Security Module integration for mobile encryption using MDES tokenisation, supporting secure card data flows.</li>
+        <li>Implemented a backend image-serving service using Spring WebFlux and Reactive Streams, improving scalable asynchronous image delivery.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Selected Projects</div>
+    <div class="project">
+      <div class="project-title">Credit Card Fraud Analytics</div>
+      <div class="project-desc">Built a fraud-detection analysis on the IEEE-CIS dataset, merging 590,540 transactions across 434 transaction and identity features. Tuned Random Forest models with SMOTE variants and threshold optimisation; best model achieved 96.9% test accuracy and 0.879 ROC-AUC on a strict chronological test split.</div>
+    </div>
+    <div class="project">
+      <div class="project-title">Repository Summariser</div>
+      <div class="project-desc">Built a FastAPI and LLM-based service that generates human-readable summaries of GitHub repositories. Extracted code skeletons using AST parsing and Tree-sitter, prioritised source files, and assembled context within a 7000-token limit.</div>
+    </div>
+    <div class="project">
+      <div class="project-title">Go Microservices</div>
+      <div class="project-desc">Built an end-to-end cloud-native microservice in Go, implementing service discovery, distributed tracing, containerized deployment, observability, and CI/CD practices.</div>
+    </div>
+    <div class="project">
+      <div class="project-title">Technical Writing and Dissemination</div>
+      <div class="project-desc">Published 40+ technical articles and produced Mastercard whitepapers on Accessibility and Microfrontend architecture, recognised by the CTO, adopted as internal reference material, and circulated to 200 engineers.</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Education</div>
+    <div class="edu-item"><div class="edu-header"><div><span class="edu-title">MSc Advanced Computer Science</span>, <span class="edu-org">Queen Mary University of London</span></div><div class="edu-year">September 2025 - September 2026</div></div></div>
+    <div class="edu-item"><div class="edu-header"><div><span class="edu-title">Bachelor of Computer Science</span>, <span class="edu-org">Sardar Vallabhbhai Institute of Technology</span></div><div class="edu-year">July 2015 - May 2019</div></div></div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Skills</div>
+    <div class="skills-grid">
+      <div class="skill-item"><span class="skill-category">Languages and Frameworks:</span> Java, Python, Go, TypeScript, JavaScript, React, Spring, FastAPI, Django, Quarkus</div>
+      <div class="skill-item"><span class="skill-category">AI and ML:</span> PyTorch, Scikit-learn, Transformers, LoRA, MoE, RoPE, KV Cache, Random Forest, SMOTE, LangChain, RAG, AI agents, MCP</div>
+      <div class="skill-item"><span class="skill-category">Data and APIs:</span> REST APIs, PostgreSQL, PostgreSQL JSONB, Redis, MongoDB, Kafka, RabbitMQ, Debezium, Pandas, DuckDB, Parquet</div>
+      <div class="skill-item"><span class="skill-category">Cloud and DevOps:</span> Docker, Kubernetes, Terraform, AWS, Jenkins, Gradle, SkyPilot, Container Registry</div>
+      <div class="skill-item"><span class="skill-category">Quality and Observability:</span> Jest, React Testing Library, Cypress, Playwright, JUnit, Grafana, Prometheus, Splunk, Dynatrace, OpenTelemetry, k6</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

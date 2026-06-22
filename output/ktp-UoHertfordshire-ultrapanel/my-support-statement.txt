@@ -1,0 +1,19 @@
+I am applying for the Software Developer with AI in Modern Construction post because it combines the kind of work I am looking for next: software development with applied AI and data-integration in a research oriented environment with an industrial problem statement.
+
+The project with Ultrapanel is interesting as it combines all layers of Software and AI engineering; from leveraging both data and AI to improve design-to-manufacturing processes at Ultrapanel.
+
+My background is that of always learning and evolving. I have worked as a full-stack engineer for 6 years at Mastercard before coming to the UK to pursue my Masters in Advanced Computer Science at Queen Mary University of London.
+
+I initially started as doing pure backend engineering at Mastercard. This meant writing APIs, defining workflows using orchestration tools (Camunda, BPMN). It then evolved in creating our own workflow engine built with Java/Spring and using databases such as Oracle and Postgres.
+I then transitioned into Full-stack engineer with major contributions to both the frontend architecture using Microfrontend and React as well as on backend with microservices.
+Even though my title was that of an "engineer", I was also tasked with leading teams in a ad-hoc fashion my my VP. This came on top of my existing work where I led products with colleagues from different timezones. I also worked as a Product manager and designer as there was no one with the skillset of building end-to-end applications with the product sense. 
+
+I have also been recognized by my CTO for my contributions to a whitepaper I wrote with a group of frontend engineers. I am a team player who does not only work for myself but also alliviete my team. My recommendations can be seen here: https://patelofthought.com/me
+
+My AI experience is both academic and practical. I participated in various hackathons and come in the top 3. It usually involved implementing some sort of AI such as Multi-modal LLMs, RAGs with vector databases.
+I have also taken a few modules in big data and machine learning. For Machine Learning, I have got a distinction grade. 
+For big data, I did a project for my course which was to build a fraud-detection analysis on the IEEE-CIS credit card dataset; merging 590,540 transactions across 434 transaction and identity features, identifying severe class imbalance at a 3.5% fraud rate, and reducing the feature space to the strongest predictors such as card, product, amount, identity, and temporal signals. Used a tuned Random Forest models with SMOTE variants and threshold optimization; the best model achieved 96.9% test accuracy, 0.503 F1, 0.541 precision, 0.470 recall, and 0.879 ROC-AUC on a strict chronological test split.
+I am also part of a comprehensive AI fellowship at Nebius Academy with hands-on work across LLM architectures, AI agents, MLOps, distributed training, and GPU performance engineering. 
+
+What attracts me about Ultrapanel is leveraging my expertise to combine commercial traction and existing product recognition of Ultrapanel to the next phase of design-to-manufacturing capability using AI and modern software engineering. I want to leverage big data from design and construction into actionanable insight, build software that improves processes and AI find hidden patterns,  and suppporting better-informed decisions for Ultrapanel's growth in offsite construction.
+
