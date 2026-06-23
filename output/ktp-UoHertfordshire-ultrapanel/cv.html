@@ -54,7 +54,7 @@
   }
   .contact-row a { color: #555; text-decoration: none; white-space: nowrap; }
   .separator { color: #ccc; }
-  .section { margin-bottom: 12px; }
+  .section { margin-bottom: 11px; }
   .section-title {
     font-family: 'Space Grotesk', Arial, sans-serif;
     font-size: 11.3px;
@@ -96,7 +96,7 @@
   .job-role { font-size: 10.4px; font-weight: 600; color: #333; margin-bottom: 4px; }
   .job ul { padding-left: 16px; margin-top: 4px; }
   .job li { font-size: 9.9px; line-height: 1.45; color: #333; margin-bottom: 3px; }
-  .project { margin-bottom: 8px; break-inside: avoid; page-break-inside: avoid; }
+  .project { margin-bottom: 7px; break-inside: avoid; page-break-inside: avoid; }
   .project-title {
     font-family: 'Space Grotesk', Arial, sans-serif;
     font-size: 10.8px;
@@ -104,6 +104,8 @@
     color: hsl(270, 70%, 45%);
   }
   .project-desc { font-size: 9.9px; color: #444; margin-top: 2px; line-height: 1.42; }
+  .compact-list { padding-left: 16px; margin-top: 4px; }
+  .compact-list li { font-size: 9.9px; line-height: 1.42; color: #333; margin-bottom: 3px; }
   .edu-item { margin-bottom: 5px; break-inside: avoid; page-break-inside: avoid; }
   .edu-header { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
   .edu-title { font-weight: 600; font-size: 10.4px; color: #333; }
@@ -202,7 +204,7 @@
   </div>
 
   <div class="section">
-    <div class="section-title">Selected Projects</div>
+    <div class="section-title">Code Projects</div>
     <div class="project">
       <div class="project-title">Credit Card Fraud Analytics</div>
       <div class="project-desc">Built a fraud-detection analysis on the IEEE-CIS dataset, merging 590,540 transactions across 434 transaction and identity features. Tuned Random Forest models with SMOTE variants and threshold optimisation; best model achieved 96.9% test accuracy and 0.879 ROC-AUC on a strict chronological test split.</div>
@@ -216,9 +218,27 @@
       <div class="project-desc">Built an end-to-end cloud-native microservice in Go, implementing service discovery, distributed tracing, containerized deployment, observability, and CI/CD practices.</div>
     </div>
     <div class="project">
-      <div class="project-title">Technical Writing and Dissemination</div>
-      <div class="project-desc">Published 40+ technical articles and produced Mastercard whitepapers on Accessibility and Microfrontend architecture, recognised by the CTO, adopted as internal reference material, and circulated to 200 engineers.</div>
+      <div class="project-title">RL Accessibility</div>
+      <div class="project-desc">Applied reinforcement learning to improve web accessibility by training agents to identify and fix WCAG violations automatically.</div>
     </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Hackathons</div>
+    <ul class="compact-list">
+      <li><strong>Encode Hackathon, London - 3rd place:</strong> Built Phantom Fraud, an AI-powered financial risk engine for Solana blockchain using Solana CLI, OpenRouter, and Helius APIs.</li>
+      <li><strong>AI Hackathon, Vadodara - 3rd place:</strong> Built a code-review assistant powered by fine-tuned Gemini Pro Vision with a PostgreSQL-backed developer UI.</li>
+      <li><strong>AI Hackathon, Vadodara - 2nd place:</strong> Developed RAG-based internal documentation search using LangChain and Chroma vector database.</li>
+      <li><strong>Technology Hackathon - 2nd place:</strong> Migrated a React app to Next.js, improving page performance.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Writing</div>
+    <ul class="compact-list">
+      <li><strong>Personal blog:</strong> Published 40+ technical articles on system design, architecture, infrastructure, databases, observability, and AI, including RAG, LLM observability, microfrontends, change data capture, Redis, and eBPF.</li>
+      <li><strong>Mastercard whitepapers:</strong> Produced whitepapers on Accessibility and Microfrontend architecture, recognised by the CTO, adopted as internal reference material, and circulated to 200 engineers.</li>
+    </ul>
   </div>
 
   <div class="section">

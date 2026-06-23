@@ -10,7 +10,7 @@
 
 ## Professional Summary
 
-Senior Full-Stack Engineer with 6+ years of production experience building systems at Mastercard, from fraud-detection ML pipelines to microfrontend platforms serving 10+ product modules. Recently spent three months at the Nebius AI Engineering Fellowship, where I built a transformer language model from scratch to understand why pre-norm trains more stably than post-norm, implemented LoRA on GPT-2 and observed a 124M-parameter model shift to Shakespearean prose using only 0.65% trainable adapters, and optimized LLM inference from 0.94s to 0.14s for 128 tokens by replacing redundant full-sequence attention with KV caching. I write about this work — 40+ articles on system design and architecture — because explaining technical decisions forces clarity. Currently completing an MSc in Computer Science at Queen Mary University of London.
+Senior Full-Stack Engineer with 6+ years of production experience building systems at Mastercard, from fraud-detection ML pipelines to microfrontend platforms serving 10+ product modules. Recently spent three months at the Nebius AI Engineering Fellowship, where I built a transformer language model from scratch to understand why pre-norm trains more stably than post-norm, implemented LoRA on GPT-2 and observed a 124M-parameter model shift to Shakespearean prose using only 0.65% trainable adapters, and optimized LLM inference from 0.94s to 0.14s for 128 tokens by replacing redundant full-sequence attention with KV caching. I write about this work — 40+ articles on system design and architecture — because explaining technical decisions forces clarity. Be an avid blog writer covering concepts from all layers of the software stack. Currently completing an MSc in Computer Science at Queen Mary University of London.
 
 ## Work Experience
 
@@ -51,7 +51,7 @@ March 2024 - August 2025
 
 - Owned translation of product manager requirements into detailed technical specifications, user stories, and acceptance criteria for cross-functional engineering teams
 - Owned the frontend in React and TypeScript, using Redux Toolkit and RTK Query for scalable state and data-fetching layers
-- Developed backend APIs with Spring, Spring Data JPA, and Hibernate, applying API Gateway and Event Sourcing patterns
+- Developed backend APIs with Spring, Spring Data JPA, and Hibernate, applying API Gateway and Event Sourcing patterns using Kafka
 - Owned introduction of Redis as a cache layer for Mastercard APIs to optimize response times for frequently accessed data
 - Owned implementation of Resilience4j Circuit Breaker and Retry patterns across 5+ microservices, reducing cascading failures and improving system availability by 15%
 - Drove design of a microfrontend platform using Webpack Module Federation, enabling independent deployment of 10+ product modules
@@ -63,12 +63,14 @@ March 2024 - August 2025
 - Owned load and performance testing with k6, using InfluxDB as the TSDB to track trends and regressions over time
 - Owned CI/CD pipelines in Jenkins for staging-to-production delivery of artifacts
 - Owned production incident diagnosis using Splunk, Grafana, and Dynatrace, reducing mean time to resolution from days to hours.
-- Led cross-country projects as the de facto frontend architect, UX designer, and product manager, driving alignment across teams and owning end-to-end delivery
+- Led cross-country projects as the de facto frontend/backend architect, UX designer, and product manager, driving alignment across teams and owning end-to-end delivery
 
 ### Mastercard -- Vadodara, India
 **Software Engineer II**  
 March 2022 - February 2024
 
+- Built greenfield backend services in **Spring** and **Oracle** with **Hibernate** as the ORM layer
+- Built greenfield frontend services in **React + TypeScript** with state management using **Redux** and **RTK Query**
 - Built greenfield applications in React, Redux, JavaScript (ES6+), and Spring; served as core maintainer for performance, code quality, and accessibility standards across frontend projects
 - Built pipelines using Gradle, streamlining dependency management and artifact generation
 - Wrote unit tests using Jest and React Testing Library, and end-to-end tests using Playwright and Cypress, achieving 95% test coverage and e2e sanity while preventing regressions at scale; reduced CI e2e suite runtime from 8 hours to 3 hours through test splitting, parallel execution, selective retries, and environment-level caching
@@ -105,11 +107,10 @@ January 2019 - June 2019
 - **Credit Card Fraud Analytics ([Report](https://github.com/aymanapatel/qmul-all-projects/blob/main/data-analytics/coursework1/credit-card-report.pdf), [Notebook](https://github.com/aymanapatel/qmul-all-projects/blob/main/data-analytics/coursework1/credit-card-notebook.ipynb))** -- Built a fraud-detection analysis on the IEEE-CIS credit card dataset, merging 590,540 transactions across 434 transaction and identity features, identifying severe class imbalance at a 3.5% fraud rate, and reducing the feature space to the strongest predictors such as card, product, amount, identity, and temporal signals. Tuned Random Forest models with SMOTE variants and threshold optimization; the best model achieved 96.9% test accuracy, 0.503 F1, 0.541 precision, 0.470 recall, and 0.879 ROC-AUC on a strict chronological test split.
 - **[Java CLI using GraalVM](https://github.com/aymanapatel/java-cli)** -- Built a Java CLI tool using the Picocli framework to query the Stack Overflow API, then compiled it to a native binary with GraalVM for zero-JVM-startup execution
 - **[LGTM Observability](https://aymanace2049.hashnode.dev/grafana-one-observability-tool-to-rule-them-all) -- Implement an end-to-end observability with tracing (Tempo), Logs (Loki), Graph (Grafana) and Metrics (Memir). Add modern profiling such as flamegraphs and eBPF for user and kernel level observibility.
-- **[Go Microservices](https://github.com/aymanapatel/golang-microservices)** -- Built an end-to-end cloud-native microservice in Go, implementing service discovery, distributed tracing, and containerized deployment
+- **[Go Microservices](https://github.com/aymanapatel/golang-microservices)** -- Built a progressive Go microservices project spanning standard-library REST APIs, Gorilla Mux with custom request validation, Swagger/OpenAPI documentation, Envoy-based service mesh/load balancing with K8s/WASM filters, and gRPC
 - **[Cloud Native Go](https://github.com/aymanapatel/cloud-native-go)** -- Go microservices deployed in cloud-native environments with CI/CD pipelines, observability, and infrastructure-as-code
 - **[RL Accessibility](https://github.com/aymanapatel/rl-a11y)** -- Applied reinforcement learning to improve web accessibility by training agents to identify and fix WCAG violations automatically
-
-## Hackathons
+- **[Java GraphQL](https://github.com/aymanapatel/java-graphql)** -- Developed a production-oriented Spring Boot GraphQL service demonstrating advanced patterns including query-depth DDOS protection, cursor-based pagination, file upload mutations, DataLoader N+1 resolution, and execution tracing with full JUnit 5 integration tests
 
 - **Encode Hackathon | London, UK (3rd place)** -- Built Phantom Fraud, an AI-powered financial risk engine for Solana blockchain using Solana CLI, OpenRouter, and Helius APIs to detect wash-trading patterns
 - **AI Hackathon | Vadodara, India, March 2025 (3rd place)** -- Built a code-review assistant powered by fine-tuned Gemini Pro Vision with PostgreSQL-backed developer UI

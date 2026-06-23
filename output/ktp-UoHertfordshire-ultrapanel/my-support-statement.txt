@@ -1,19 +1,42 @@
-I am applying for the Software Developer with AI in Modern Construction post because it combines the kind of work I am looking for next: software development with applied AI and data-integration in a research oriented environment with an industrial problem statement.
+AYMAN PATEL
+Supporting Statement
+Software Developer with AI in Modern Construction
+Ultrapanel / University of Hertfordshire KTP
 
-The project with Ultrapanel is interesting as it combines all layers of Software and AI engineering; from leveraging both data and AI to improve design-to-manufacturing processes at Ultrapanel.
+I am applying for the Software Developer with AI in Modern Construction post because it combines the kind of work I am looking for next: software development, applied AI, data integration, and research-led delivery in an industrial setting. 
 
-My background is that of always learning and evolving. I have worked as a full-stack engineer for 6 years at Mastercard before coming to the UK to pursue my Masters in Advanced Computer Science at Queen Mary University of London.
+The project with Ultrapanel is interesting as it combines all layers of Software and AI engineering; from leveraging software, data and AI to improve design-to-manufacturing processes at Ultrapanel.
+My background is built around continuous learning and technical ownership. I worked for six years as a full-stack software engineer at Mastercard before moving to the UK to pursue an MSc in Advanced Computer Science at Queen Mary University of London. 
 
-I initially started as doing pure backend engineering at Mastercard. This meant writing APIs, defining workflows using orchestration tools (Camunda, BPMN). It then evolved in creating our own workflow engine built with Java/Spring and using databases such as Oracle and Postgres.
-I then transitioned into Full-stack engineer with major contributions to both the frontend architecture using Microfrontend and React as well as on backend with microservices.
-Even though my title was that of an "engineer", I was also tasked with leading teams in a ad-hoc fashion my my VP. This came on top of my existing work where I led products with colleagues from different timezones. I also worked as a Product manager and designer as there was no one with the skillset of building end-to-end applications with the product sense. 
+I started in backend engineering, building APIs and defining business workflows using Camunda, BPMN, Java, Spring, Oracle, and PostgreSQL. Over time, my role expanded into full-stack engineering, with major contributions across React frontend architecture, microfrontends, backend microservices, API integration, observability, and CI/CD.
 
-I have also been recognized by my CTO for my contributions to a whitepaper I wrote with a group of frontend engineers. I am a team player who does not only work for myself but also alliviete my team. My recommendations can be seen here: https://patelofthought.com/me
+Although my title was "Software Engineer", my work often went beyond implementation. I translated product requirements into technical specifications, user stories, and acceptance criteria; led delivery across teams in different time zones; and took ownership of architecture and product decisions where a stronger end-to-end view was needed. In some projects, I effectively operated across engineering, product management, and design; because I could connect technical implementation with user needs and delivery constraints.
 
-My AI experience is both academic and practical. I participated in various hackathons and come in the top 3. It usually involved implementing some sort of AI such as Multi-modal LLMs, RAGs with vector databases.
-I have also taken a few modules in big data and machine learning. For Machine Learning, I have got a distinction grade. 
-For big data, I did a project for my course which was to build a fraud-detection analysis on the IEEE-CIS credit card dataset; merging 590,540 transactions across 434 transaction and identity features, identifying severe class imbalance at a 3.5% fraud rate, and reducing the feature space to the strongest predictors such as card, product, amount, identity, and temporal signals. Used a tuned Random Forest models with SMOTE variants and threshold optimization; the best model achieved 96.9% test accuracy, 0.503 F1, 0.541 precision, 0.470 recall, and 0.879 ROC-AUC on a strict chronological test split.
-I am also part of a comprehensive AI fellowship at Nebius Academy with hands-on work across LLM architectures, AI agents, MLOps, distributed training, and GPU performance engineering. 
+I have also shown that I can communicate technical work clearly. I contributed to a frontend engineering whitepaper that was recognised by the Mastercard CTO and adopted as internal reference material for developers. 
+I have written more than 40 technical articles on software architecture, infrastructure, databases, observability, and AI. 
+I see this as directly relevant to the KTP requirement to contribute to papers, presentations, dissemination, and high-quality written outputs. 
 
-What attracts me about Ultrapanel is leveraging my expertise to combine commercial traction and existing product recognition of Ultrapanel to the next phase of design-to-manufacturing capability using AI and modern software engineering. I want to leverage big data from design and construction into actionanable insight, build software that improves processes and AI find hidden patterns,  and suppporting better-informed decisions for Ultrapanel's growth in offsite construction.
+My recommendations and portfolio are available at: https://patelofthought.com/me
 
+My AI experience is both academic and practical. I have taken modules in machine learning and big data, achieving a distinction grade in Machine Learning. 
+In my big data coursework, I built a fraud-detection analysis on the IEEE-CIS credit card dataset, merging 590,540 transactions across 434 transaction and identity features.
+  I identified severe class imbalance at a 3.5% fraud rate, reduced the feature space to the strongest predictors,
+  and tuned Random Forest models with SMOTE variants and threshold optimisation. The best model achieved 96.9%
+  test accuracy, 0.503 F1, 0.541 precision, 0.470 recall, and 0.879 ROC-AUC on a strict chronological test split.
+
+  I have also applied AI in practical projects and hackathons, where I placed in the top three on multiple
+  occasions. These projects included multimodal LLMs, RAG systems, vector databases. More recently, I joined the Nebius AI Engineering Fellowship, a hands-on programme covering LLM
+  architectures, AI agents, MLOps, distributed training, and GPU performance engineering. This gave me practical
+  exposure to building, evaluating, and optimising AI systems rather than only using AI APIs at a surface level.
+
+  What attracts me to Ultrapanel is the chance to apply this background to a real business and engineering
+  problem. Ultrapanel already has commercial traction and product recognition; the opportunity now is to help
+  advance its design-to-manufacturing capability using AI, data, and modern software engineering. I want to help
+  turn design and construction data into actionable insight, build software that improves processes, use AI to
+  surface hidden patterns or risks, and support better-informed decisions for Ultrapanel’s growth in offsite
+  construction.
+
+  I believe I meet the criteria for this role because I bring software engineering depth, applied AI knowledge,
+  data analysis experience, API and integration skills, project ownership, and strong communication. I would bring
+  a methodical approach, attention to detail, and the ability to work independently while collaborating closely
+  with academic and business stakeholders.

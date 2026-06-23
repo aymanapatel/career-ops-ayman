@@ -56,7 +56,7 @@ Vadodara, India | January 2019 - February 2022
 - Developed Hardware Security Module integration for mobile encryption using MDES tokenisation, supporting secure card data flows.
 - Implemented a backend image-serving service using Spring WebFlux and Reactive Streams, improving scalable asynchronous image delivery.
 
-## Selected Projects
+## Code Projects
 
 ### Credit Card Fraud Analytics
 Built a fraud-detection analysis on the IEEE-CIS dataset, merging 590,540 transactions across 434 transaction and identity features. Investigated class imbalance, reduced the feature space to stronger predictors, and tuned Random Forest models with SMOTE variants and threshold optimisation. Best model achieved 96.9% test accuracy, 0.503 F1, 0.541 precision, 0.470 recall, and 0.879 ROC-AUC on a strict chronological test split.
@@ -70,16 +70,22 @@ Built an end-to-end cloud-native microservice in Go, implementing service discov
 ### RL Accessibility
 Applied reinforcement learning to improve web accessibility by training agents to identify and fix WCAG violations automatically.
 
+## Hackathons
+
+- Encode Hackathon, London - 3rd place: Built Phantom Fraud, an AI-powered financial risk engine for Solana blockchain using Solana CLI, OpenRouter, and Helius APIs to detect wash-trading patterns.
+- AI Hackathon, Vadodara - 3rd place: Built a code-review assistant powered by fine-tuned Gemini Pro Vision with a PostgreSQL-backed developer UI.
+- AI Hackathon, Vadodara - 2nd place: Developed RAG-based internal documentation search using LangChain and Chroma vector database.
+- Technology Hackathon - 2nd place: Migrated a React app to Next.js, improving page performance.
+
 ## Education
 
 - MSc Advanced Computer Science, Queen Mary University of London | September 2025 - September 2026
 - Bachelor of Computer Science, Sardar Vallabhbhai Institute of Technology | July 2015 - May 2019 | GPA: 7.9/10
 
-## Writing and Presentations
+## Writing
 
-- Published 40+ technical articles on system design, architecture, infrastructure, databases, observability, and AI.
-- Produced Mastercard whitepapers on Accessibility and Microfrontend architecture, recognised by the CTO, adopted as internal reference material, and circulated to 200 engineers.
-- Delivered seminars and technical presentations on Kafka, Git, frontend architecture, accessibility, and engineering practices.
+- Personal blog: Published 40+ technical articles on system design, architecture, infrastructure, databases, observability, and AI, including RAG, LLM observability, microfrontends, change data capture, Redis, and eBPF.
+- Mastercard whitepapers: Produced whitepapers on Accessibility and Microfrontend architecture, recognised by the CTO, adopted as internal reference material, and circulated to 200 engineers.
 
 ## Skills
 
