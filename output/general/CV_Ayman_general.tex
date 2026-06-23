@@ -1,0 +1,162 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage[margin=0.55in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+
+\definecolor{accent}{HTML}{4B1FA5}
+\definecolor{teal}{HTML}{157A86}
+\definecolor{textgray}{HTML}{333333}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2pt}
+\setlist[itemize]{leftmargin=*, topsep=1pt, itemsep=1pt, parsep=0pt}
+\sloppy
+
+\titleformat{\section}
+  {\large\bfseries\color{teal}\uppercase}
+  {}
+  {0pt}
+  {}
+  [\vspace{-3pt}\titlerule]
+\titlespacing*{\section}{0pt}{7pt}{5pt}
+
+\newcommand{\role}[4]{
+  \textbf{\color{accent}#1} \hfill {\small #2}\\
+  \textit{#3} \hfill {\small \textit{#4}}
+}
+
+\newcommand{\project}[2]{
+  \textbf{\color{accent}#1}\\
+  {\small #2}
+}
+
+\newcommand{\skill}[2]{
+  \textbf{#1:} #2
+}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE \textbf{Ayman Patel}}\\
+  \vspace{2pt}
+  London, UK \quad | \quad
+  \href{mailto:ayman.patel97@gmail.com}{ayman.patel97@gmail.com} \quad | \quad
+  +447900626876 \quad | \quad
+  \href{https://linkedin.com/in/aymanapatel}{linkedin.com/in/aymanapatel}\\
+  \href{https://patelofthought.com/me}{patelofthought.com/me} \quad | \quad
+  \href{https://github.com/aymanapatel}{github.com/aymanapatel}
+\end{center}
+
+\section{Professional Summary}
+{\small
+Senior Full-Stack Engineer with 6+ years at Mastercard building production software using backend technologies such as Java/Spring Boot, React/TypeScript frontends with Microfrontend architecture, workflow automation using Camunda.
+
+Led effort for payment-related integrations, web accessibility.
+Have also led cross-country team to develop a product from 0-to-1 by handling technical architecture as well as product management.
+\\
+Currently completing MSc in Advanced Computer Science at Queen Mary University of London and recently completed the Nebius AI
+Engineering Fellowship; adding practical depth in cloud-native ML systems, agents, distributed training, and inference
+optimization
+}
+
+
+\section{Work Experience}
+\role{Nebius Academy}{March 2025 -- May 2025}{AI Engineering Fellow}{London, UK}
+\begin{itemize}
+  \item Completed an intensive AI engineering fellowship covering LLM architectures, AI agents, MLOps, distributed training, and GPU performance engineering on Nvidia H100 infrastructure.
+  \item Built a complete transformer language model from scratch, implementing multi-head causal self-attention, feed-forward networks, autoregressive generation, and KV caching while validating causality with targeted tests.
+  \item Built a LangGraph ReAct research agent and added a dataflow integrity check so final outputs could be traced back to tool calls, reducing the risk of unsupported AI-generated claims.
+  \item Deployed distributed data parallel training on Kubernetes across 2 Nvidia H100 nodes using Docker, SkyPilot, and torchrun, keeping configuration version-controlled and reproducible.
+  \item Optimised LLM inference from 0.943s to 0.141s for 128 tokens by implementing KV caching and preallocated sequence buffers.
+\end{itemize}
+
+\role{Mastercard}{March 2024 -- August 2025}{Senior Software Engineer}{Vadodara, India}
+\begin{itemize}
+  \item Owned translation of product manager requirements into technical specifications, user stories, and acceptance criteria for cross-functional engineering teams.
+  \item Developed backend APIs with Spring, Spring Data JPA, and Hibernate, applying API Gateway and Event Sourcing patterns across production systems.
+  \item Owned React and TypeScript frontend delivery using Redux Toolkit and RTK Query for scalable state management and API data-fetching layers.
+  \item Introduced Redis as a cache layer for frequently accessed Mastercard API data and implemented Resilience4j circuit breaker and retry patterns across 5+ microservices, improving availability by 15\%.
+  \item Used PostgreSQL JSONB for flexible, schema-free dynamic form handling and built Mixpanel analytics dashboards to surface product KPIs for stakeholders.
+  \item Fix production issues with observability tools such as Splunk, Grafana, Dynatrace, and OpenTelemetry, reducing mean time to resolution from days to hours.
+\item Create a load and performance framework with k6, using InfluxDB as the time-series database to track performance trends and regressions over time
+\item Led accessibility initiatives as Accessibility Champion, lifting WCAG compliance scores by 40\% and coaching 10+ teams on best practices
+
+  \item Led cross-country delivery as de facto frontend architect, UX designer, and product manager, aligning teams around architecture, delivery trade-offs, and stakeholder outcomes.
+\end{itemize}
+
+\role{Mastercard}{March 2022 -- February 2024}{Software Engineer II}{Vadodara, India}
+\begin{itemize}
+  \item Built greenfield applications in React, Redux, JavaScript, and Spring, serving as core maintainer for performance, code quality, accessibility, and test standards.
+  \item Wrote unit tests with Jest and React Testing Library and end-to-end tests with Playwright and Cypress, achieving 95\% test coverage and reducing CI e2e runtime from 8 hours to 3 hours.
+  \item Improved UI load performance by 30\% by migrating static assets to an Akamai CDN.
+  \item Designed high-fidelity Figma prototypes to align product managers and stakeholders, creating UX direction in 2 days where no dedicated UX designer was available.
+  \item Steered RBAC and status-based access control across 5+ products under urgent delivery pressure within 2 weeks.
+\end{itemize}
+
+\role{Mastercard}{January 2019 -- February 2022}{Software Engineer I / Software Engineering Intern}{Vadodara, India}
+\begin{itemize}
+  \item Designed and implemented RESTful APIs to automate BPM workflows using Camunda, BPMN, DMN, and CMMN.
+  \item Built CI/CD pipelines with Grunt.js and Jenkins and maintained Angular.js application delivery.
+  \item Developed Hardware Security Module integration for mobile encryption using MDES tokenisation.
+  \item Implemented a backend image-serving service using Spring WebFlux and Reactive Streams, improving scalable asynchronous image delivery.
+\end{itemize}
+
+\section{Code Projects}
+\project{Credit Card Fraud Analytics \small{(\href{https://github.com/aymanapatel/qmul-all-projects/blob/main/data-analytics/coursework1/credit-card-report.pdf}{Report} | \href{https://github.com/aymanapatel/qmul-all-projects/blob/main/data-analytics/coursework1/credit-card-notebook.ipynb}{Notebook})}}{Built a fraud-detection analysis on the IEEE-CIS dataset, merging 590,540 transactions across 434 transaction and identity features. Investigated class imbalance, reduced the feature space to stronger predictors, and tuned Random Forest models with SMOTE variants and threshold optimisation. Best model achieved 96.9\% test accuracy, 0.503 F1, 0.541 precision, 0.470 recall, and 0.879 ROC-AUC on a strict chronological test split.}
+
+\vspace{2pt}
+\project{Repository Summariser \small{(\href{https://github.com/aymanapatel/nebius-project}{GitHub})}}{Built a FastAPI and LLM-based service that generates human-readable summaries of GitHub repositories. Extracted code skeletons using AST parsing and Tree-sitter, prioritised source files, and assembled context within a 7000-token limit. This project secured admission into the Nebius AI Engineering Fellowship.}
+
+\vspace{2pt}
+\project{Go Microservices \small{(\href{https://github.com/aymanapatel/golang-microservices}{GitHub})}}{Built a progressive Go microservices project spanning standard-library REST APIs, Gorilla Mux with custom request validation, Swagger/OpenAPI documentation, Envoy-based service mesh/load balancing with K8s/WASM filters, and gRPC — all wired with GitHub Actions CI.}
+
+\vspace{2pt}
+\project{Java GraphQL app\small{(\href{https://github.com/aymanapatel/graphql-app}{GitHub})}}{
+Developed a production-oriented Spring Boot GraphQL service demonstrating advanced patterns including query-depth DDOS protection, cursor-based pagination, file upload mutations, DataLoader N+1 resolution, and execution tracing with full JUnit 5 integration tests.}
+
+\vspace{2pt}
+\project{Java CLI using GraalVM \small{(\href{https://github.com/aymanapatel/java-cli}{GitHub})}}{Built a Java CLI tool using the Picocli framework to query the Stack Overflow API, then compiled it to a native binary with GraalVM for zero cold start execution time.}
+
+
+\vspace{2pt}
+\project{RL Accessibility \small{(\href{https://github.com/aymanapatel/rl-a11y}{GitHub})}}{Applied reinforcement learning to improve web accessibility by training agents to identify and fix WCAG violations automatically.}
+
+\section{Hackathons}
+\begin{itemize}
+  \item \textbf{Encode Hackathon, London -- 3rd place:} \\ Built Phantom Fraud, an AI-powered financial risk engine for Solana blockchain using Solana CLI, OpenRouter, and Helius APIs to detect wash-trading patterns.
+  \item \textbf{AI Hackathon, Vadodara -- 3rd place:} \\ Built a code-review assistant powered by fine-tuned Gemini Pro Vision with a PostgreSQL-backed developer UI.
+  \item \textbf{AI Hackathon, Vadodara -- 2nd place:} \\ Developed RAG-based internal documentation search using LangChain and Chroma vector database.
+  \item \textbf{Technology Hackathon -- 2nd place:} \\ Migrated a React app to Next.js, improving page performance by 30\%.
+\end{itemize}
+
+\section{Education}
+\textbf{MSc Advanced Computer Science}, Queen Mary University of London \hfill {\small September 2025 -- September 2026}\\
+\textbf{Bachelor of Computer Science}, Sardar Vallabhbhai Institute of Technology \hfill {\small July 2015 -- May 2019}\\
+{\small GPA: 7.9/10}
+
+\section{Writing}
+\begin{itemize}
+  \item \textbf{Personal blog} \small{(\href{https://aymanace2049.hashnode.dev}{aymanace2049.hashnode.dev})}: 
+\\ Published 40+ technical articles on system design, architecture, infrastructure, databases, observability, and AI, including RAG, LLM observability, microfrontends, change data capture, Redis, and eBPF.
+  \item \textbf{Mastercard whitepapers:} \\ Produced whitepapers on Accessibility and Microfrontend architecture, recognised by the CTO, adopted as internal reference material, and circulated to 200 engineers.
+\end{itemize}
+
+\section{Skills}
+{\small
+\skill{Languages and Frameworks}{Java, Python, Go, TypeScript, JavaScript, React, Spring, FastAPI, Django, Quarkus}\\
+\skill{AI and ML}{PyTorch, Scikit-learn, Transformers, LoRA, Mixture of Experts, RoPE, KV Cache, Random Forest, SMOTE, LangChain, RAG, AI agents, MCP}\\
+\skill{Data and APIs}{REST APIs, PostgreSQL, PostgreSQL JSONB, Redis, MongoDB, Kafka, RabbitMQ, Debezium, Change Data Capture, Pandas, DuckDB, Parquet}\\
+\skill{Cloud and DevOps}{Docker, Kubernetes, Terraform, AWS, Jenkins, Gradle, SkyPilot, Container Registry}\\
+\skill{Quality and Observability}{Jest, React Testing Library, Cypress, Playwright, JUnit, Mockito, Grafana, Prometheus, Splunk, Dynatrace, OpenTelemetry, k6}
+}
+
+\end{document}
+
