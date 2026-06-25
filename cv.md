@@ -16,9 +16,10 @@ Senior Full-Stack Engineer with 6+ years of production experience building syste
 
 ### Nebius Academy -- London, UK
 **AI Engineering Fellow**  
-March 2025 - May 2025
+March 2026 - May 2026
 
-*Intensive 4-module AI/ML engineering fellowship covering LLM architectures, AI agents, MLOps, and GPU performance engineering — completed 12+ hands-on assignments on Nvidia H100 infrastructure.*
+*Completed an intensive 4-module AI/ML engineering fellowship covering LLM architectures, AI agents, MLOps, and GPU performance engineering.*  
+*Built 12+ hands-on systems on Nvidia H100 infrastructure, spanning transformers, agent workflows, distributed training, and inference optimization.*
 
 **Module 1 — LLM Architectures:**
 - Built a complete transformer language model from scratch to understand why pre-norm (LayerNorm before each sublayer) trains more stably than the original post-norm layout. This meant implementing multi-head causal self-attention, position-wise feed-forward networks, and autoregressive generation with KV caching — then verifying causality by perturbing the last input token and confirming earlier outputs did not change.
@@ -49,6 +50,9 @@ March 2025 - May 2025
 **Senior Software Engineer**  
 March 2024 - August 2025
 
+*Owned platform architecture across React/TypeScript frontends, Spring APIs, caching, observability, CI/CD, and production incident response.*  
+*Translated PM requirements into technical specifications, user stories, and acceptance criteria while driving cross-country delivery across engineering teams.*
+
 - Owned translation of product manager requirements into detailed technical specifications, user stories, and acceptance criteria for cross-functional engineering teams
 - Owned the frontend in React and TypeScript, using Redux Toolkit and RTK Query for scalable state and data-fetching layers
 - Developed backend APIs with Spring, Spring Data JPA, and Hibernate, applying API Gateway and Event Sourcing patterns using Kafka
@@ -69,6 +73,9 @@ March 2024 - August 2025
 **Software Engineer II**  
 March 2022 - February 2024
 
+*Built greenfield backend and frontend services, then hardened them through testing, performance work, and accessibility standards.*  
+*Served as a core maintainer for code quality, release reliability, and user-facing performance across React/TypeScript and Spring applications.*
+
 - Built greenfield backend services in **Spring** and **Oracle** with **Hibernate** as the ORM layer
 - Built greenfield frontend services in **React + TypeScript** with state management using **Redux** and **RTK Query**
 - Built greenfield applications in React, Redux, JavaScript (ES6+), and Spring; served as core maintainer for performance, code quality, and accessibility standards across frontend projects
@@ -76,11 +83,13 @@ March 2022 - February 2024
 - Wrote unit tests using Jest and React Testing Library, and end-to-end tests using Playwright and Cypress, achieving 95% test coverage and e2e sanity while preventing regressions at scale; reduced CI e2e suite runtime from 8 hours to 3 hours through test splitting, parallel execution, selective retries, and environment-level caching
 - Improved UI load performance by 30% by migrating to a Akamai CDN
 - Designed high-fidelity Figma prototypes to align product managers and stakeholders, creating UX in 2 days in the absence of a UX designer and showing strong ownership
-- Steer the creation of RBAC and SBAC (Status-Based) for the entire program (5+ products) across the stack. This was done in urgency within 2 weeks
 
 ### Mastercard -- Vadodara, India
 **Software Engineer I**  
 July 2019 - February 2022
+
+*Built enterprise workflow automation and security-integrated services for payment systems.*  
+*Worked across API design, BPMN/DMN/CMMN modelling, Jenkins delivery, and MDES tokenisation flows.*
 
 - Designed and implemented RESTful APIs to automate BPM workflows using Camunda
 - Modelled complex business logic using BPMN, DMN, and CMMN standards
@@ -91,10 +100,13 @@ July 2019 - February 2022
 **Software Engineering Intern**  
 January 2019 - June 2019
 
+*Built a backend image-serving service for MDES CardArt with a focus on payload efficiency and asynchronous delivery.*  
+*Practiced TDD to define service behaviour, reduce regressions, and support safe refactoring.*
+
 - Implemented a backend image-serving service for MDES's CardArt project, improving delivery efficiency for serving card images in MDES APIs
 - Optimized image delivery with ImageMagick compression before serving, reducing payload size and improving response times
 - Enabled non-blocking image delivery using Spring WebFlux and Reactive Streams to support scalable, asynchronous request handling
-- Practiced Test-Driven Development (TDD) to define expected behavior upfront, improve code reliability, reduce regressions, and support safe refactorings
+- Practiced Test-Driven Development (TDD) to defprojectine expected behavior upfront, improve code reliability, reduce regressions, and support safe refactorings
 
 ## Education
 
@@ -106,12 +118,12 @@ January 2019 - June 2019
 - **[Nebius Project](https://github.com/aymanapatel/nebius-project)** -- Built a Repository Summarizer service using FastAPI and LLMs that generates human-readable summaries of GitHub repositories. Extracts code skeletons via AST and Tree-sitter to fit within token budgets, intelligently prioritizes source files, and assembles context within a 7000-token limit. This project secured admission into the Nebius AI Engineering Fellowship
 - **Credit Card Fraud Analytics ([Report](https://github.com/aymanapatel/qmul-all-projects/blob/main/data-analytics/coursework1/credit-card-report.pdf), [Notebook](https://github.com/aymanapatel/qmul-all-projects/blob/main/data-analytics/coursework1/credit-card-notebook.ipynb))** -- Built a fraud-detection analysis on the IEEE-CIS credit card dataset, merging 590,540 transactions across 434 transaction and identity features, identifying severe class imbalance at a 3.5% fraud rate, and reducing the feature space to the strongest predictors such as card, product, amount, identity, and temporal signals. Tuned Random Forest models with SMOTE variants and threshold optimization; the best model achieved 96.9% test accuracy, 0.503 F1, 0.541 precision, 0.470 recall, and 0.879 ROC-AUC on a strict chronological test split.
 - **[Java CLI using GraalVM](https://github.com/aymanapatel/java-cli)** -- Built a Java CLI tool using the Picocli framework to query the Stack Overflow API, then compiled it to a native binary with GraalVM for zero-JVM-startup execution
-- **[LGTM Observability](https://aymanace2049.hashnode.dev/grafana-one-observability-tool-to-rule-them-all) -- Implement an end-to-end observability with tracing (Tempo), Logs (Loki), Graph (Grafana) and Metrics (Memir). Add modern profiling such as flamegraphs and eBPF for user and kernel level observibility.
 - **[Go Microservices](https://github.com/aymanapatel/golang-microservices)** -- Built a progressive Go microservices project spanning standard-library REST APIs, Gorilla Mux with custom request validation, Swagger/OpenAPI documentation, Envoy-based service mesh/load balancing with K8s/WASM filters, and gRPC
-- **[Cloud Native Go](https://github.com/aymanapatel/cloud-native-go)** -- Go microservices deployed in cloud-native environments with CI/CD pipelines, observability, and infrastructure-as-code
 - **[RL Accessibility](https://github.com/aymanapatel/rl-a11y)** -- Applied reinforcement learning to improve web accessibility by training agents to identify and fix WCAG violations automatically
 - **[Java GraphQL](https://github.com/aymanapatel/java-graphql)** -- Developed a production-oriented Spring Boot GraphQL service demonstrating advanced patterns including query-depth DDOS protection, cursor-based pagination, file upload mutations, DataLoader N+1 resolution, and execution tracing with full JUnit 5 integration tests
 
+- **[TfL Road Flow Tracker](https://github.com/aymanapatel/qmul-group-project)** -- Built a Haskell application that monitors, analyzes, and visualizes road status data from Transport for London (TfL). Leverages the TfL Unified API to build a historical SQLite database of traffic disruptions, featuring an interactive CLI with fuzzy search, geospatial queries using the Haversine formula, and a recommendation engine that identifies optimal routes based on real-time severity data. Includes trend analytics to identify worst days and hours for traffic reliability.
+- **[Social Network Simulation](https://github.com/aymanapatel/qmul-socialnetwork-project)** -- Built a concurrent social network simulation in Haskell demonstrating threading, STM (Software Transactional Memory), and message passing. Simulates 10 concurrent user threads exchanging 100 messages, with an extension feature implementing spam detection and filtering based on message frequency patterns.
 - **Encode Hackathon | London, UK (3rd place)** -- Built Phantom Fraud, an AI-powered financial risk engine for Solana blockchain using Solana CLI, OpenRouter, and Helius APIs to detect wash-trading patterns
 - **AI Hackathon | Vadodara, India, March 2025 (3rd place)** -- Built a code-review assistant powered by fine-tuned Gemini Pro Vision with PostgreSQL-backed developer UI
 - **AI Hackathon | Vadodara, India, September 2024 (2nd place)** -- Developed RAG-based internal documentation search using Langchain and Chroma vector database

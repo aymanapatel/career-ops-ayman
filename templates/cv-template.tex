@@ -21,7 +21,10 @@
 \usepackage{multicol}
 \setlength{\multicolsep}{-3.0pt}
 \setlength{\columnsep}{-1pt}
-\input{glyphtounicode}
+\ifdefined\pdfglyphtounicode
+  \input{glyphtounicode}
+  \pdfgentounicode=1
+\fi
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
 \fancyfoot{}
@@ -41,8 +44,8 @@
 \titleformat{\section}{
   \vspace{-7pt}\scshape\raggedright\large\bfseries
 }{}{0em}{}[\color{black}\titlerule \vspace{0pt}]
+\titlespacing*{\section}{0pt}{9pt}{4pt}
 % Ensure that generate pdf is machine readable/ATS parsable
-\pdfgentounicode=1
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%  Commands  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\resumeItem}[1]{
@@ -55,19 +58,23 @@
     \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & \textbf{\small #2} \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{-4pt}
 }
 \newcommand{\resumeSubheadingContinue}[2]{
   \vspace{-3pt}
     \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{-4pt}
 }
 \newcommand{\resumeProjectHeading}[2]{
   \vspace{-3pt}\item
     \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & \textbf{\small #2} \\
     \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeRoleSummary}[1]{
+  {\small #1\par}
+  \vspace{-2pt}
 }
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{0pt}}
 \renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
@@ -113,7 +120,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%  Technical Skills  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Technical Skills}
-\vspace{-7pt}
+\vspace{-2pt}
 \begin{itemize}
 [leftmargin=0.15in, label={}]\small{\item{
 {{SKILLS}}

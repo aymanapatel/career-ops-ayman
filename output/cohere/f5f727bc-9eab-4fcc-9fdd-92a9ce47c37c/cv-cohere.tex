@@ -1,0 +1,290 @@
+%-------------------------
+% Career-Ops LaTeX CV Template
+% Based on: Gabriel Sison / sb2nov resume template
+% License: MIT
+%------------------------
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Random Stuff %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[letterpaper,11pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-7pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{0pt}]
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%%%%%% color to links
+
+\usepackage{xcolor}
+\usepackage[
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    citecolor=green
+]{hyperref}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Commands  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-3pt}}
+  }
+}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-3pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeSubheadingContinue}[2]{
+  \vspace{-3pt}
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeProjectHeading}[2]{
+  \vspace{-3pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{0pt}}
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Heading  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+    \begin{center}
+        % NAME
+        {\Huge\scshape Ayman Patel}
+        % SUBHEADING
+        \\ \small Senior Full-Stack Engineer \textbar\ London, UK\\
+        \small
+        % EMAIL
+        \href{mailto:ayman.patel97@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{ayman.patel97@gmail.com}} ~
+        % LINKEDIN
+        \href{https://linkedin.com/in/aymanapatel}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/aymanapatel}}  ~
+        % GITHUB
+        \href{https://github.com/aymanapatel}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/aymanapatel}} ~
+        % PORTFOLIO
+        \href{https://patelofthought.com/me}{\raisebox{-0.2\height}\faGlobe\ \underline{patelofthought.com/me}}
+    \end{center}
+
+\vspace{-4pt}
+\small{
+\textbf{Summary:} Senior Full-Stack Engineer with 6+ years building production systems at Mastercard, from payment-security microservices to microfrontend platforms serving 10+ product modules. Recently completed the Nebius AI Engineering Fellowship, where I optimized LLM inference latency 6.69x and built agent orchestration systems with LangGraph and MCP. Comfortable across the entire stack -- React, TypeScript, Go, Python, Spring and CI/CD deployment pipelines. Thrives in fast-paced environments where priorities evolve and execution is the only metric that matters.
+}
+\vspace{2pt}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Education  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Queen Mary University of London}{London, UK}
+      {MSc Advanced Computer Science}{September 2025 -- September 2026}
+    \resumeSubheading
+      {Sardar Vallabhbhai Institute of Technology}{Vadodara, India}
+      {Bachelor of Computer Science; GPA: 7.9/10}{July 2015 -- May 2019}
+  \resumeSubHeadingListEnd
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Experience  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Work Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Mastercard}{Vadodara, India}
+      {Senior Software Engineer}{March 2024 -- August 2025}
+      \resumeItemListStart
+        \resumeItem{Developed backend APIs with \textbf{Spring, Spring Data JPA, and Hibernate}, applying API Gateway and Event Sourcing patterns using Kafka -- directly relevant to building auth, billing, and payment systems.}
+        \resumeItem{Owned the frontend in \textbf{React and TypeScript}, using Redux Toolkit and RTK Query for scalable state and data-fetching layers across multiple product modules.}
+        \resumeItem{Owned implementation of \textbf{Resilience4j Circuit Breaker and Retry} patterns across 5+ microservices, reducing cascading failures and improving system availability by 15\%.}
+        \resumeItem{Drove design of a \textbf{microfrontend platform} using Webpack Module Federation, enabling independent deployment of 10+ product modules with stringent release mechanisms.}
+        \resumeItem{Owned introduction of \textbf{Redis} as a cache layer for Mastercard APIs to optimize response times for frequently accessed payment data.}
+        \resumeItem{Owned \textbf{CI/CD pipelines in Jenkins} for staging-to-production delivery; diagnosed production incidents using Splunk, Grafana, and Dynatrace, reducing MTTR from days to hours.}
+        \resumeItem{Led cross-country projects as the de facto frontend/backend architect, UX designer, and product manager, driving alignment and owning end-to-end delivery in fast-moving environments.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Nebius Academy}{London, UK}
+      {AI Engineering Fellow}{March 2025 -- May 2025}
+      \resumeItemListStart
+        \resumeItem{Optimized \textbf{LLM inference 6.69x} by implementing KV caching and preallocated sequence buffers, dropping generation time from 0.94s to 0.141s for 128 tokens -- experience in low-resource optimization.}
+        \resumeItem{Built a \textbf{LangGraph ReAct research agent} with dataflow integrity checks that verify every claim against tool logs, eliminating hallucinated outputs in customer-facing applications.}
+        \resumeItem{Designed an \textbf{MCP shared tool layer} enabling multiple agent clients to discover and call tools dynamically without code duplication.}
+        \resumeItem{Deployed \textbf{distributed data parallel (DDP) training on Kubernetes} across 2x Nvidia H100 nodes using SkyPilot for reproducible cloud execution.}
+        \resumeItem{Profiled GPU kernels with CUDA events and torch.profiler, identifying memory-bound bottlenecks and achieving \textbf{32 FLOP/Byte via torch.compile kernel fusion}.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Mastercard}{Vadodara, India}
+      {Software Engineer II}{March 2022 -- February 2024}
+      \resumeItemListStart
+        \resumeItem{Built greenfield backend services in \textbf{Spring and Oracle} with Hibernate; built greenfield frontend services in \textbf{React + TypeScript} with Redux and RTK Query.}
+        \resumeItem{Wrote unit tests using Jest and React Testing Library, and end-to-end tests using Playwright and Cypress, achieving \textbf{95\% test coverage}.}
+        \resumeItem{Reduced CI e2e suite runtime from \textbf{8 hours to 3 hours} through test splitting, parallel execution, selective retries, and environment-level caching.}
+        \resumeItem{Improved UI load performance by \textbf{30\%} by migrating to an Akamai CDN.}
+        \resumeItem{Steered the creation of \textbf{RBAC and SBAC} (Status-Based Access Control) for the entire program (5+ products) across the stack, delivered in urgency within 2 weeks.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Mastercard}{Vadodara, India}
+      {Software Engineer I}{July 2019 -- February 2022}
+      \resumeItemListStart
+        \resumeItem{Designed and implemented \textbf{RESTful APIs} to automate BPM workflows using Camunda, modelling complex business logic with BPMN, DMN, and CMMN standards.}
+        \resumeItem{Developed and maintained \textbf{Hardware Security Module (HSM) integration} for mobile encryption using MDES tokenisation, securing card data transmission across payment flows.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%  PROJECTS  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Personal Projects}
+\resumeSubHeadingListStart
+
+  \resumeProjectHeading
+    {\href{https://github.com/aymanapatel/nebius-project}{Nebius Project (FastAPI, Python, LLMs)}}{}
+  \resumeItemListStart
+    \resumeItem{Built a Repository Summarizer service using FastAPI and LLMs that generates human-readable summaries of GitHub repositories. Extracts code skeletons via AST and Tree-sitter to fit within token budgets, intelligently prioritizes source files, and assembles context within a 7000-token limit.}
+  \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\href{https://github.com/aymanapatel/golang-microservices}{Go Microservices (Go, gRPC, Kubernetes, Envoy)}}{}
+  \resumeItemListStart
+    \resumeItem{Built a progressive Go microservices project spanning standard-library REST APIs, Gorilla Mux with custom request validation, Swagger/OpenAPI documentation, Envoy-based service mesh/load balancing with K8s/WASM filters, and gRPC.}
+  \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\href{https://github.com/aymanapatel/qmul-all-projects}{Credit Card Fraud Analytics (Python, Scikit-learn, SMOTE)}}{}
+  \resumeItemListStart
+    \resumeItem{Built fraud-detection analysis on the IEEE-CIS credit card dataset (590K transactions, 434 features). Tuned Random Forest models with SMOTE variants; best model achieved 96.9\% test accuracy and 0.879 ROC-AUC on a strict chronological test split.}
+  \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\href{https://github.com/aymanapatel/java-cli}{Java CLI using GraalVM (Java, Picocli, GraalVM)}}{}
+  \resumeItemListStart
+    \resumeItem{Built a Java CLI tool using the Picocli framework to query the Stack Overflow API, then compiled it to a native binary with GraalVM for zero-JVM-startup execution.}
+  \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\href{https://github.com/aymanapatel/java-graphql}{Java GraphQL Service (Java, Spring Boot, GraphQL)}}{}
+  \resumeItemListStart
+    \resumeItem{Developed a production-oriented Spring Boot GraphQL service demonstrating advanced patterns including query-depth DDOS protection, cursor-based pagination, file upload mutations, DataLoader N+1 resolution, and execution tracing with full JUnit 5 integration tests.}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%  HACKATHONS  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Hackathons}
+
+\textbf{Encode Hackathon --- London, UK} \hfill \textbf{3rd Place}
+\vspace{-5pt}
+\begin{itemize}[leftmargin=0.15in]
+    \item Built an \textbf{AI-powered financial risk engine} for Solana blockchain to detect wash-trading patterns in real-time.
+\end{itemize}
+
+\textbf{AI Hackathon --- Vadodara, India} \hfill \textbf{3rd Place}
+\vspace{-5pt}
+\begin{itemize}[leftmargin=0.15in]
+    \item Built a PostgreSQL-backed dynamic UI generator using Gemini Vision.
+\end{itemize}
+
+\textbf{AI Hackathon --- Vadodara, India} \hfill \textbf{2nd Place}
+
+
+\begin{itemize}[leftmargin=0.15in]
+\vspace{-5pt}
+    \item Developed a \textbf{RAG-based internal documentation search} for Mastercard using Langchain and Chroma vector database.
+\end{itemize}
+
+\textbf{Technology Hackathon --- Vadodara, India} \hfill \textbf{2nd Place}
+\vspace{-5pt}
+\begin{itemize}[leftmargin=0.15in]
+    \item Migrated a React app to \textbf{Next.js}, improving page performance by 35\%.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%  WRITING  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Writing}
+\vspace{-7pt}
+
+\textbf{Personal Blog}
+\vspace{-5pt}
+\begin{itemize}[leftmargin=0.15in]
+    \item Featured in the eBPF newsletter. Key pieces: eBPF -- Unleash the Linux kernel, Microfrontends -- Decoupling Frontends, Change Data Capture in Microservices, End to End RAG with Postgres, Observability in LLMs, OpenRouter -- One Proxy to Rule them All.
+\end{itemize}
+
+\textbf{Frontend Engineering Whitepapers}
+\vspace{-5pt}
+\begin{itemize}[leftmargin=0.15in]
+    \item Produced whitepapers on Accessibility and Microfrontend architecture; earned CTO recognition, adopted as internal frontend engineering reference material, and circulated to 200 engineers.
+\end{itemize}
+
+\textbf{Undergraduate Seminar -- Kafka Ecosystem}
+\vspace{-5pt}
+\begin{itemize}[leftmargin=0.15in]
+    \item Delivered a technical seminar covering Kafka Architecture, Kafka Streams, Kafka Connect, and AMQP messaging patterns.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%  EDUCATION  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Queen Mary University of London}{London, UK}
+      {MSc Advanced Computer Science}{September 2025 -- September 2026}
+    \resumeSubheading
+      {Sardar Vallabhbhai Institute of Technology}{Vadodara, India}
+      {Bachelor of Computer Science; GPA: 7.9/10}{July 2015 -- May 2019}
+  \resumeSubHeadingListEnd
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Technical Skills  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Technical Skills}
+\vspace{-7pt}
+\begin{itemize}
+[leftmargin=0.15in, label={}]\small{\item{
+\textbf{Frontend:}{ React, TypeScript, Redux Toolkit, RTK Query, Next.js, Webpack, Module Federation} \\
+\textbf{Backend:}{ Go, Python, FastAPI, Django, Spring, Spring Data JPA, Hibernate, Java, REST APIs, Microservices} \\
+\textbf{Databases \& Events:}{ PostgreSQL, Oracle, MongoDB, Redis, Kafka, RabbitMQ} \\
+\textbf{Cloud \& DevOps:}{ AWS (S3, Lambda, EC2), Docker, Kubernetes, Terraform, Jenkins, Gradle} \\
+\textbf{Testing:}{ JUnit, Mockito, Jest, React Testing Library, Cypress, Playwright, Testcontainers} \\
+\textbf{Observability:}{ Grafana, Prometheus, Splunk, Dynatrace, OpenTelemetry} \\
+\textbf{AI/ML:}{ PyTorch, Transformers, LoRA, KV Cache, Attention Mechanisms, Langchain, RAG, Vector Databases} \\
+\textbf{MLOps:}{ DDP, torchrun, Kubernetes, Docker, Container Registry, bf16 Mixed Precision} \\
+\textbf{Security:}{ HSM, MDES Tokenization, RBAC, SBAC, WCAG, Accessibility}
+}}
+\end{itemize}
+
+\end{document}

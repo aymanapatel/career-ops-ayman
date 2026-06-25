@@ -46,3 +46,7 @@ bun.lock
 .claude/memory/
 career-dashboard
 package-lock.json
+
+
+# output pdf ignore
+*output/*pdf

@@ -1,0 +1,123 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[margin=0.42in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlist[itemize]{leftmargin=1.05em, itemsep=0.25pt, topsep=1pt, parsep=0pt, partopsep=0pt}
+\titleformat{\section}{\normalsize\bfseries\uppercase}{}{0pt}{}[\titlerule]
+\titlespacing*{\section}{0pt}{4pt}{2pt}
+
+\newcommand{\resumeSubheading}[4]{%
+  \textbf{#1}\hfill #2\\
+  \textbf{#3}\hfill #4\\[-5pt]
+}
+\newcommand{\resumeItem}[1]{\item #1}
+\newcommand{\resumeProjectHeading}[2]{%
+  \item \textbf{#1}\\
+  #2
+}
+\newcommand{\resumeSummaryLine}[1]{#1\\}
+\newcommand{\skill}[2]{\textbf{#1:} #2\\}
+
+\begin{document}
+\fontsize{8.55}{9.75}\selectfont
+
+\begin{center}
+{\Large \textbf{Ayman Patel}}\\[2pt]
+London, UK \textbar{}
+\href{tel:+447900626876}{+447900626876} \textbar{}
+\href{mailto:ayman.patel97@gmail.com}{ayman.patel97@gmail.com} \textbar{}
+\href{https://linkedin.com/in/aymanapatel}{linkedin.com/in/aymanapatel} \textbar{}
+\href{https://github.com/aymanapatel}{github.com/aymanapatel} \textbar{}
+\href{https://aymanace2049.hashnode.dev}{aymanace2049.hashnode.dev} \textbar{}
+\href{https://patelofthought.com/me}{patelofthought.com/me}
+\end{center}
+
+\section*{Professional Summary}
+Senior Full-Stack and AI Platform Engineer with 6+ years building production systems at Mastercard and hands-on GenAI/MLOps work on H100 infrastructure through the Nebius AI Engineering Fellowship. Built transformers, LoRA adapters, LangGraph agents, an MCP shared tool layer, Kubernetes DDP training jobs, and optimized LLM inference from 0.943s to 0.141s for 128 tokens with KV caching. Strong fit for Bloomberg's GenAI platform work: Python/Go/Java, Kubernetes, model training and inference workflows, observability, stakeholder-facing platform documentation, and debugging production systems.
+
+\section*{Core Competencies}
+GenAI platform engineering \textbar{} MCP tool layers \textbar{} LangGraph / ReAct agents \textbar{} Kubernetes MLOps \textbar{} Distributed training \textbar{} LLM inference optimization \textbar{} Observability and incident diagnosis \textbar{} Platform APIs and documentation
+
+\section{Work Experience}
+\resumeSubheading{Nebius Academy}{March 2025 - May 2025}{AI Engineering Fellow \textbar{} London, UK}{}
+\resumeSummaryLine{Built hands-on GenAI systems across LLM architecture, agents, MLOps, and GPU performance engineering.}
+\resumeSummaryLine{Worked on H100-backed training and inference workflows with production-style debugging, observability, and deployment constraints.}
+\begin{itemize}
+  \resumeItem{Built a transformer language model from scratch with multi-head causal self-attention, feed-forward layers, autoregressive generation, and KV caching; verified causality through perturbation tests.}
+  \resumeItem{Implemented LoRA on GPT-2, freezing 124M base parameters and training only 811K adapter parameters, producing a 3 MB adapter instead of a 500 MB full checkpoint.}
+  \resumeItem{Built a LangGraph ReAct research agent with tool-call traceability checks so generated claims could be validated against tool logs before reaching the user.}
+  \resumeItem{Designed an MCP shared tool layer so LangGraph, Rasa, and voice-pipeline clients could discover and call the same tools without duplicating integration logic.}
+  \resumeItem{Deployed DDP training on Kubernetes across 2x Nvidia H100 nodes using Docker, SkyPilot, torchrun, NCCL checks, and YAML-driven configuration.}
+  \resumeItem{Cut LLM generation time from 0.943s to 0.141s for 128 tokens by implementing KV caching and preallocated sequence buffers.}
+\end{itemize}
+
+\resumeSubheading{Mastercard}{March 2024 - August 2025}{Senior Software Engineer \textbar{} Vadodara, India}{}
+\resumeSummaryLine{Owned platform architecture across React/TypeScript frontends, Spring APIs, caching, observability, CI/CD, and production incident response.}
+\resumeSummaryLine{Translated PM requirements into technical specifications, user stories, and acceptance criteria for cross-functional teams.}
+\begin{itemize}
+  \resumeItem{Drove design of a Webpack Module Federation microfrontend platform, enabling independent deployment of 10+ product modules.}
+  \resumeItem{Built Spring APIs with Spring Data JPA and Hibernate, applying API Gateway and Event Sourcing patterns with Kafka.}
+  \resumeItem{Introduced Redis caching for Mastercard APIs and implemented Resilience4j Circuit Breaker and Retry patterns across 5+ microservices, improving availability by 15\%.}
+  \resumeItem{Owned frontend observability with Grafana and OpenTelemetry, plus production diagnosis with Splunk, Grafana, and Dynatrace, reducing MTTR from days to hours.}
+  \resumeItem{Ran k6 performance testing with InfluxDB trend tracking and owned Jenkins CI/CD pipelines for staging-to-production artifact delivery.}
+\end{itemize}
+
+\resumeSubheading{Mastercard}{March 2022 - February 2024}{Software Engineer II \textbar{} Vadodara, India}{}
+\resumeSummaryLine{Built greenfield backend and frontend services, then hardened them through testing, performance work, and accessibility standards.}
+\resumeSummaryLine{Served as a core maintainer for performance, code quality, and release reliability across frontend projects.}
+\begin{itemize}
+  \resumeItem{Built Spring and Oracle services with Hibernate, plus React/TypeScript applications using Redux Toolkit and RTK Query.}
+  \resumeItem{Achieved 95\% unit and e2e test coverage with Jest, React Testing Library, Playwright, and Cypress.}
+  \resumeItem{Reduced CI e2e runtime from 8 hours to 3 hours through test splitting, parallel execution, selective retries, and environment-level caching.}
+  \resumeItem{Improved UI load performance by 30\% by migrating assets to an Akamai CDN.}
+\end{itemize}
+
+\resumeSubheading{Mastercard}{July 2019 - February 2022}{Software Engineer I \textbar{} Vadodara, India}{}
+\resumeSummaryLine{Built enterprise workflow automation and security-integrated services for payment systems.}
+\resumeSummaryLine{Worked across API design, BPMN/DMN/CMMN modelling, Jenkins delivery, and MDES tokenisation flows.}
+\begin{itemize}
+  \resumeItem{Designed REST APIs to automate BPM workflows using Camunda and modelled complex business logic with BPMN, DMN, and CMMN.}
+  \resumeItem{Built CI/CD deployment for an Angular.js application using Grunt.js and Jenkins.}
+  \resumeItem{Maintained HSM integration for MDES mobile encryption, securing card data transmission across payment flows.}
+\end{itemize}
+
+\resumeSubheading{Mastercard}{January 2019 - June 2019}{Software Engineering Intern \textbar{} Vadodara, India}{}
+\resumeSummaryLine{Built a backend image-serving service for MDES CardArt with a focus on payload efficiency and asynchronous delivery.}
+\resumeSummaryLine{Practiced TDD to define service behaviour, reduce regressions, and support safe refactoring.}
+\begin{itemize}
+  \resumeItem{Implemented image delivery with Spring WebFlux and Reactive Streams for scalable non-blocking requests.}
+  \resumeItem{Optimized card image payloads with ImageMagick compression before serving them through MDES APIs.}
+\end{itemize}
+
+\section{Personal Projects}
+\begin{itemize}
+  \resumeProjectHeading{\href{https://github.com/aymanapatel/nebius-project}{Repository Summarizer / Nebius Project}}{FastAPI and LLM service that summarizes GitHub repositories by extracting AST and Tree-sitter code skeletons, prioritizing source files, and packing context into a 7000-token limit.}
+  \resumeProjectHeading{Credit Card Fraud Analytics: \href{https://github.com/aymanapatel/qmul-all-projects/blob/main/data-analytics/coursework1/credit-card-report.pdf}{Report}, \href{https://github.com/aymanapatel/qmul-all-projects/blob/main/data-analytics/coursework1/credit-card-notebook.ipynb}{Notebook}}{Analyzed 590,540 IEEE-CIS transactions across 434 features; tuned Random Forest models with SMOTE variants and threshold optimization, reaching 0.879 ROC-AUC on a chronological split.}
+  \resumeProjectHeading{\href{https://github.com/aymanapatel/golang-microservices}{Go Microservices}}{Progressive Go services covering REST APIs, Gorilla Mux validation, Swagger/OpenAPI docs, Envoy service mesh/load balancing, Kubernetes/WASM filters, and gRPC.}
+  \resumeProjectHeading{\href{https://github.com/aymanapatel/java-graphql}{Java GraphQL}}{Spring Boot GraphQL service with query-depth DDoS protection, cursor pagination, file uploads, DataLoader N+1 resolution, tracing, and JUnit 5 tests.}
+  \resumeProjectHeading{\href{https://aymanace2049.hashnode.dev}{Technical Writing}}{40+ articles on system design, architecture, LLM observability, RAG with Postgres, Redis, Grafana, eBPF, microfrontends, and infrastructure.}
+\end{itemize}
+
+\section{Education}
+\begin{tabularx}{\textwidth}{@{}Xr@{}}
+\textbf{MSc Advanced Computer Science}, Queen Mary University of London & September 2025 - September 2026\\
+\textbf{Bachelor of Computer Science}, Sardar Vallabhbhai Institute of Technology & July 2015 - May 2019\\
+GPA: 7.9/10 &
+\end{tabularx}
+
+\section{Technical Skills}
+\skill{Languages}{Python, Go, Java, TypeScript}
+\skill{Backend and Platform}{Spring, FastAPI, REST APIs, microservices, Kafka, Redis, PostgreSQL, Oracle, Docker, Kubernetes, Jenkins, Gradle}
+\skill{AI and MLOps}{SkyPilot, torchrun, NCCL, PyTorch, Transformers, LoRA, MoE, RoPE, KV cache, LangGraph, LangChain, RAG, Chroma, vector databases, MCP}
+\skill{Observability and Quality}{OpenTelemetry, Grafana, Prometheus, Splunk, Dynatrace, k6, Playwright, Cypress, JUnit, Jest}
+
+\end{document}
