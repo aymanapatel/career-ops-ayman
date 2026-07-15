@@ -1,0 +1,296 @@
+%-------------------------
+% Career-Ops LaTeX CV
+% Role: Agentic AI Security and Privacy Research Engineer (KTP Associate 1)
+% Company: Kodamai Ltd / University of Edinburgh
+%-------------------------
+
+\documentclass[a4paper,10pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{xcolor}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[colorlinks=true, urlcolor=blue, linkcolor=blue]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome}
+\usepackage{tikz}
+
+% Theme configuration (edit theme-config.tex to change colors)
+\input{theme-config}
+
+\ifdefined\pdfglyphtounicode
+  \input{glyphtounicode}
+  \pdfgentounicode=1
+\fi
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\color{bodycolor}
+
+\newcommand{\writingHeading}[1]{%
+  \textbf{\color{secondarycolor}#1}\par\vspace{1pt}
+}
+
+\newcommand{\competencyPill}[1]{%
+  \tikz[baseline=(pill.base)]\node[
+    fill=primarycolor!10,
+    draw=primarycolor!25,
+    rounded corners=3pt,
+    inner xsep=5pt,
+    inner ysep=2.5pt
+  ] (pill) {\textcolor{primarycolor}{\scriptsize\bfseries #1}};%
+}
+
+%-------------------------
+% Document
+%-------------------------
+\begin{document}
+
+\begin{center}
+  {\Huge\scshape Ayman Patel}
+  \\ London, UK \\
+  \small
+  \href{mailto:ayman.patel97@gmail.com}{\raisebox{-0.2\height}\faEnvelope\ \underline{ayman.patel97@gmail.com}} ~
+  \href{https://linkedin.com/in/aymanapatel}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/aymanapatel}} ~
+  \href{https://github.com/aymanapatel}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/aymanapatel}} ~
+     \href{https://aymanace2049.hashnode.dev}{\raisebox{-0.2\height}\faLink\ \underline{Blog}} ~
+  \href{https://patelofthought.com/me}{\raisebox{-0.2\height}\faLink\ \underline{patelofthought.com/me}} 
+
+
+\end{center}
+
+%-------------------------
+% Professional Summary
+%-------------------------
+\section{Professional Summary}
+\resumeRoleSummary{Software engineer with 6+ years of production experience at Mastercard and recent specialist training in LLM architectures, agentic systems, and GPU performance engineering at the Nebius AI Engineering Fellowship. Strong fit for Kodamai's KTP role through hands-on work in agent integrity and deterministic controls, secure-by-design software engineering, typed functional programming in Haskell, and active security research writing. Currently completing an MSc in Advanced Computer Science at Queen Mary University of London.}
+
+%-------------------------
+% Core Competencies
+%-------------------------
+\section{Core Competencies}
+\vspace{-2pt}
+\noindent
+\competencyPill{Full stack engineer with full SDLC}\hspace{4pt}
+\competencyPill{Typed Functional Programming}\hspace{4pt}
+\competencyPill{Technical Writing and Research}
+\competencyPill{Agentic Systems}
+\vspace{1pt}
+
+%-------------------------
+% Work Experience
+%-------------------------
+\section{Work Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+  {Nebius Academy}{March 2026 -- May 2026}
+  {AI Engineering Fellow}{London, UK}
+\resumeItemListStart
+  \resumeItem{Built a LangGraph ReAct research agent and added a dataflow integrity check so every claim in the final output is traceable to a tool call, supporting agent and workflow integrity.}
+  \resumeItem{Implemented a Rasa Pro CALM deterministic booking flow where LLMs handle language understanding while Python enforces hard business rules, creating an auditable, traceable confirmation system.}
+  \resumeItem{Designed an MCP shared tool layer so multiple agent clients (LangGraph, Rasa, voice pipeline) discover and call tools dynamically, ensuring consistent state propagation across clients.}
+  \resumeItem{Built a bidirectional handoff bridge between an exploratory LangGraph agent and a deterministic Rasa agent using atomic file IPC to prevent race conditions.}
+  \resumeItem{Deployed distributed data parallel training on Kubernetes across 2$\times$ Nvidia H100 nodes using Docker, SkyPilot, and torchrun.}
+\resumeItemListEnd
+
+\resumeSubheading
+  {Mastercard}{March 2024 -- August 2025}
+  {Senior Software Engineer}{Vadodara, India}
+\resumeItemListStart
+  \resumeItem{Owned platform architecture across React/TypeScript frontends, Spring APIs, caching, observability, CI/CD, and production incident response for payment-system products.}
+  \resumeItem{Translated product manager requirements into technical specifications, user stories, and acceptance criteria for cross-functional engineering teams across multiple countries.}
+  \resumeItem{Developed backend APIs with Spring, Spring Data JPA, and Hibernate, applying API Gateway and Event Sourcing patterns with Kafka for services handling sensitive payment data.}
+  \resumeItem{Implemented Resilience4j circuit breaker and retry patterns across 5+ microservices, improving system availability by 15\%.}
+  \resumeItem{Drove design of a microfrontend platform using Webpack Module Federation, enabling independent deployment of 10+ product modules.}
+  \resumeItem{Owned CI/CD pipelines in Jenkins for staging-to-production delivery and production incident diagnosis using Splunk, Grafana, and Dynatrace, reducing mean time to resolution from days to hours.}
+  \resumeItem{Led accessibility initiatives as Accessibility Champion, lifting WCAG compliance scores by 40\% and coaching 10+ teams on best practices.}
+\resumeItemListEnd
+
+\resumeSubheading
+  {Mastercard}{March 2022 -- February 2024}
+  {Software Engineer II}{Vadodara, India}
+\resumeItemListStart
+  \resumeItem{Built greenfield backend services in Spring and Oracle with Hibernate, and greenfield frontend services in React and TypeScript with Redux and RTK Query.}
+  \resumeItem{Used Burp Suite to identify a DOM XSS vulnerability in an internal application and fixed it by integrating DOMPurify for client-side sanitisation, closing the injection path without breaking existing functionality.}
+  \resumeItem{Served as core maintainer for performance, code quality, and accessibility standards across frontend projects.}
+  \resumeItem{Wrote unit tests with Jest and React Testing Library and end-to-end tests with Playwright and Cypress, achieving 95\% test coverage and reducing CI e2e suite runtime from 8 hours to 3 hours through test splitting, parallel execution, and selective retries.}
+  \resumeItem{Improved UI load performance by 30\% by migrating to an Akamai CDN and built pipelines using Gradle to streamline dependency management and artifact generation.}
+\resumeItemListEnd
+
+\resumeSubheading
+  {Mastercard}{January 2019 -- February 2022}
+  {Software Engineering Intern / Software Engineer I}{Vadodara, India}
+\resumeItemListStart
+  \resumeItem{Designed and implemented RESTful APIs to automate BPM workflows using Camunda, BPMN, DMN, and CMMN standards.}
+  \resumeItem{Developed and maintained Hardware Security Module (HSM) integration for mobile encryption using MDES tokenisation, securing card data transmission across payment flows.}
+  \resumeItem{Implemented a backend image-serving service for MDES CardArt using Spring WebFlux and Reactive Streams, with ImageMagick compression to reduce payload size.}
+  \resumeItem{Practised Test-Driven Development (TDD) to define service behaviour upfront and reduce regressions.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+  % Applied supply-chain security practices to Java/Spring microservices built with Gradle and Jenkins: dependency scanning, reproducible builds, signed artifacts, and maintaining an auditable software bill of materials for third-party libraries.
+
+%-------------------------
+% Personal Projects
+%-------------------------
+\section{Personal Projects}
+\resumeSubHeadingListStart
+
+\resumeProjectHeading
+  {TfL Road Flow Tracker (Haskell)}{}
+\resumeItemListStart
+  \resumeItem{Built a Haskell application that monitors, analyses, and visualises TfL road status data. Features a historical SQLite database, interactive CLI with fuzzy search, geospatial queries using the Haversine formula, and a route recommendation engine based on real-time severity.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+  {Social Network Simulation (Haskell)}{}
+\resumeItemListStart
+  \resumeItem{Built a concurrent social network simulation in Haskell demonstrating threading, Software Transactional Memory (STM), and message passing across 10 concurrent user threads, with spam detection based on message frequency patterns.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+  {Repository Summariser}{}
+\resumeItemListStart
+  \resumeItem{Built a FastAPI and LLM-based service that generates human-readable summaries of GitHub repositories. Extracts code skeletons via AST and Tree-sitter, prioritises source files, and assembles context within a 7000-token limit. Secured admission into the Nebius AI Engineering Fellowship.}
+\resumeItemListEnd
+
+
+\resumeProjectHeading
+  {Tryhackme rooms}{}
+\resumeItemListStart
+  \resumeItem{Complete Tryhackme rooms, gaining experience in 
+  
+
+\begin{itemize}
+    \item Hydra: Perform brute-force and credential-stuffing attacks against login services and protocols. Reinforced understanding of authentication weaknesses and how to design controls that resist automated attacks.
+    \item BurpSuite: Use Repeater and Proxy, to inspect, modify, and replay HTTP requests, assess web authentication and login flows, and investigate common attack vectors such as broken access control, session-management weaknesses, input-validation issues, and authentication vulnerabilities within authorised testing environments.
+\end{itemize}
+  
+  }
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-------------------------
+% Hackathons
+%-------------------------
+\section{Hackathons}
+\resumeSubHeadingListStart
+
+\resumeProjectHeading
+  {SciCRM, London \textit{\color{mutedcolor}July 2026}}{Security Award (€1,000 cash)}
+\resumeItemListStart
+  \resumeItem{Won the security award for most secure build. Built a platform bridging deep science and venture capital/biotech by turning raw academic papers into investor-ready intelligence. The pipeline lets users search in plain English, expands queries into scientific keywords via an AI research agent, searches PubMed, OpenAlex and other publications using Tavily, and returns an instant scorecard with drug target, disease, mechanism and Commercial Viability score.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+  {Encode Hackathon, London}{3rd place}
+\resumeItemListStart
+  \resumeItem{Built Phantom Fraud, an AI-powered financial risk engine for Solana blockchain using Solana CLI, OpenRouter, and Helius APIs.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+  {AI Hackathon, Vadodara}{3rd place}
+\resumeItemListStart
+  \resumeItem{Built a code-review assistant powered by fine-tuned Gemini Pro Vision with a PostgreSQL-backed developer UI. \textit{\color{mutedcolor}March 2025}}
+\resumeItemListEnd
+
+\resumeProjectHeading
+  {AI Hackathon, Vadodara}{2nd place}
+\resumeItemListStart
+  \resumeItem{Developed RAG-based internal documentation search using LangChain and Chroma vector database. \textit{\color{mutedcolor}September 2024}}
+\resumeItemListEnd
+
+\resumeProjectHeading
+  {Technology Hackathon, Vadodara}{2nd place}
+\resumeItemListStart
+  \resumeItem{Migrated a React app to Next.js, leveraging features as Server-side rendering and page routers to improve page performance by 40\%}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-------------------------
+% Writing
+%-------------------------
+\section{Writing}
+
+\writingHeading{\href{https://aymanace2049.hashnode.dev}{Personal Blog}}
+\resumeRoleSummary{40+ technical articles on system design, architecture, infrastructure, databases, observability, and AI/LLMs.}
+\resumeItemListStart
+  \resumeItem{\textbf{\href{https://aymanace2049.hashnode.dev/the-quest-to-improve-supply-chain-security}{The Quest to Improve Supply Chain Security}} -- Blog on how modern software teams can reduce dependency and build-chain risk by tracking third-party libraries, checking known vulnerabilities, documenting what ships inside an application, and verifying software artifacts before release.}
+  \resumeItem{\textbf{\href{https://aymanace2049.hashnode.dev/client-hello-security-all-the-way-down}{Client Hello -- Security All the Way Down}} -- Blog on unencrypted connection metadata can expose user privacy and how newer web standards reduce that risk by protecting more of the browser-to-server setup process.}
+  \resumeItem{\textbf{\href{https://aymanace2049.hashnode.dev/ebpf-unleash-the-linux-kernel}{eBPF -- Unleash the Linux Kernel}} -- Explained how eBPF enables safe kernel-level observability and security without modifying kernel source code; featured in the eBPF newsletter.}
+\resumeItemListEnd
+
+\writingHeading{Mastercard whitepapers}
+\resumeRoleSummary{Internal reference papers on Accessibility and Microfrontend architecture, circulated to 200 engineers and recognised by the CTO.}
+
+%-------------------------
+% Education
+%-------------------------
+\section{Education}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+  {Queen Mary University of London}{September 2025 -- September 2026}
+  {MSc Advanced Computer Science}{London, UK}
+\resumeItemListStart
+  \resumeItem{Coursework includes probabilistic modelling, Bayesian networks, and typed functional programming in Haskell.}
+\resumeItemListEnd
+
+\resumeSubheading
+  {Sardar Vallabhbhai Institute of Technology}{July 2015 -- May 2019}
+  {Bachelor of Computer Science}{Vadodara, India}
+
+\resumeSubHeadingListEnd
+\vspace{2pt}
+%-------------------------
+% Technical Skills
+%-------------------------
+\section{Technical Skills}
+\vspace{-2pt}
+
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{
+\item{
+  \textbf{Agentic AI:} LangGraph, ReAct, MCP, multi-agent orchestration, tool-use integrity, voice pipelines. \\[3pt]
+
+  \textbf{Security:} API integrity, HSM, secure coding, Burp Suite, Hydra, Nmap, DevSecOps, supply chain security, SBOM. \\[3pt]
+
+  \textbf{Typed Foundations:} Haskell, functional programming, STM, type-driven design, Bayesian networks. \\[3pt]
+
+  \textbf{Languages and Frameworks:} Java, Python, Go, TypeScript, JavaScript, React, Spring, FastAPI. \\[3pt]
+
+  \textbf{MLOps and Training:} PyTorch, LoRA, MoE, DDP, torchrun, Docker, Kubernetes, SkyPilot, Container Registry. \\[3pt]
+
+  \textbf{Datbase} PostgreSQL, Redis, MongoDB, Kafka, RabbitMQ, REST APIs, event sourcing. \\[3pt]
+
+  \textbf{Testing and Observability:} Jest, React Testing Library, Cypress, Playwright, JUnit, Grafana, Prometheus, OpenTelemetry, k6.
+}}
+\end{itemize}
+
+
+
+\end{document}

@@ -1,115 +1,141 @@
-# Career-Ops Profile -- Dual-Track Example (Engineer + Instructor)
+# Career-Ops Profile -- Dual-Track Example (Backend + AI/ML Engineer)
 #
-# Fictional persona. Demonstrates how to configure a profile when you are
-# optimizing for TWO archetypes at the same time -- e.g. Senior AI Engineer
-# AND Senior Technical Instructor. See README.md in this folder for the
-# rationale and the interview-objection playbook.
+# Adapted from Ayman Patel's CV. Demonstrates how to configure a profile when
+# you are optimizing for TWO engineering archetypes at the same time -- e.g.
+# Senior Backend Engineer AND Senior AI/ML Engineer. See README.md in this
+# folder for the rationale and the interview-objection playbook.
 #
 # Copy this file to config/profile.yml and edit before using.
 
 candidate:
-  full_name: "Sam Rivera"
-  email: "sam@example.com"
-  phone: "+00-000-0000000"          # placeholder, replace with your real number
-  location: "Berlin, Germany"
-  linkedin: "linkedin.com/in/sam-rivera-example"
-  portfolio_url: "https://sam-rivera.example.dev"
-  github: "github.com/sam-rivera-example"
-  twitter: "https://x.com/sam_rivera_example"
+  full_name: "Ayman Patel"
+  email: "ayman.patel97@gmail.com"
+  phone: "+44 7900 626876"
+  location: "London, United Kingdom"
+  linkedin: "linkedin.com/in/aymanapatel"
+  portfolio_url: "https://patelofthought.com/me"
+  github: "github.com/aymanapatel"
+  website: "aymanace2049.hashnode.dev"
 
 target_roles:
   # North Star -- TWO primary tracks, not one.
   primary:
-    - "Senior AI Engineer"
-    - "Staff AI Engineer"
-    - "Senior Technical Instructor (AI/ML)"
-    - "Lead Curriculum Engineer"
+    - "Senior Backend Engineer"
+    - "Staff Backend Engineer"
+    - "Senior AI/ML Engineer"
+    - "AI Engineer"
   # Archetypes -- note: TWO entries with fit: primary.
   # The evaluator should pick whichever is closer to the JD at scoring time.
   archetypes:
-    - name: "Senior AI Engineer"
+    - name: "Senior Backend Engineer"
       level: "Senior/Staff"
       fit: "primary"
-      track: "engineering"
-      sell_when: "JD emphasizes shipping production AI, agent infra, LangChain/LangGraph, eval systems, ownership of an AI subsystem"
-    - name: "Senior Technical Instructor (AI/ML)"
-      level: "Senior/Lead"
+      track: "backend"
+      sell_when: "JD emphasizes Spring Boot, microservices, payment systems, API design, caching (Redis), observability, CI/CD, Resilience4j, event sourcing with Kafka"
+    - name: "Senior AI/ML Engineer"
+      level: "Senior"
       fit: "primary"
-      track: "teaching"
-      sell_when: "JD emphasizes curriculum, cohort delivery, bootcamp/university lectureship, DevRel education, internal enablement, instructor-led training"
-    - name: "AI DevRel Engineer"
+      track: "ai"
+      sell_when: "JD emphasizes LLM engineering, agent systems (LangGraph/ReAct), fine-tuning (LoRA), inference optimization (KV caching), RAG, MLOps, distributed training, GPU performance"
+    - name: "Senior Full-Stack Engineer"
       level: "Senior"
       fit: "secondary"
-      track: "hybrid"
-      sell_when: "JD wants someone who can ship demos, write docs, AND speak at events / run workshops -- the natural dual-track landing zone"
-    - name: "Head of AI Education / Curriculum Lead"
-      level: "Lead/Manager"
+      track: "fullstack"
+      sell_when: "JD wants someone who can ship both backend (Spring/Java) AND frontend (React/TypeScript) -- the natural Mastercard-era landing zone"
+    - name: "ML Platform / MLOps Engineer"
+      level: "Senior"
       fit: "secondary"
-      track: "teaching"
-      sell_when: "JD wants ownership of an entire curriculum, hiring + managing instructors, working with industry partners"
+      track: "mlops"
+      sell_when: "JD wants distributed training infra, Kubernetes, Docker, CI/CD for ML, observability, containerized pipelines -- bridges backend and AI tracks"
     - name: "Forward Deployed AI Engineer"
       level: "Senior"
       fit: "adjacent"
-      track: "engineering"
-      sell_when: "JD wants client-facing technical work, fast prototyping, customer enablement -- teaching skills become a differentiator here"
+      track: "hybrid"
+      sell_when: "JD wants client-facing technical work, fast prototyping, customer enablement -- backend reliability plus AI depth becomes a differentiator here"
 
 narrative:
   # One-line headline. Names BOTH tracks. The "rare combination" is the value.
-  headline: "Senior AI engineer who also runs the curriculum -- 60K LOC in production, 5,200+ teaching hours, 80+ careers launched"
+  headline: "Backend engineer with 6+ years shipping payment systems at Mastercard, now building production AI -- LoRA fine-tuning, 6.69x inference speedups, and LangGraph agents that verify their own facts"
   # Exit story bridges both tracks into one coherent reason for the move.
-  exit_story: "Spent 4 years running an AI subsystem at a knowledge-graph SaaS in parallel with leading the AI Engineering track at a Berlin bootcamp. Both missions are complete -- now optimizing for a single role that uses both sides, or for one side at full intensity if the team is right."
-  # Superpowers -- mix of engineering AND teaching to reflect the dual track.
+  exit_story: "Spent 6 years building backend and frontend services for Mastercard's payment flows -- microservices, caching, observability, and a microfrontend platform for 10+ product modules. Then completed an AI Engineering Fellowship at Nebius (H100s, distributed training, GPU performance) and started an MSc in Advanced Computer Science at Queen Mary. Both sides are real: I ship production systems AND I understand transformers from scratch. Now optimizing for a role that uses both, or for one side at full intensity if the team is right."
+  # Superpowers -- mix of backend AND AI/ML to reflect the dual track.
   superpowers:
-    - "Ship production AI systems end-to-end (LangChain, LangGraph, Neo4j, Redis)"
-    - "Design curriculum that produces hireable engineers (92% completion, 80+ placed)"
-    - "Explain hard technical material in plain language -- in two languages"
-    - "Run incident reviews and code reviews at scale without burning out the team"
-    - "Bridge engineering and education -- internal docs that people actually read"
-  # Proof points -- mix engineering AND teaching wins, marked by track.
+    - "Ship production backend systems end-to-end (Spring Boot, Kafka, Redis, PostgreSQL, Resilience4j)"
+    - "Build and optimize LLM systems from scratch (LoRA, MoE, RoPE, KV caching, 6.69x inference speedup)"
+    - "Design AI agent architectures with verifiable facts (LangGraph ReAct, MCP tool layers, dataflow integrity checks)"
+    - "Run distributed training on H100 clusters (DDP, torchrun, NCCL, Kubernetes, SkyPilot)"
+    - "Write technical content that people actually read -- 40+ articles, featured in the eBPF newsletter, whitepapers circulated to 200+ engineers"
+  # Proof points -- mix backend AND AI/ML wins, marked by track.
   proof_points:
-    - name: "Knowledge-Graph SaaS AI subsystem"
-      url: "https://sam-rivera.example.dev/case-study-knowledge-graph"
-      hero_metric: "60K LOC owned, 4M+ agent events/month, 38% latency cut"
-      track: "engineering"
-    - name: "agent-skills-kit"
-      url: "https://github.com/sam-rivera-example/agent-skills-kit"
-      hero_metric: "2,400+ GitHub stars, 11 contributors"
-      track: "engineering"
-    - name: "AI Engineering 4-Week Intensive (curriculum)"
-      url: "https://sam-rivera.example.dev/curriculum-ai-eng"
-      hero_metric: "6 cohorts, NPS 71, 92% completion, 80+ careers launched"
-      track: "teaching"
-    - name: "pplx-embed-local-runner"
-      url: "https://github.com/sam-rivera-example/pplx-embed-local-runner"
-      hero_metric: "610 stars, used in 3 lab exercises"
-      track: "hybrid"
+    - name: "Mastercard Microservices Platform"
+      url: "https://github.com/aymanapatel"
+      hero_metric: "Owned 5+ microservices, Resilience4j circuit breakers improved availability 15%, RBAC/SBAC across 5+ products"
+      track: "backend"
+    - name: "Microfrontend Platform (Module Federation)"
+      url: "https://github.com/aymanapatel"
+      hero_metric: "10+ product modules deployed independently, reduced cross-team release coordination"
+      track: "fullstack"
+    - name: "KV Cache Inference Optimization"
+      url: "https://github.com/aymanapatel/nebius-project"
+      hero_metric: "6.69x speedup -- 0.943s to 0.141s for 128 tokens"
+      track: "ai"
+    - name: "LoRA Fine-tuning on GPT-2"
+      url: "https://github.com/aymanapatel/nebius-project"
+      hero_metric: "124M base params frozen, only 811K (0.65%) adapters trained -- 3MB adapter vs 500MB checkpoint"
+      track: "ai"
+    - name: "LangGraph ReAct Research Agent"
+      url: "https://github.com/aymanapatel"
+      hero_metric: "Autonomous tool-calling agent with dataflow integrity check that catches hallucinated outputs automatically"
+      track: "ai"
+    - name: "Technical Blog"
+      url: "https://aymanace2049.hashnode.dev"
+      hero_metric: "40+ articles on system design, microfrontends, eBPF, RAG, observability -- featured in eBPF newsletter"
+      track: "fullstack"
+    - name: "Engineering Whitepapers (Mastercard)"
+      url: ""
+      hero_metric: "Authored whitepapers on Accessibility + Microfrontend Architecture, circulated to 200+ engineers, CTO recognition"
+      track: "backend"
   # Optional dashboard / live demo
   # dashboard:
-  #   url: "https://sam-rivera.example.dev/demo"
+  #   url: "https://ayman.example.dev/demo"
   #   password: "demo-2026"
 
 compensation:
-  # Default range = engineering range (typically higher).
-  target_range: "EUR 95K-130K"
-  currency: "EUR"
-  minimum: "EUR 80K"
-  location_flexibility: "Remote within EU; up to 1 week/month on-site in Berlin or any EU city"
+  # Default range = AI/ML range (typically higher in London market).
+  # Switch to backend range as default if targeting backend-heavy roles.
+  target_range: "GBP 80K-130K"
+  currency: "GBP"
+  minimum: "GBP 55K"
+  location_flexibility: "London. Hybrid or full-time office; open to remote within UK"
 
   # alternate_ranges -- non-standard but the dual-track pattern needs it.
   # The evaluator should pick the range matching the detected archetype track.
   alternate_ranges:
-    - track: "teaching"
-      target_range: "EUR 70K-95K"
-      minimum: "EUR 60K"
-      note: "Teaching roles pay less than engineering. Walk-away is lower because the work is intrinsically rewarding, but not unlimited."
-    - track: "hybrid"
-      target_range: "EUR 90K-120K"
-      minimum: "EUR 75K"
-      note: "DevRel and Forward-Deployed roles -- price between the two tracks."
+    - track: "backend"
+      target_range: "GBP 70K-120K"
+      minimum: "GBP 55K"
+      note: "Backend roles in London for 6+ year senior. Lower walk-away because visa sponsorship roles are the priority."
+    - track: "ai"
+      target_range: "GBP 80K-140K"
+      minimum: "GBP 60K"
+      note: "AI/ML engineering roles command a premium. Higher target reflects LLM/agent specialization."
+    - track: "fullstack"
+      target_range: "GBP 75K-125K"
+      minimum: "GBP 55K"
+      note: "Full-stack roles -- price between backend and AI tracks."
+    - track: "mlops"
+      target_range: "GBP 80K-135K"
+      minimum: "GBP 60K"
+      note: "ML Platform / MLOps roles -- premium for distributed training + Kubernetes + observability combo."
 
 location:
-  country: "Germany"
-  city: "Berlin"
-  timezone: "CET/CEST"
-  visa_status: "EU citizen, no sponsorship needed"
-  onsite_availability: "1 week/month in any EU city; full remote preferred"
+  country: "United Kingdom"
+  city: "London"
+  timezone: "GMT/BST"
+  visa_status: "Skilled Worker visa sponsorship needed (currently on Student visa for MSc)"
+  onsite_availability: "London-based; hybrid preferred, open to full-time office"
+
+cv:
+  output_format: "latex" # "html" (default) or "latex"
+  # (Optional) Canva resume design ID for visual CV generation via /career-ops pdf.
+  # canva_resume_design_id: "DAxxxxxxxxx"

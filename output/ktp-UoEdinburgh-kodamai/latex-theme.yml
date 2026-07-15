@@ -1,0 +1,54 @@
+# LaTeX CV Theme Configuration
+# Used by: output/ktp-UoEdinburgh-kodamai/cv.tex
+# Adjust these values and recompile to change the visual theme.
+
+theme:
+  name: "career-ops-default"
+  base:
+    document_class: "article"
+    paper_size: "a4paper"
+    font_size: "10pt"
+    margins:
+      oddsidemargin_offset: "-0.6in"
+      evensidemargin_offset: "-0.5in"
+      textwidth_offset: "1.19in"
+      topmargin_offset: "-0.7in"
+      textheight_offset: "1.4in"
+
+  colors:
+    # Section title color (teal in HTML version)
+    primary: " teal!70!black"
+    # Accent color for company/project names (purple in HTML version)
+    secondary: "purple!70!black"
+    # Body text
+    body: "black"
+    # Subtle metadata (dates, locations)
+    muted: "black!60"
+    # Section rule
+    rule: "black"
+
+  typography:
+    # Section title style: small caps, bold, large
+    section_style: "scshape raggedright large bfseries"
+    # Name style
+    name_style: "Huge scshape"
+    # Body font size inside lists
+    item_size: "small"
+
+  layout:
+    # Space before section titles
+    section_before: "9pt"
+    # Space after section titles
+    section_after: "4pt"
+    # Space between subheadings
+    subheading_space: "-3pt"
+    # Item spacing
+    item_space: "-3pt"
+
+  features:
+    # Include page numbers? ( career-ops default is no)
+    page_numbers: false
+    # Use hyperlinks? (requires hyperref)
+    hyperlinks: true
+    # ATS compatibility: map glyphs to unicode
+    pdf_gentounicode: true

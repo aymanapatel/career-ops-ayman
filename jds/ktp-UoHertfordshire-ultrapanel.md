@@ -10,9 +10,9 @@ poc:
 
 # Software Developer with AI in Modern Construction 
 
-
-£38,000 - £50,000
-
+## Salary and duration:
+Salary: £38,000 - £50,000
+Duration: todo
 
 
 ### Job sector

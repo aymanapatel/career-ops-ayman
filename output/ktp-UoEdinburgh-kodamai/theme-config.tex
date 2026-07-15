@@ -1,0 +1,44 @@
+% Theme configuration for LaTeX CV
+% Modify the colors below and recompile to change the visual theme.
+
+% --- Color definitions ---
+\definecolor{primarycolor}{HTML}{0D7377}   % teal for section titles
+\definecolor{secondarycolor}{HTML}{6A1B9A} % purple for company/project names
+\definecolor{mutedcolor}{HTML}{666666}     % dates, locations
+\definecolor{bodycolor}{HTML}{1A1A2E}      % body text
+\definecolor{rulecolor}{HTML}{E2E2E2}      % section rule
+
+% --- Section formatting ---
+\titleformat{\section}
+  {\vspace{-7pt}\color{primarycolor}\scshape\raggedright\large\bfseries}
+  {}{0em}{}
+  [\color{rulecolor}\titlerule \vspace{0pt}]
+\titlespacing*{\section}{0pt}{9pt}{4pt}
+
+% --- Custom commands ---
+\newcommand{\resumeItem}[1]{%
+  \item\small{#1 \vspace{-3pt}}%
+}
+\newcommand{\resumeSubheading}[4]{%
+  \vspace{-3pt}\item
+  \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{\color{secondarycolor}#1} & \textbf{\small #2} \\
+    \textit{\small\color{mutedcolor}#3} & \textit{\small\color{mutedcolor}#4} \\
+  \end{tabular*}\vspace{-4pt}%
+}
+\newcommand{\resumeProjectHeading}[2]{%
+  \vspace{-3pt}\item
+  \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{\color{secondarycolor}#1} & \textbf{\small #2} \\
+  \end{tabular*}\vspace{-7pt}%
+}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{0pt}}
+\newcommand{\resumeRoleSummary}[1]{{\small #1\par}\vspace{-2pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}

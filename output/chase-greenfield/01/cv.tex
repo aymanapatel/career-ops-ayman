@@ -5,24 +5,32 @@
 \usepackage{enumitem}
 \usepackage{titlesec}
 \usepackage{tabularx}
+\usepackage{xcolor}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
+
+\definecolor{primarycolor}{HTML}{0D7377}
+\definecolor{secondarycolor}{HTML}{6A1B9A}
+\definecolor{mutedcolor}{HTML}{666666}
+\definecolor{bodycolor}{HTML}{1A1A2E}
+\definecolor{rulecolor}{HTML}{E2E2E2}
 
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
 \setlist[itemize]{leftmargin=1.05em, itemsep=0.25pt, topsep=1pt, parsep=0pt, partopsep=0pt}
-\titleformat{\section}{\normalsize\bfseries\uppercase}{}{0pt}{}[\titlerule]
-\titlespacing*{\section}{0pt}{4pt}{2pt}
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\titleformat{\section}{\color{primarycolor}\normalsize\bfseries}{}{0pt}{}[\color{rulecolor}\titlerule]
+\titlespacing*{\section}{0pt}{6pt}{3pt}
 
 \newcommand{\entry}[4]{%
-  \textbf{#1}\hfill #2\\
-  \textbf{#3}\hfill #4\\[-5pt]
+  \textbf{\color{secondarycolor}#1}\hfill {\small\color{mutedcolor}#2}\\
+  \textbf{#3}\hfill {\small\color{mutedcolor}#4}\\[-5pt]
 }
 
 \newcommand{\project}[2]{%
-  \item \textbf{#1}\\
-  #2
+  \item[] \textbf{\color{secondarycolor}#1}\\[-1pt]
+  {#2}
 }
 
 \newcommand{\skill}[2]{%
@@ -31,16 +39,17 @@
 
 \begin{document}
 \fontsize{8.85}{10.0}\selectfont
+\color{bodycolor}
 
 \begin{center}
-{\Large \textbf{Ayman Patel}}\\[2pt]
-London, UK \textbar{}
-\href{mailto:ayman.patel97@gmail.com}{ayman.patel97@gmail.com} \textbar{}
+{\Huge\scshape Ayman Patel}\\[3pt]
 \href{tel:+447900626876}{+447900626876} \textbar{}
+\href{mailto:ayman.patel97@gmail.com}{ayman.patel97@gmail.com} \textbar{}
 \href{https://linkedin.com/in/aymanapatel}{linkedin.com/in/aymanapatel} \textbar{}
+\href{https://patelofthought.com/me}{patelofthought.com/me} \textbar{}
 \href{https://github.com/aymanapatel}{github.com/aymanapatel} \textbar{}
 \href{https://aymanace2049.hashnode.dev}{aymanace2049.hashnode.dev} \textbar{}
-\href{https://patelofthought.com/me}{patelofthought.com/me}
+London, UK
 \end{center}
 
 \section*{Professional Summary}
@@ -83,7 +92,7 @@ GPA: 7.9/10 &
   \item Implemented a backend image-serving service for MDES CardArt using ImageMagick compression, Spring WebFlux, Reactive Streams, and TDD practices.
 \end{itemize}
 
-\entry{Nebius Academy}{March 2025 - May 2025}{AI Engineering Fellow \textbar{} London, UK}{}
+\entry{Nebius Academy}{March 2026 - May 2026}{AI Engineering Fellow \textbar{} London, UK}{}
 \begin{itemize}
   \item Completed an intensive AI/ML engineering fellowship covering LLM architectures, AI agents, MLOps, distributed training, and GPU performance engineering on Nvidia H100 infrastructure.
   \item Built a transformer language model from scratch, implementing multi-head causal self-attention, feed-forward networks, autoregressive generation, KV caching, and causality checks.
@@ -106,21 +115,28 @@ GPA: 7.9/10 &
 
 \section*{Hackathons}
 \begin{itemize}
-  \project{Encode Hackathon, London - 3rd place}{Built Phantom Fraud, an AI-powered Solana financial risk engine using Solana CLI, OpenRouter, and Helius APIs to detect wash-trading patterns.}
-  \project{AI Hackathon, Vadodara - 3rd place}{Built a code-review assistant powered by fine-tuned Gemini Pro Vision with a PostgreSQL-backed developer UI.}
-  \project{AI Hackathon, Vadodara - 2nd place}{Built RAG-based internal documentation search using LangChain and Chroma.}
+  \project{\{Tech: Europe\} Hackathon, London - Most Secure Build Award}{Built SciCRM, a deep-science CRM that turns raw academic papers into investor-ready intelligence. The pipeline expands plain-English queries such as ``Ozempic in a pill'' into scientific keywords with an AI research agent, searches PubMed/OpenAlex and other publications using Tavily, returns a scorecard with drug target, disease, mechanism, and Commercial Viability score, saves corresponding authors as leads in Attio CRM, and generates one-click R\&D briefs. Recognized by Aikido Security for the most secure codebase with zero issues detected. Partners: Attio, Tavily, Google DeepMind. July 2026.}
+  \project{Encode Hackathon, London - 3rd place}{Built Phantom Fraud, an AI-powered financial risk engine for Solana blockchain using Solana CLI, OpenRouter, and Helius APIs to detect wash-trading patterns.}
+  \project{AI Hackathon, Vadodara, March 2025 - 3rd place}{Built a code-review assistant powered by fine-tuned Gemini Pro Vision with a PostgreSQL-backed developer UI.}
+  \project{AI Hackathon, Vadodara, September 2024 - 2nd place}{Developed RAG-based internal documentation search using LangChain and Chroma vector database.}
   \project{Technology Hackathon, Vadodara - 2nd place}{Migrated a React app to Next.js, improving page performance.}
 \end{itemize}
 
 \section*{Writing}
 \textbf{Technical Blog}
 \begin{itemize}
-  \item \textbf{\href{https://aymanace2049.hashnode.dev}{Personal Blog}:} Published 40+ technical articles on system design, architecture, infrastructure, databases, observability, and AI/LLM systems.
-  \item \textbf{Featured topics:} eBPF, microfrontends, change data capture, RAG with Postgres, LLM observability, OpenRouter, Grafana/LGTM observability, Redis, infrastructure as code, and Localstack.
+  \item \textbf{\href{https://aymanace2049.hashnode.dev}{Personal Blog}:} Published 40+ technical articles on system design, architecture, infrastructure, databases, observability, security, and AI/LLM systems.
+  \item \textbf{Systems and architecture:} Wrote pieces including \textit{eBPF - Unleash the Linux kernel}, \textit{Microfrontends - Decoupling Frontends}, and \textit{Change Data Capture in Microservices}; articles have been featured in the eBPF newsletter.
+  \item \textbf{AI/LLM engineering:} Covered \textit{End to End RAG with Postgres}, \textit{Observability in LLMs}, and \textit{OpenRouter - One Proxy to Rule them All}, connecting model workflows to production engineering concerns.
+  \item \textbf{Infrastructure and security:} Covered \textit{Grafana - One Observability Tool to Rule them All}, \textit{Redis is not just a Cache}, \textit{Infrastructure as Code - A History Primer}, \textit{Localstack: Running AWS Locally}, \textit{The Quest to Improve Supply Chain Security}, and \textit{Client Hello - Security All the Way Down}.
 \end{itemize}
 \textbf{Internal Engineering Writing}
 \begin{itemize}
   \item \textbf{Mastercard whitepapers:} Wrote company-wide whitepapers on Accessibility and Microfrontend architecture; earned CTO recognition, were adopted as internal frontend engineering references, and circulated to 200 engineers.
+\end{itemize}
+\textbf{Academic Writing / Reports}
+\begin{itemize}
+  \item \textbf{\href{https://drive.google.com/file/d/1iKV_xFES7ByKqhxLe3ffbDuWSnKmVFsI/view?usp=sharing}{GitHub Recommendation System}:} Built an undergraduate recommender-system report for GitHub users using collaborative filtering and PySpark over repository contribution data.
 \end{itemize}
 \textbf{Seminars}
 \begin{itemize}
