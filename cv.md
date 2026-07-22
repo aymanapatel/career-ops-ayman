@@ -53,21 +53,30 @@ March 2024 - August 2025
 *Owned platform architecture across React/TypeScript frontends, Spring APIs, caching, observability, CI/CD, and production incident response.*  
 *Translated PM requirements into technical specifications, user stories, and acceptance criteria while driving cross-country delivery across engineering teams.*
 
-- Owned translation of product manager requirements into detailed technical specifications, user stories, and acceptance criteria for cross-functional engineering teams
-- Owned the frontend in React and TypeScript, using Redux Toolkit and RTK Query for scalable state and data-fetching layers
-- Developed backend APIs with Spring, Spring Data JPA, and Hibernate, applying API Gateway and Event Sourcing patterns using Kafka
-- Owned introduction of Redis as a cache layer for Mastercard APIs to optimize response times for frequently accessed data
-- Owned implementation of Resilience4j Circuit Breaker and Retry patterns across 5+ microservices, reducing cascading failures and improving system availability by 15%
-- Drove design of a microfrontend platform using Webpack Module Federation, enabling independent deployment of 10+ product modules
-- Leveraged PostgreSQL JSONB to own flexible, schema-free dynamic form handling
-- Owned product analytics dashboards in Mixpanel, providing stakeholders with KPIs
-- Contributed 5 feature additions and bug fixes to Mastercard's internal design system
-- Led accessibility initiatives as Accessibility Champion, lifting WCAG compliance scores by 40% and coaching 10+ teams on best practices
-- Owned frontend observability using Grafana and OpenTelemetry to surface client-side performance and traceability insights
-- Owned load and performance testing with k6, using InfluxDB as the TSDB to track trends and regressions over time
-- Owned CI/CD pipelines in Jenkins for staging-to-production delivery of artifacts
-- Owned production incident diagnosis using Splunk, Grafana, and Dynatrace, reducing mean time to resolution from days to hours.
-- Led cross-country projects as the de facto frontend/backend architect, UX designer, and product manager, driving alignment across teams and owning end-to-end delivery
+**Microfrontend platform & independent deployment**
+- Drove the design and rollout of a microfrontend platform using **Webpack Module Federation**, splitting a monolithic React frontend into independently deployable product modules.
+- Enabled **10+ product teams** to ship their own modules on separate release cadences without blocking the shell application, cutting cross-team deployment coordination from days to hours.
+- Defined shared dependency boundaries, runtime module discovery, and versioning contracts so teams could upgrade libraries locally without breaking the integrated experience.
+- Built the host shell with React, TypeScript, Redux Toolkit, and RTK Query for consistent state and data-fetching layers, while letting each module own its own build and routing.
+
+**Accessibility champion**
+- Led Mastercard's accessibility initiative as the team's Accessibility Champion, lifting WCAG compliance scores by **40%** across the product suite.
+- Audited React/TypeScript components with axe-core and browser screen readers, then prioritized fixes by user impact and traffic volume.
+- Coached **10+ engineering teams** on accessible patterns (semantic markup, focus management, ARIA best practices) and embedded checks into code review and CI.
+- Contributed **5 accessibility-focused additions and bug fixes** to Mastercard's internal design system, making compliant components the default for new features.
+
+**Frontend performance & observability**
+- Improved UI load performance by **30%** by migrating static assets to an **Akamai CDN** and optimizing bundle delivery for the React application.
+- Introduced **Redis** as a cache layer for frequently accessed API data, reducing redundant backend calls and improving perceived response times for common user journeys.
+- Implemented **Resilience4j Circuit Breaker and Retry** patterns across **5+ microservices**, which reduced cascading failures during downstream outages and improved overall system availability by **15%**.
+- Owned frontend observability with **Grafana and OpenTelemetry**, instrumenting client-side traces and core web vitals so performance regressions were visible before they reached production.
+- Ran load and performance tests with **k6** and stored time-series results in **InfluxDB**, tracking latency trends and catching regressions during release cycles.
+
+**Backend, delivery & incident ownership**
+- Developed backend APIs with **Spring, Spring Data JPA, and Hibernate**, applying API Gateway and event-sourcing patterns using **Kafka** for asynchronous, auditable flows.
+- Leveraged **PostgreSQL JSONB** for flexible, schema-free dynamic form handling, letting business teams add form fields without database migrations.
+- Owned **Jenkins CI/CD pipelines** for staging-to-production delivery and used **Splunk, Grafana, and Dynatrace** to diagnose production incidents, reducing mean time to resolution from days to hours.
+- Led cross-country projects as the de facto frontend/backend architect, UX designer, and product manager, translating PM requirements into technical specs and user stories while driving end-to-end delivery.
 
 ### Mastercard -- Vadodara, India
 **Software Engineer II**  
@@ -106,7 +115,7 @@ January 2019 - June 2019
 - Implemented a backend image-serving service for MDES's CardArt project, improving delivery efficiency for serving card images in MDES APIs
 - Optimized image delivery with ImageMagick compression before serving, reducing payload size and improving response times
 - Enabled non-blocking image delivery using Spring WebFlux and Reactive Streams to support scalable, asynchronous request handling
-- Practiced Test-Driven Development (TDD) to defprojectine expected behavior upfront, improve code reliability, reduce regressions, and support safe refactorings
+- Practiced Test-Driven Development (TDD) to define expected behavior upfront, improve code reliability, reduce regressions, and support safe refactorings
 
 ## Education
 
@@ -124,15 +133,40 @@ January 2019 - June 2019
 
 - **[TfL Road Flow Tracker](https://github.com/aymanapatel/qmul-group-project)** -- Built a Haskell application that monitors, analyzes, and visualizes road status data from Transport for London (TfL). Leverages the TfL Unified API to build a historical SQLite database of traffic disruptions, featuring an interactive CLI with fuzzy search, geospatial queries using the Haversine formula, and a recommendation engine that identifies optimal routes based on real-time severity data. Includes trend analytics to identify worst days and hours for traffic reliability.
 - **[Social Network Simulation](https://github.com/aymanapatel/qmul-socialnetwork-project)** -- Built a concurrent social network simulation in Haskell demonstrating threading, STM (Software Transactional Memory), and message passing. Simulates 10 concurrent user threads exchanging 100 messages, with an extension feature implementing spam detection and filtering based on message frequency patterns.
-- **{Tech: Europe} Hackathon | London, UK — Most Secure Build Award (€1,000 cash)** -- Built a platform bridging deep science and venture capital/biotech by turning raw academic papers into investor-ready intelligence. The pipeline lets users search in plain English (e.g., "Ozempic in a pill"), expands queries into scientific keywords via an AI research agent, searches PubMed, OpenAlex and other publications using Tavily, and returns an instant scorecard with drug target, disease, mechanism and Commercial Viability score. The corresponding author is saved as a lead in Attio CRM, and one click generates an R&D brief; a voice agent enables hands-free review. Recognized by Aikido Security for the most secure codebase with zero issues detected, despite last-minute demo crunch in an npm ecosystem. Partners: Attio, Tavily, Google DeepMind
-- **Encode Hackathon | London, UK (3rd place)** -- Built Phantom Fraud, an AI-powered financial risk engine for Solana blockchain using Solana CLI, OpenRouter, and Helius APIs to detect wash-trading patterns
-- **AI Hackathon | Vadodara, India, March 2025 (3rd place)** -- Built a code-review assistant powered by fine-tuned Gemini Pro Vision with PostgreSQL-backed developer UI
-- **AI Hackathon | Vadodara, India, September 2024 (2nd place)** -- Developed RAG-based internal documentation search using Langchain and Chroma vector database
-- **Technology Hackathon | Vadodara, India (2nd place)** -- Migrated React app to Next.js, improving page performance
+- **[Next.js Notion Clone](https://github.com/aymanapatel/nextjs-notion-clone)** -- Built a full-stack Notion-style workspace in Next.js with real-time collaborative editing, nested documents, and authentication. Focused on app-router patterns, server components, and optimistic UI updates.
+- **[Clone Projects](https://github.com/aymanapatel/clone-projects)** -- Collection of React clone projects recreating popular UIs to practice component composition, state management, and responsive design with modern JavaScript.
+- **[Microfrontend World](https://github.com/aymanapatel/microfrontend-world)** -- Documented and built microfrontend experiments exploring module federation, independent deployment, and runtime integration of multiple frontend applications.
+- **[Optimize Third-Party Script](https://github.com/aymanapatel/optimize-third-party-script)** -- Investigated and implemented patterns for loading third-party scripts in React/Next.js without blocking the main thread, measuring impact on Core Web Vitals.
+- **[Dynamic Forms](https://github.com/aymanapatel/dynamic-forms)** -- Built a schema-driven dynamic form engine in JavaScript that renders complex forms from JSON configuration, supporting validation, conditional fields, and nested sections.
+- **[React Native Projects](https://github.com/aymanapatel/react-native-projects)** -- Collection of React Native experiments covering navigation, native modules, and cross-platform mobile UI patterns.
+
+## Hackathons
+
+- **{Tech: Europe} Hackathon | London, UK | June 2026 | Most Secure Build Award (€1,000 cash)**
+  - Built a platform bridging deep science and venture capital/biotech by turning raw academic papers into investor-ready intelligence.
+  - Users search in plain English (e.g., "Ozempic in a pill"); an AI research agent expands the query into scientific keywords, searches PubMed/OpenAlex via Tavily, and returns an instant scorecard with drug target, disease, mechanism, and Commercial Viability score.
+  - Saved the corresponding author as a lead in Attio CRM; one-click R&D brief generation and a voice agent for hands-free review.
+  - Recognized by Aikido Security for the most secure codebase with zero issues detected, despite last-minute demo crunch in an npm ecosystem.
+  - Partners: Attio, Tavily, Google DeepMind.
+
+- **Encode Hackathon | London, UK | 2025 | 3rd place**
+  - Built **Phantom Fraud**, an AI-powered financial risk engine for the Solana blockchain.
+  - Used Solana CLI, OpenRouter, and Helius APIs to fetch and parse on-chain transactions and detect wash-trading patterns.
+  - Designed heuristics for circular wallet flows, buyer-diversity concentration, and repeated token swaps to flag inorganic volume.
+
+- **AI Hackathon | Vadodara, India | March 2025 | 3rd place**
+  - TODO
+
+- **AI Hackathon | Vadodara, India | September 2024 | 2nd place**
+  - Developed a RAG-based internal documentation search system using LangChain and Chroma vector database.
+  - Chunked internal docs, embedded them, and exposed a Q&A interface that retrieved grounded answers with source references.
+
+- **Technology Hackathon | Vadodara, India | 2023 | 2nd place**
+  - Migrated a React application to Next.js, improving page load performance and enabling server-side rendering and static generation for key routes.
 
 ## Writing
 
-- **Personal Blog** -- 40+ published technical articles on system design and architecture (Link: aymanace2049.hashnode.dev)
+- **Personal Blog** -- 40+ published technical articles on system design and architecture (Link: https://aymanace2049.hashnode.dev/ebpf-unleash-the-linux-kernel)
   - Authored 40+ technical articles featured in the eBPF newsletter; key pieces include eBPF - Unleash the Linux kernel, Microfrontends - Decoupling Frontends, and Change Data Capture in Microservices
   - Wrote AI/LLM-focused articles: End to End RAG with Postgres, Observability in LLMs, and OpenRouter - One Proxy to Rule them All
   - Covered infrastructure and data topics: Grafana - One Observability Tool to Rule them All, Redis is not just a Cache, Infrastructure as Code - A History Primer, and Localstack: Running AWS Locally
