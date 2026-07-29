@@ -1,0 +1,147 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage[margin=0.55in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+
+\definecolor{accent}{HTML}{4B1FA5}
+\definecolor{teal}{HTML}{157A86}
+\definecolor{textgray}{HTML}{333333}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2pt}
+\setlist[itemize]{leftmargin=*, topsep=1pt, itemsep=1pt, parsep=0pt}
+\sloppy
+
+\titleformat{\section}
+  {\large\bfseries\color{teal}\uppercase}
+  {}
+  {0pt}
+  {}
+  [\vspace{-3pt}\titlerule]
+\titlespacing*{\section}{0pt}{7pt}{5pt}
+
+\newcommand{\role}[4]{
+  \textbf{\color{accent}#1} \hfill {\small #2}\\
+  \textit{#3} \hfill {\small \textit{#4}}
+}
+
+\newcommand{\project}[2]{
+  \textbf{\color{accent}#1}\\
+  {\small #2}
+}
+
+\newcommand{\skill}[2]{
+  \textbf{#1:} #2
+}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE \textbf{Ayman Patel}}\\
+  \vspace{2pt}
+  London, UK \quad | \quad
+  \href{mailto:ayman.patel97@gmail.com}{ayman.patel97@gmail.com} \quad | \quad
+  +447900626876 \quad | \quad
+  \href{https://linkedin.com/in/aymanapatel}{linkedin.com/in/aymanapatel}\\
+  \href{https://patelofthought.com/me}{patelofthought.com/me} \quad | \quad
+  \href{https://github.com/aymanapatel}{github.com/aymanapatel}
+\end{center}
+
+\section{Professional Summary}
+{\small
+Senior Frontend Engineer with 6+ years building complex JavaScript single-page applications in React, TypeScript, and Redux for business-critical payment systems at Mastercard. Designed and rolled out a microfrontend platform with Webpack Module Federation that enabled 10+ product teams to deploy independently, and improved UI load performance by 30\% through CDN migration, bundle optimisation, and Core Web Vitals observability. Led engineering-wide initiatives as Accessibility Champion, coaching 10+ teams and publishing frontend architecture whitepapers circulated to 200 engineers. Recently completed the Nebius AI Engineering Fellowship, adding production depth in LLM systems and inference optimisation. Currently completing an MSc in Advanced Computer Science at Queen Mary University of London.
+}
+
+\section{Work Experience}
+\role{Nebius Academy}{March 2026 -- May 2026}{AI Engineering Fellow}{London, UK}
+\begin{itemize}
+  \item Completed an intensive AI engineering fellowship covering LLM architectures, AI agents, MLOps, distributed training, and GPU performance engineering on Nvidia H100 infrastructure.
+  \item Built a complete transformer language model from scratch -- multi-head causal self-attention, feed-forward networks, and autoregressive generation with KV caching -- verifying causality with targeted perturbation tests.
+  \item Optimised LLM inference 6.69x (0.943s to 0.141s for 128 tokens) by implementing KV caching and preallocated sequence buffers; profiled GPU kernels with CUDA events and torch.profiler to target memory-bound bottlenecks.
+  \item Built a LangGraph ReAct research agent with a dataflow integrity check tracing every claim back to a tool call, catching fabricated outputs automatically before they reached users.
+\end{itemize}
+
+\role{Mastercard}{March 2024 -- August 2025}{Senior Software Engineer}{Vadodara, India}
+\begin{itemize}
+  \item Drove the design and rollout of a microfrontend platform using Webpack Module Federation, splitting a monolithic React frontend into independently deployable product modules and enabling 10+ product teams to ship on separate release cadences, cutting cross-team deployment coordination from days to hours.
+  \item Defined shared dependency boundaries, runtime module discovery, and versioning contracts so teams could upgrade libraries without breaking the integrated experience; built the host shell with React, TypeScript, Redux Toolkit, and RTK Query.
+  \item Led Mastercard's accessibility initiative as Accessibility Champion, lifting WCAG compliance scores by 40\%, coaching 10+ engineering teams on accessible patterns, contributing 5 fixes to the internal design system, and embedding checks into code review and CI.
+  \item Owned frontend observability with Grafana and OpenTelemetry, instrumenting client-side traces and Core Web Vitals so performance regressions were visible before production; ran k6 load tests with InfluxDB to track latency trends across release cycles.
+  \item Introduced Redis as a cache layer for frequently accessed API data and implemented Resilience4j circuit breaker and retry patterns across 5+ microservices, improving overall system availability by 15\%.
+  \item Diagnosed complex production incidents across frontend and distributed systems with Splunk, Grafana, and Dynatrace, reducing mean time to resolution from days to hours.
+  \item Led cross-country delivery as de facto frontend architect, UX designer, and product manager, translating PM requirements into technical specifications, user stories, and acceptance criteria.
+\end{itemize}
+
+\role{Mastercard}{March 2022 -- February 2024}{Software Engineer II}{Vadodara, India}
+\begin{itemize}
+  \item Built greenfield frontend services in React and TypeScript with Redux and RTK Query, serving as core maintainer for performance, code quality, and accessibility standards across frontend projects.
+  \item Wrote unit tests with Jest and React Testing Library and end-to-end tests with Playwright and Cypress, achieving 95\% test coverage; reduced CI e2e suite runtime from 8 hours to 3 hours through test splitting, parallel execution, selective retries, and environment-level caching.
+  \item Improved UI load performance by 30\% by migrating static assets to an Akamai CDN and optimising bundle delivery.
+  \item Designed high-fidelity Figma prototypes to align product managers and stakeholders, creating UX direction in 2 days in the absence of a dedicated UX designer.
+  \item Steered RBAC and status-based access control across 5+ products under urgent delivery pressure within 2 weeks.
+\end{itemize}
+
+\role{Mastercard}{January 2019 -- February 2022}{Software Engineer I / Software Engineering Intern}{Vadodara, India}
+\begin{itemize}
+  \item Designed and implemented RESTful APIs to automate BPM workflows using Camunda, BPMN, DMN, and CMMN.
+  \item Developed Hardware Security Module integration for mobile encryption using MDES tokenisation, securing card data transmission across payment flows.
+  \item Implemented a backend image-serving service using Spring WebFlux and Reactive Streams with ImageMagick compression, practising TDD to reduce regressions and support safe refactoring.
+\end{itemize}
+
+\section{Personal Projects}
+\project{Microfrontend World \small{(\href{https://github.com/aymanapatel/microfrontend-world}{GitHub})}}{Documented and built microfrontend experiments exploring Webpack Module Federation, independent deployment, and runtime integration of multiple frontend applications.}
+
+\vspace{2pt}
+\project{Next.js Notion Clone \small{(\href{https://github.com/aymanapatel/nextjs-notion-clone}{GitHub})}}{Built a full-stack Notion-style workspace in Next.js with real-time collaborative editing, nested documents, and authentication, focusing on app-router patterns, server components, server-side rendering, and optimistic UI updates.}
+
+\vspace{2pt}
+\project{Go Microservices \small{(\href{https://github.com/aymanapatel/golang-microservices}{GitHub})}}{Built a progressive Go microservices project spanning standard-library REST APIs, Gorilla Mux with custom request validation, Swagger/OpenAPI documentation, Envoy-based service mesh and load balancing with Kubernetes/WASM filters, and gRPC.}
+
+\vspace{2pt}
+\project{Java CLI with GraalVM \small{(\href{https://github.com/aymanapatel/java-cli}{GitHub})}}{Built a Java CLI tool using the Picocli framework to query the Stack Overflow API, then compiled it to a native binary with GraalVM for zero-JVM-startup execution.}
+
+\vspace{2pt}
+\project{Repository Summariser \small{(\href{https://github.com/aymanapatel/nebius-project}{GitHub})}}{Built a FastAPI and LLM-based service that generates human-readable summaries of GitHub repositories, extracting code skeletons via AST and Tree-sitter to fit a 7000-token budget. This project secured admission into the Nebius AI Engineering Fellowship.}
+
+\vspace{2pt}
+\project{React Native Projects \small{(\href{https://github.com/aymanapatel/react-native-projects}{GitHub})}}{Collection of React Native experiments covering navigation, native modules, and cross-platform mobile UI patterns.}
+
+\section{Hackathons}
+\begin{itemize}
+  \item \textbf{\{Tech: Europe\} Hackathon, London -- Most Secure Build Award (EUR 1,000), 2026:} Built a platform turning raw academic papers into investor-ready intelligence; an AI research agent expanded plain-English queries, searched PubMed/OpenAlex, and returned commercial viability scorecards. Recognised by Aikido Security for the most secure codebase with zero issues detected. Partners: Attio, Tavily, Google DeepMind.
+  \item \textbf{Encode Hackathon, London -- 3rd place, 2025:} Built Phantom Fraud, an AI-powered financial risk engine for the Solana blockchain, detecting wash-trading patterns via circular wallet flow and buyer-diversity heuristics.
+  \item \textbf{Technology Hackathon -- 2nd place, 2023:} Migrated a React application to Next.js, improving page load performance and enabling server-side rendering and static generation for key routes.
+  \item \textbf{AI Hackathon, Vadodara -- 2nd place, 2024:} Developed a RAG-based internal documentation search system using LangChain and Chroma vector database with grounded source references.
+\end{itemize}
+
+\section{Education}
+\textbf{MSc Advanced Computer Science}, Queen Mary University of London \hfill {\small September 2025 -- September 2026}\\
+\textbf{Bachelor of Computer Science}, Sardar Vallabhbhai Institute of Technology \hfill {\small July 2015 -- May 2019}\\
+{\small GPA: 7.9/10}
+
+\section{Writing and Talks}
+\begin{itemize}
+  \item \textbf{Personal blog} \small{(\href{https://aymanace2049.hashnode.dev}{aymanace2049.hashnode.dev})}: Published 40+ technical articles on system design and architecture, featured in the eBPF newsletter; key pieces on microfrontends, RAG, LLM observability, Redis, change data capture, and eBPF.
+  \item \textbf{Mastercard whitepapers:} Produced company-wide whitepapers on Accessibility and Microfrontend architecture, recognised by the CTO, adopted as internal frontend engineering reference material, and circulated to 200 engineers.
+  \item \textbf{Technical seminars:} Delivered talks on the Kafka ecosystem (architecture, Kafka Streams, Kafka Connect, AMQP) and on Git and version control best practices at Parul University.
+\end{itemize}
+
+\section{Technical Skills}
+{\small
+\skill{Frontend}{React, Redux Toolkit, RTK Query, TypeScript, JavaScript (ES6+), Next.js, server-side rendering, Progressive Web Apps (PWA), Service Workers, Webpack, Module Federation, microfrontends, single-page applications, Figma}\\
+\skill{Testing and CI}{Jest, React Testing Library, Cypress, Playwright, automated testing, continuous integration, Jenkins, GitHub Actions}\\
+\skill{Performance and Observability}{Core Web Vitals, frontend performance optimisation, Grafana, OpenTelemetry, k6, Splunk, Dynatrace, Prometheus}\\
+\skill{Backend and Data}{Java, Spring, Python, Go, FastAPI, REST APIs, PostgreSQL, Redis, Kafka, MongoDB}\\
+\skill{AI and ML}{PyTorch, Transformers, LoRA, KV Cache, LangChain, RAG, AI agents, MCP}\\
+\skill{Cloud and DevOps}{Docker, Kubernetes, AWS, Terraform, Localstack}
+}
+
+\end{document}
