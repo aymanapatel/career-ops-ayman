@@ -139,6 +139,7 @@ January 2019 - June 2019
 - **[Optimize Third-Party Script](https://github.com/aymanapatel/optimize-third-party-script)** -- Investigated and implemented patterns for loading third-party scripts in React/Next.js without blocking the main thread, measuring impact on Core Web Vitals.
 - **[Dynamic Forms](https://github.com/aymanapatel/dynamic-forms)** -- Built a schema-driven dynamic form engine in JavaScript that renders complex forms from JSON configuration, supporting validation, conditional fields, and nested sections.
 - **[React Native Projects](https://github.com/aymanapatel/react-native-projects)** -- Collection of React Native experiments covering navigation, native modules, and cross-platform mobile UI patterns.
+- **[GitHub Repository Recommendation Engine](https://drive.google.com/file/d/1iKV_xFES7ByKqhxLe3ffbDuWSnKmVFsI/view?usp=sharing)** -- Built a collaborative filtering recommendation system for GitHub repositories, implementing and benchmarking nearest-neighbour (Euclidean, Cosine, Pearson correlation) and ALS-based matrix factorization on implicit feedback (repo stars) across a 980-repository Kaggle dataset using PySpark. Evaluated model accuracy with the Surprise library via 5-fold cross-validation, achieving an RMSE of 0.77 and MAE of 0.59 with cosine-similarity KNN, matching Pearson-baseline performance.
 
 ## Hackathons
 
@@ -166,14 +167,8 @@ January 2019 - June 2019
 
 ## Writing
 
-- **Personal Blog** -- 40+ published technical articles on system design and architecture (Link: https://aymanace2049.hashnode.dev/ebpf-unleash-the-linux-kernel)
-  - Authored 40+ technical articles featured in the eBPF newsletter; key pieces include eBPF - Unleash the Linux kernel, Microfrontends - Decoupling Frontends, and Change Data Capture in Microservices
-  - Wrote AI/LLM-focused articles: End to End RAG with Postgres, Observability in LLMs, and OpenRouter - One Proxy to Rule them All
-  - Covered infrastructure and data topics: Grafana - One Observability Tool to Rule them All, Redis is not just a Cache, Infrastructure as Code - A History Primer, and Localstack: Running AWS Locally
+- **[Personal Blog](https://patelofthought.com/blog)** -- 40+ published technical articles spanning AI/LLM systems, observability, and distributed data infrastructure, breaking down production tradeoffs behind the code; work featured in industry newsletters, including eBPF, among others.
 - **Frontend engineering whitepapers** -- Produced company-wide whitepapers on Accessibility and Microfrontend architecture; earned CTO recognition, were adopted as internal frontend engineering reference material, and were circulated to 200 engineers
-- **Undergraduate project - Recommendation System for Github [Project Link](https://drive.google.com/file/d/1iKV_xFES7ByKqhxLe3ffbDuWSnKmVFsI/view?usp=sharing)}** -- Build a recommender systems for GitHub users. Use techniques like
-collaborative filtering techniques. Used PySpark on Github repos to match
-user’s contributions with the repositories they should be recommended. 
 - **Undergraduate seminar -  Kafka [Report Link](https://drive.google.com/file/d/1txqBQZaRxxT7wu5csBuIHUfi8DrRvUMU/view?usp=sharing)}** -- Delivered college seminar on Event Driven Architecture using Apache Kafka which
 included topics such as Kafka Architecture, AMQP, Kafka Streams and Kafka
 Connect
