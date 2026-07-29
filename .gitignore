@@ -50,3 +50,4 @@ package-lock.json
 
 # output pdf ignore
 *output/*pdf
+*cover-letter.pdf
