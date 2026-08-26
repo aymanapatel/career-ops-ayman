@@ -47,11 +47,6 @@ career-dashboard
 package-lock.json
 
 
-# output pdf ignore
-*cover-letter.pdf
-
-
-# PDFs
-
-# *pdf
+# Generated PDFs (CVs, cover letters, reports)
+output/**/*.pdf
 
