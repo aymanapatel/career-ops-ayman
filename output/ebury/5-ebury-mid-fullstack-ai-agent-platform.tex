@@ -1,0 +1,162 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[margin=0.55in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{tabularx}
+
+\ifdefined\pdfglyphtounicode
+  \input{glyphtounicode}
+  \pdfgentounicode=1
+\fi
+
+\definecolor{accent}{HTML}{4B1FA5}
+\definecolor{teal}{HTML}{157A86}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2pt}
+\setlist[itemize]{leftmargin=*, topsep=1pt, itemsep=1pt, parsep=0pt}
+\raggedright
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\emergencystretch=3em
+\sloppy
+
+\titleformat{\section}{\large\bfseries\color{teal}\uppercase}{}{0pt}{}[\vspace{-3pt}\titlerule]
+\titlespacing*{\section}{0pt}{7pt}{5pt}
+
+\newcommand{\resumeItem}[1]{\item {\small #1}}
+\newcommand{\resumeSubheading}[4]{
+  \item
+  \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & {\small #2} \\
+    \textit{\small #3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-4pt}
+}
+\newcommand{\resumeProjectHeading}[2]{
+  \item
+  \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & {\small #2} \\
+  \end{tabular*}\vspace{-6pt}
+}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in,label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE \textbf{Ayman Patel}}\\
+  \vspace{2pt}
+  {\small Full-Stack Engineer | React, Python, and AI Agents}\\
+  {\small London, UK \quad | \quad +44 7900 626876 \quad | \quad
+  \href{mailto:ayman.patel97@gmail.com}{ayman.patel97@gmail.com} \quad | \quad
+  \href{https://linkedin.com/in/aymanapatel}{linkedin.com/in/aymanapatel}}\\
+  {\small \href{https://github.com/aymanapatel}{github.com/aymanapatel} \quad | \quad
+  \href{https://patelofthought.com/me}{patelofthought.com/me}}
+\end{center}
+
+\section{Professional Summary}
+{\small Full-Stack Engineer with 6+ years of production experience across React, TypeScript, Spring, REST APIs, Kafka, testing, and CI/CD at Mastercard. Built a FastAPI and LLM repository summarizer, LangGraph agent workflows with tool-log verification, an MCP shared tool layer, and a RAG-based documentation search system. Strong testing record includes 95\% coverage and reducing an end-to-end CI suite from eight hours to three. Currently completing an MSc in Advanced Computer Science at Queen Mary University of London.}
+
+\section{Core Competencies}
+{\small React and TypeScript \textbar{} Python and FastAPI project work \textbar{} LangGraph, RAG, and MCP \textbar{} REST APIs and asynchronous flows \textbar{} PostgreSQL, MongoDB, and Redis \textbar{} Jest, Playwright, and Cypress \textbar{} Module Federation and Vite \textbar{} AWS, Docker, Kubernetes, and Terraform}
+
+\section{Work Experience}
+\resumeSubHeadingListStart
+    \resumeSubheading
+      {Nebius Academy}{London, UK}
+      {AI Engineering Fellow}{March 2026 - May 2026}
+      \resumeItemListStart
+        \resumeItem{Built a LangGraph ReAct research agent that plans its tool-calling sequence, then added a dataflow integrity check that verifies every number in the final output against the tool log.}
+        \resumeItem{Designed an MCP shared tool layer so LangGraph, Rasa, and voice clients discover and call the same tools dynamically without duplicating tool logic.}
+        \resumeItem{Implemented a Rasa Pro CALM deterministic booking flow and a bidirectional handoff bridge between exploratory and deterministic agents using atomic file IPC.}
+        \resumeItem{Improved LLM generation time from 0.943s to 0.141s for 128 tokens, a 6.69x speedup, by implementing KV caching and preallocated sequence buffers.}
+        \resumeItem{Completed an intensive four-module fellowship covering LLM architectures, AI agents, MLOps, and GPU performance engineering; built 12+ systems on NVIDIA H100 infrastructure.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Mastercard}{Vadodara, India}
+      {Senior Software Engineer}{March 2024 - August 2025}
+      \resumeItemListStart
+        \resumeItem{Built the host shell with React, TypeScript, Redux Toolkit, and RTK Query; defined shared dependency boundaries, runtime module discovery, and versioning contracts.}
+        \resumeItem{Drove the design and rollout of a Webpack Module Federation microfrontend platform, enabling 10+ product teams to deploy modules independently and reducing cross-team coordination from days to hours.}
+        \resumeItem{Developed Spring, Spring Data JPA, and Hibernate APIs using API Gateway and Kafka event-sourcing patterns for asynchronous, auditable flows.}
+        \resumeItem{Improved UI load performance by 30\% through Akamai CDN migration and bundle delivery work; introduced Redis caching for frequently accessed API data.}
+        \resumeItem{Owned frontend observability with Grafana and OpenTelemetry and ran k6 performance tests with InfluxDB to expose regressions during release cycles.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Mastercard}{Vadodara, India}
+      {Software Engineer II}{March 2022 - February 2024}
+      \resumeItemListStart
+        \resumeItem{Built greenfield backend services in Spring and Oracle with Hibernate and greenfield frontend services in React and TypeScript with Redux and RTK Query.}
+        \resumeItem{Wrote Jest, React Testing Library, Playwright, and Cypress tests, achieving 95\% test coverage and reducing the CI end-to-end suite from eight hours to three through splitting, parallel execution, retries, and caching.}
+        \resumeItem{Designed high-fidelity Figma prototypes to align product managers and stakeholders, producing UX direction in two days when no dedicated UX designer was available.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Mastercard}{Vadodara, India}
+      {Software Engineer I}{July 2019 - February 2022}
+      \resumeItemListStart
+        \resumeItem{Designed REST APIs for Camunda workflow automation and modelled business logic with BPMN, DMN, and CMMN.}
+        \resumeItem{Developed and maintained Hardware Security Module integration for mobile encryption using MDES tokenisation, securing card data transmission across payment flows.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Mastercard}{Vadodara, India}
+      {Software Engineering Intern}{January 2019 - June 2019}
+      \resumeItemListStart
+        \resumeItem{Built a backend image-serving service for MDES CardArt, using ImageMagick compression, Spring WebFlux, Reactive Streams, and test-driven development.}
+      \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\section{Personal Projects}
+\resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\href{https://github.com/aymanapatel/nebius-project}{Repository Summarizer}}{FastAPI, Python, LLMs, AST, Tree-sitter}
+      \resumeItemListStart
+        \resumeItem{Built a FastAPI and LLM service that extracts code skeletons with AST and Tree-sitter, prioritizes source files, and assembles repository context within a 7000-token limit.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\href{https://github.com/aymanapatel/microfrontend-world}{Microfrontend World}}{React, TypeScript, Webpack Module Federation}
+      \resumeItemListStart
+        \resumeItem{Built and documented experiments in Module Federation, independent frontend deployment, and runtime integration of multiple applications.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\href{https://github.com/aymanapatel/nextjs-notion-clone}{Next.js Notion Clone}}{Next.js, React, real-time collaboration}
+      \resumeItemListStart
+        \resumeItem{Built a collaborative workspace with nested documents, authentication, App Router patterns, server components, and optimistic UI updates.}
+      \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Queen Mary University of London}{London, UK}
+    {MSc Advanced Computer Science}{September 2025 - September 2026}
+  \resumeSubheading
+    {Sardar Vallabhbhai Institute of Technology}{Vadodara, India}
+    {Bachelor of Computer Science; GPA: 7.9/10}{July 2015 - May 2019}
+\resumeSubHeadingListEnd
+
+\section{Technical Skills}
+{\small
+    \textbf{Frontend:} React, TypeScript, Redux Toolkit, RTK Query, Next.js, Vite, Webpack, Module Federation, Figma \\
+    \textbf{Backend:} Java, Spring, Spring Data JPA, Hibernate, Python, FastAPI, Django, Go, REST APIs, Microservices, Event Sourcing, CQRS \\
+    \textbf{Data and Events:} PostgreSQL, Oracle, MongoDB, Redis, Kafka, RabbitMQ, Debezium, Change Data Capture \\
+    \textbf{Cloud and DevOps:} AWS (S3, Lambda, EC2), Docker, Kubernetes, Terraform, Jenkins, Gradle, SkyPilot \\
+    \textbf{Testing:} JUnit, Mockito, Jest, React Testing Library, Cypress, Playwright, Testcontainers \\
+    \textbf{Observability:} Grafana, Prometheus, Splunk, Dynatrace, OpenTelemetry, eBPF \\
+    \textbf{AI and ML:} PyTorch, Transformers, LoRA, Mixture of Experts, RoPE, KV Cache, Scikit-learn, Random Forest, SMOTE \\
+    \textbf{AI Agents:} LangChain, RAG, Vector Databases, Multi-Agent Systems, ReAct, MCP \\
+}
+
+\end{document}

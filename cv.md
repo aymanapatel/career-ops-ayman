@@ -124,22 +124,30 @@ January 2019 - June 2019
 
 ## Projects
 
+- **[Web Accessibility Repair Platform](https://github.com/aymanapatel/rl-a11y)** -- Architected an end-to-end web-accessibility platform using LLM-guided Browser Use and Playwright to navigate public/authenticated pages and collect aligned HTML, axe-core, accessibility-tree, visual and screenshot data for 704 webpages; trained routed GAT/GraphSAGE specialists and generated schema-constrained repairs through FastAPI/React, improving page-level F1 by 34.1 points and rule-level F1 by 30.6 points over the initial architecture.
 - **[Nebius Project](https://github.com/aymanapatel/nebius-project)** -- Built a Repository Summarizer service using FastAPI and LLMs that generates human-readable summaries of GitHub repositories. Extracts code skeletons via AST and Tree-sitter to fit within token budgets, intelligently prioritizes source files, and assembles context within a 7000-token limit. This project secured admission into the Nebius AI Engineering Fellowship
-- **Credit Card Fraud Analytics ([Report](https://github.com/aymanapatel/qmul-all-projects/blob/main/data-analytics/coursework1/credit-card-report.pdf), [Notebook](https://github.com/aymanapatel/qmul-all-projects/blob/main/data-analytics/coursework1/credit-card-notebook.ipynb))** -- Built a fraud-detection analysis on the IEEE-CIS credit card dataset, merging 590,540 transactions across 434 transaction and identity features, identifying severe class imbalance at a 3.5% fraud rate, and reducing the feature space to the strongest predictors such as card, product, amount, identity, and temporal signals. Tuned Random Forest models with SMOTE variants and threshold optimization; the best model achieved 96.9% test accuracy, 0.503 F1, 0.541 precision, 0.470 recall, and 0.879 ROC-AUC on a strict chronological test split.
-- **[Java CLI using GraalVM](https://github.com/aymanapatel/java-cli)** -- Built a Java CLI tool using the Picocli framework to query the Stack Overflow API, then compiled it to a native binary with GraalVM for zero-JVM-startup execution
 - **[Go Microservices](https://github.com/aymanapatel/golang-microservices)** -- Built a progressive Go microservices project spanning standard-library REST APIs, Gorilla Mux with custom request validation, Swagger/OpenAPI documentation, Envoy-based service mesh/load balancing with K8s/WASM filters, and gRPC
-- **[RL Accessibility](https://github.com/aymanapatel/rl-a11y)** -- Applied reinforcement learning to improve web accessibility by training agents to identify and fix WCAG violations automatically
-- **[Java GraphQL](https://github.com/aymanapatel/java-graphql)** -- Developed a production-oriented Spring Boot GraphQL service demonstrating advanced patterns including query-depth DDOS protection, cursor-based pagination, file upload mutations, DataLoader N+1 resolution, and execution tracing with full JUnit 5 integration tests
+- **[Java CLI using GraalVM](https://github.com/aymanapatel/java-cli)** -- Built a Java CLI tool using the Picocli framework to query the Stack Overflow API, then compiled it to a native binary with GraalVM for zero-JVM-startup execution
 
-- **[TfL Road Flow Tracker](https://github.com/aymanapatel/qmul-group-project)** -- Built a Haskell application that monitors, analyzes, and visualizes road status data from Transport for London (TfL). Leverages the TfL Unified API to build a historical SQLite database of traffic disruptions, featuring an interactive CLI with fuzzy search, geospatial queries using the Haversine formula, and a recommendation engine that identifies optimal routes based on real-time severity data. Includes trend analytics to identify worst days and hours for traffic reliability.
-- **[Social Network Simulation](https://github.com/aymanapatel/qmul-socialnetwork-project)** -- Built a concurrent social network simulation in Haskell demonstrating threading, STM (Software Transactional Memory), and message passing. Simulates 10 concurrent user threads exchanging 100 messages, with an extension feature implementing spam detection and filtering based on message frequency patterns.
-- **[Next.js Notion Clone](https://github.com/aymanapatel/nextjs-notion-clone)** -- Built a full-stack Notion-style workspace in Next.js with real-time collaborative editing, nested documents, and authentication. Focused on app-router patterns, server components, and optimistic UI updates.
-- **[Clone Projects](https://github.com/aymanapatel/clone-projects)** -- Collection of React clone projects recreating popular UIs to practice component composition, state management, and responsive design with modern JavaScript.
-- **[Microfrontend World](https://github.com/aymanapatel/microfrontend-world)** -- Documented and built microfrontend experiments exploring module federation, independent deployment, and runtime integration of multiple frontend applications.
-- **[Optimize Third-Party Script](https://github.com/aymanapatel/optimize-third-party-script)** -- Investigated and implemented patterns for loading third-party scripts in React/Next.js without blocking the main thread, measuring impact on Core Web Vitals.
-- **[Dynamic Forms](https://github.com/aymanapatel/dynamic-forms)** -- Built a schema-driven dynamic form engine in JavaScript that renders complex forms from JSON configuration, supporting validation, conditional fields, and nested sections.
-- **[React Native Projects](https://github.com/aymanapatel/react-native-projects)** -- Collection of React Native experiments covering navigation, native modules, and cross-platform mobile UI patterns.
-- **[GitHub Repository Recommendation Engine](https://drive.google.com/file/d/1iKV_xFES7ByKqhxLe3ffbDuWSnKmVFsI/view?usp=sharing)** -- Built a collaborative filtering recommendation system for GitHub repositories, implementing and benchmarking nearest-neighbour (Euclidean, Cosine, Pearson correlation) and ALS-based matrix factorization on implicit feedback (repo stars) across a 980-repository Kaggle dataset using PySpark. Evaluated model accuracy with the Surprise library via 5-fold cross-validation, achieving an RMSE of 0.77 and MAE of 0.59 with cosine-similarity KNN, matching Pearson-baseline performance.
+## Talks / Seminars
+
+- **Seminar: Kafka Ecosystem** (October 2018) -- Delivered a technical seminar covering Kafka Architecture, Kafka Streams, Kafka Connect, and AMQP messaging patterns
+- **Seminar: Git and Version Control Systems** -- Presented an introductory talk on Git workflows and VCS best practices for undergraduate students at Parul University
+
+## Skills
+
+- **Frontend:** React, TypeScript, Redux Toolkit, RTK Query, Next.js, Vite, Webpack, Module Federation, Figma
+- **Backend:** Spring, Spring Data JPA, Hibernate, Java, Python, Go, FastAPI, Django, Quarkus, REST APIs, Microservices, Event Sourcing, CQRS
+- **Databases & Events:** PostgreSQL, Oracle, MongoDB, Redis, Kafka, RabbitMQ, Debezium, Change Data Capture
+- **Cloud & DevOps:** AWS (S3, Lambda, EC2), Docker, Kubernetes, Terraform, Localstack, Ansible, PCF, Jenkins, Gradle
+- **Testing:** JUnit, Mockito, Jest, React Testing Library, Cypress, Playwright, Testcontainers
+- **Observability:** Grafana, Prometheus, Splunk, Dynatrace, OpenTelemetry, eBPF
+- **Machine Learning:** PyTorch, Scikit-learn, Transformers, LoRA, Mixture of Experts (MoE), RoPE, KV Cache, Attention Mechanisms, Fine-tuning, Random Forest, SMOTE
+- **AI/LLM Engineering:** LLM APIs, Langchain, Chroma, RAG, Vector Databases, Multi-Agent Systems, ReAct Pattern, MCP (Model Context Protocol)
+- **MLOps & Distributed Training:** DDP, torchrun, NCCL, Kubernetes (Nebius MK8S), SkyPilot, Docker, Container Registry, bf16 Mixed Precision
+- **GPU Performance:** CUDA Profiling, Roofline Model, Kernel Fusion, torch.compile, Memory-Bound vs Compute-Bound Optimization, H100 Inference Optimization
+- **Big Data:** Pandas, Polar, DuckDB, Parquet
+- **Other:** Camunda, BPMN, DMN, CMMN, Mixpanel, CDN
 
 ## Hackathons
 
@@ -172,24 +180,3 @@ January 2019 - June 2019
 - **Undergraduate seminar -  Kafka [Report Link](https://drive.google.com/file/d/1txqBQZaRxxT7wu5csBuIHUfi8DrRvUMU/view?usp=sharing)}** -- Delivered college seminar on Event Driven Architecture using Apache Kafka which
 included topics such as Kafka Architecture, AMQP, Kafka Streams and Kafka
 Connect
-
-
-## Talks / Seminars
-
-- **Seminar: Kafka Ecosystem** (October 2018) -- Delivered a technical seminar covering Kafka Architecture, Kafka Streams, Kafka Connect, and AMQP messaging patterns
-- **Seminar: Git and Version Control Systems** -- Presented an introductory talk on Git workflows and VCS best practices for undergraduate students at Parul University
-
-## Skills
-
-- **Frontend:** React, TypeScript, Redux Toolkit, RTK Query, Next.js, Vite, Webpack, Module Federation, Figma
-- **Backend:** Spring, Spring Data JPA, Hibernate, Java, Python, Go, FastAPI, Django, Quarkus, REST APIs, Microservices, Event Sourcing, CQRS
-- **Databases & Events:** PostgreSQL, Oracle, MongoDB, Redis, Kafka, RabbitMQ, Debezium, Change Data Capture
-- **Cloud & DevOps:** AWS (S3, Lambda, EC2), Docker, Kubernetes, Terraform, Localstack, Ansible, PCF, Jenkins, Gradle
-- **Testing:** JUnit, Mockito, Jest, React Testing Library, Cypress, Playwright, Testcontainers
-- **Observability:** Grafana, Prometheus, Splunk, Dynatrace, OpenTelemetry, eBPF
-- **Machine Learning:** PyTorch, Scikit-learn, Transformers, LoRA, Mixture of Experts (MoE), RoPE, KV Cache, Attention Mechanisms, Fine-tuning, Random Forest, SMOTE
-- **AI/LLM Engineering:** LLM APIs, Langchain, Chroma, RAG, Vector Databases, Multi-Agent Systems, ReAct Pattern, MCP (Model Context Protocol)
-- **MLOps & Distributed Training:** DDP, torchrun, NCCL, Kubernetes (Nebius MK8S), SkyPilot, Docker, Container Registry, bf16 Mixed Precision
-- **GPU Performance:** CUDA Profiling, Roofline Model, Kernel Fusion, torch.compile, Memory-Bound vs Compute-Bound Optimization, H100 Inference Optimization
-- **Big Data:** Pandas, Polar, DuckDB, Parquet
-- **Other:** Camunda, BPMN, DMN, CMMN, Mixpanel, CDN

@@ -1,0 +1,228 @@
+% Tailored CV: MPFT Applications Developer, Band 6
+\documentclass[a4paper,10pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome}
+\ifdefined\pdfglyphtounicode
+  \input{glyphtounicode}
+  \pdfgentounicode=1
+\fi
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\addtolength{\oddsidemargin}{-0.55in}
+\addtolength{\evensidemargin}{-0.55in}
+\addtolength{\textwidth}{1.1in}
+\addtolength{\topmargin}{-0.7in}
+\addtolength{\textheight}{1.4in}
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-6pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{1pt}]
+\titlespacing*{\section}{0pt}{9pt}{4pt}
+
+\newcommand{\resumeItem}[1]{
+  \item\small{{#1 \vspace{-2pt}}}
+}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small #3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-4pt}
+}
+\newcommand{\resumeProjectHeading}[2]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+    \end{tabular*}\vspace{-6pt}
+}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in,label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.2in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\begin{document}
+
+\begin{center}
+  {\Huge\scshape Ayman Patel}\\
+  \small Full-Stack Applications Engineer $|$ United Kingdom $|$ +447900626876\\
+  \href{mailto:ayman.patel97@gmail.com}{\raisebox{-0.2\height}\faEnvelope\ \underline{ayman.patel97@gmail.com}} ~
+  \href{https://linkedin.com/in/aymanapatel}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/aymanapatel}} ~
+  \href{https://github.com/aymanapatel}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/aymanapatel}} ~
+  \href{https://patelofthought.com/me}{\raisebox{-0.2\height}\faGlobe\ \underline{patelofthought.com/me}}
+\end{center}
+
+\vspace{-6pt}
+\section{Professional Summary}
+\small{
+Full-Stack Engineer with 6+ years building, testing, releasing, and supporting enterprise web applications at Mastercard. Strong hands-on experience with React, TypeScript, Java/Spring APIs, relational databases, accessible UI, automated testing, CI/CD, monitoring, incident resolution, and technical documentation. Coached 10+ engineering teams and translated stakeholder requirements into specifications and delivery plans. Recently completed the Nebius AI Engineering Fellowship, building governed AI workflows with MCP, traceability, human oversight, testing, and graceful failure handling.
+}
+
+\section{Core Competencies}
+\small{Application Development $\bullet$ React \& TypeScript $\bullet$ REST APIs \& Integration $\bullet$ Relational Databases (Oracle, Postgres) $\bullet$ Java \& Spring Boot $\bullet$ Accessibility \& Responsive UI $\bullet$ Automated Testing $\bullet$ CI/CD  Production Support \& Monitoring, Logging}
+
+\section{Work Experience}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Nebius Academy}{London, United Kingdom}
+    {AI Engineering Fellow}{March 2026 -- May 2026}
+  \resumeItemListStart
+    \resumeItem{Built 12+ tested AI/ML systems across application development, agent workflows, MLOps, distributed training, and inference performance on Nvidia H100 infrastructure.}
+    \resumeItem{Designed an \textbf{MCP shared tool layer} so LangGraph, Rasa, and voice applications could discover and call common tools dynamically, eliminating duplicated integration logic.}
+    \resumeItem{Built a LangGraph research application with a dataflow-integrity check that verifies generated facts against tool logs, providing traceability and human-review support.}
+    \resumeItem{Implemented a deterministic Rasa CALM workflow where an LLM handles language while Python enforces business rules, producing an auditable confirmation process.}
+    \resumeItem{Added graceful degradation to a speech-to-text, agent, and text-to-speech application so it falls back to text with a visible warning when external services are unavailable.}
+    \resumeItem{Containerised reproducible training services with Docker and Kubernetes, kept configuration in version-controlled YAML, and monitored multi-node execution for operational failures.}
+  \resumeItemListEnd
+
+  \resumeSubheading
+    {Mastercard}{Vadodara, India}
+    {Senior Software Engineer}{March 2024 -- August 2025}
+  \resumeItemListStart
+    \resumeItem{Owned application architecture across \textbf{React/TypeScript frontends, Spring APIs, caching, observability, CI/CD, and production incident response} for enterprise payment services.}
+    \resumeItem{Translated stakeholder and product requirements into technical specifications, user stories, acceptance criteria, estimates, and delivery plans for cross-country teams.}
+    \resumeItem{Drove a Webpack Module Federation platform that split a monolithic application into independently deployable modules, enabling \textbf{10+ product teams} to release without blocking the host application.}
+    \resumeItem{Built the responsive host application with React, TypeScript, Redux Toolkit, and RTK Query, defining shared component, dependency, routing, and versioning patterns.}
+    \resumeItem{Led accessibility improvements as Accessibility Champion, raising WCAG compliance scores by \textbf{40\%}, coaching 10+ teams, and contributing five fixes and additions to the internal design system.}
+    \resumeItem{Developed and supported REST APIs with Spring, Spring Data JPA, and Hibernate; used PostgreSQL JSONB to support configurable forms without repeated schema migrations.}
+    \resumeItem{Applied \textbf{OOP principles and design patterns} (Repository, Factory, Strategy, Observer, Template Method, DTO, Singleton) across Java/Spring services, keeping domain logic decoupled from frameworks so code stayed testable, maintainable, and consistent across microservices.}
+    \resumeItem{Implemented Resilience4j circuit-breaker and retry controls across 5+ services, reducing cascading failures and improving system availability by \textbf{15\%}.}
+    \resumeItem{Instrumented applications with Grafana and OpenTelemetry; used Splunk, Dynatrace, and performance tests to diagnose defects and reduce incident resolution from days to hours.}
+    \resumeItem{Maintained Jenkins release pipelines from staging to production and used k6 with InfluxDB to identify latency regressions before release.}
+  \resumeItemListEnd
+
+  \resumeSubheading
+    {Mastercard}{Vadodara, India}
+    {Software Engineer II}{March 2022 -- February 2024}
+  \resumeItemListStart
+    \resumeItem{Built and maintained greenfield web applications with \textbf{React, TypeScript, Redux, RTK Query, Java/Spring, Oracle, and Hibernate}.}
+    \resumeItem{Served as a core maintainer for application performance, code quality, accessibility, release reliability, peer review, and production support.}
+    \resumeItem{Defined unit, integration, and end-to-end testing with Jest, React Testing Library, Playwright, and Cypress, reaching \textbf{95\% coverage}.}
+    \resumeItem{Reduced the CI end-to-end test suite from 8 hours to 3 through test splitting, parallel execution, selective retries, and environment caching.}
+    \resumeItem{Improved application load performance by \textbf{30\%} by moving static assets to Akamai CDN and optimising bundle delivery.}
+  \resumeItemListEnd
+
+  \resumeSubheading
+    {Mastercard}{Vadodara, India}
+    {Software Engineer I}{July 2019 -- February 2022}
+  \resumeItemListStart
+    \resumeItem{Designed REST APIs and automated operational workflows with Camunda, modelling complex business rules through BPMN, DMN, and CMMN.}
+    \resumeItem{Built Jenkins CI/CD for an Angular.js application and maintained a security integration for MDES tokenisation and encrypted payment-data transmission.}
+  \resumeItemListEnd
+
+  \resumeSubheading
+    {Mastercard}{Vadodara, India}
+    {Software Engineering Intern}{January 2019 -- June 2019}
+  \resumeItemListStart
+    \resumeItem{Built and tested an asynchronous image-serving API with Spring WebFlux, Reactive Streams, and ImageMagick compression, using TDD to support safe refactoring.}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\section{Personal Projects}
+\resumeSubHeadingListStart
+  \resumeProjectHeading
+    {\href{https://github.com/aymanapatel/golang-microservices}{Go Microservices}}{}
+  \resumeItemListStart
+    \resumeItem{Built a progressive Go microservices project spanning standard-library REST APIs, Gorilla Mux with custom request validation, Swagger/OpenAPI documentation, Envoy-based service mesh and load balancing with Kubernetes/WASM filters, and gRPC.}
+  \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\href{https://github.com/aymanapatel/java-cli}{Java CLI (GraalVM)}}{}
+  \resumeItemListStart
+    \resumeItem{Built a Java CLI tool with the Picocli framework to query the Stack Overflow API, then compiled it to a native binary with GraalVM for zero-JVM-startup execution.}
+  \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\href{https://github.com/aymanapatel/rl-a11y}{Web Accessibility Repair Platform}}{}
+  \resumeItemListStart
+    \resumeItem{Architected an end-to-end accessibility platform using LLM-guided Browser Use and Playwright to navigate public/authenticated pages and collect aligned HTML, axe-core, accessibility-tree, visual, and screenshot data for \textbf{704 webpages}; trained routed GAT/GraphSAGE specialists and generated schema-constrained repairs via FastAPI/React, improving page-level F1 by \textbf{34.1} points and rule-level F1 by \textbf{30.6} points over the initial architecture.}
+  \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\href{https://github.com/aymanapatel/nebius-project}{Repository Summarizer}}{}
+  \resumeItemListStart
+    \resumeItem{Built a FastAPI and LLM application that extracts source-code structure with AST and Tree-sitter and assembles repository context within a 7,000-token budget.}
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Queen Mary University of London}{London, United Kingdom}
+    {MSc Advanced Computer Science}{September 2025 -- September 2026}
+  \resumeSubheading
+    {Sardar Vallabhbhai Institute of Technology}{Vadodara, India}
+    {Bachelor of Computer Science; GPA: 7.9/10}{July 2015 -- May 2019}
+\resumeSubHeadingListEnd
+
+\section{Technical Skills}
+\vspace{-2pt}
+\begin{itemize}[leftmargin=0.15in,label={}]\small
+  \item{
+    \textbf{Frontend:} React, TypeScript, JavaScript, Redux Toolkit, RTK Query, Next.js, Webpack, Module Federation, HTML, CSS, React Native, responsive UI, Figma \\
+    \textbf{Backend \& APIs:} Java, Spring, Spring Data JPA, Hibernate, Python, FastAPI, Go, REST APIs, GraphQL, microservices, integration patterns \\
+    \textbf{Data \& Events:} PostgreSQL, Oracle, MongoDB, Redis, Kafka, RabbitMQ, relational queries, JSONB, change data capture \\
+    \textbf{Testing \& Quality:} Jest, React Testing Library, Playwright, Cypress, JUnit, Mockito, Testcontainers, TDD, code review, k6 \\
+    \textbf{Delivery \& Operations:} Jenkins, Gradle, Docker, Kubernetes, AWS, Terraform, CI/CD, release support, Grafana, Splunk, Dynatrace, OpenTelemetry \\
+    \textbf{AI Engineering:} MCP, LangGraph, Rasa CALM, RAG, LLM APIs, human-in-the-loop workflows, traceability, PyTorch
+  }
+\end{itemize}
+
+\section{Hackathons}
+\resumeSubHeadingListStart
+  \resumeProjectHeading
+    {{Tech: Europe} Hackathon -- London, UK}{June 2026}
+  \resumeItemListStart
+    \resumeItem{Won \textbf{Most Secure Build Award (\EUR 1,000 cash)} for a platform turning academic papers into investor-ready intelligence, using AI research agents to expand plain-English queries into scientific keywords and search PubMed/OpenAlex.}
+  \resumeItemListEnd
+
+  \resumeProjectHeading
+    {Encode Hackathon -- London, UK}{2025}
+  \resumeItemListStart
+    \resumeItem{Placed \textbf{3rd} with Phantom Fraud, an AI-powered financial risk engine that detects wash-trading on the Solana blockchain from on-chain data and circular-flow heuristics.}
+  \resumeItemListEnd
+  \resumeProjectHeading
+    {AI Hackathon -- Vadodara, India}{April 2025}
+  \resumeItemListStart
+    \resumeItem{Placed \textbf{3rd} place by building composable UI components from UX designs using a vision model and an in-browser Postgres store}
+  \resumeItemListEnd
+  
+  \resumeProjectHeading
+    {AI Hackathon -- Vadodara, India}{September 2024}
+  \resumeItemListStart
+    \resumeItem{Placed \textbf{2nd} with a RAG-based internal documentation search system using LangChain and a Chroma vector database with citations support}
+  \resumeItemListEnd
+
+  \resumeProjectHeading
+    {Technology Hackathon -- Vadodara, India}{2023}
+  \resumeItemListStart
+    \resumeItem{Placed \textbf{2nd} migrating a React application to Next.js, enabling server-side rendering and static generation for faster page loads and improved developer experience}
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\section{Technical Writing}
+\resumeSubHeadingListStart
+  \resumeItem{Published \textbf{40+ technical articles} on system design, application architecture, AI systems, observability, and distributed infrastructure at \href{https://patelofthought.com/blog}{\underline{patelofthought.com/blog}}; featured in industry newsletters including eBPF.}
+  \resumeItem{Produced internal \textbf{Accessibility and Microfrontend whitepapers} at Mastercard that were adopted as engineering reference material and circulated to \textbf{200 engineers}.}
+\resumeSubHeadingListEnd
+
+\end{document}

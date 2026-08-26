@@ -1,0 +1,160 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[margin=0.55in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{tabularx}
+
+\ifdefined\pdfglyphtounicode
+  \input{glyphtounicode}
+  \pdfgentounicode=1
+\fi
+
+\definecolor{accent}{HTML}{4B1FA5}
+\definecolor{teal}{HTML}{157A86}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2pt}
+\setlist[itemize]{leftmargin=*, topsep=1pt, itemsep=1pt, parsep=0pt}
+\raggedright
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\emergencystretch=3em
+\sloppy
+
+\titleformat{\section}{\large\bfseries\color{teal}\uppercase}{}{0pt}{}[\vspace{-3pt}\titlerule]
+\titlespacing*{\section}{0pt}{7pt}{5pt}
+
+\newcommand{\resumeItem}[1]{\item {\small #1}}
+\newcommand{\resumeSubheading}[4]{
+  \item
+  \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & {\small #2} \\
+    \textit{\small #3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-4pt}
+}
+\newcommand{\resumeProjectHeading}[2]{
+  \item
+  \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & {\small #2} \\
+  \end{tabular*}\vspace{-6pt}
+}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in,label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE \textbf{Ayman Patel}}\\
+  \vspace{2pt}
+  {\small Senior Software Engineer | Payments and Distributed Systems}\\
+  {\small London, UK \quad | \quad +44 7900 626876 \quad | \quad
+  \href{mailto:ayman.patel97@gmail.com}{ayman.patel97@gmail.com} \quad | \quad
+  \href{https://linkedin.com/in/aymanapatel}{linkedin.com/in/aymanapatel}}\\
+  {\small \href{https://github.com/aymanapatel}{github.com/aymanapatel} \quad | \quad
+  \href{https://patelofthought.com/me}{patelofthought.com/me}}
+\end{center}
+
+\section{Professional Summary}
+{\small Backend-leaning Senior Software Engineer with 6+ years at Mastercard building payment systems, REST APIs, workflow automation, and Kafka event-sourcing patterns. Production experience includes Spring, Kafka, PostgreSQL JSONB, Redis, Resilience4j, Jenkins, and observability with Grafana, Splunk, Dynatrace, and OpenTelemetry. Improved availability by 15\% and reduced incident resolution from days to hours. Also brings Python and FastAPI project work plus Docker, Kubernetes, AWS, and Terraform skills.}
+
+\section{Core Competencies}
+{\small Payments and card-data security \textbar{} Java and Spring services \textbar{} Python and FastAPI project work \textbar{} Kafka and asynchronous workflows \textbar{} PostgreSQL and Redis \textbar{} Resilience and fault handling \textbar{} Jenkins CI/CD and production ownership \textbar{} Grafana, Splunk, Dynatrace, and OpenTelemetry}
+
+\section{Work Experience}
+\resumeSubHeadingListStart
+    \resumeSubheading
+      {Nebius Academy}{London, UK}
+      {AI Engineering Fellow}{March 2026 - May 2026}
+      \resumeItemListStart
+        \resumeItem{Deployed distributed data parallel training on Kubernetes across two NVIDIA H100 nodes using Docker, SkyPilot, and torchrun.}
+        \resumeItem{Improved LLM generation time from 0.943s to 0.141s for 128 tokens, a 6.69x speedup, by implementing KV caching and preallocated sequence buffers.}
+        \resumeItem{Completed an intensive four-module fellowship covering LLM architectures, AI agents, MLOps, and GPU performance engineering; built 12+ systems on NVIDIA H100 infrastructure.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Mastercard}{Vadodara, India}
+      {Senior Software Engineer}{March 2024 - August 2025}
+      \resumeItemListStart
+        \resumeItem{Developed Spring, Spring Data JPA, and Hibernate APIs using API Gateway and Kafka event-sourcing patterns for asynchronous, auditable flows.}
+        \resumeItem{Improved UI load performance by 30\% through Akamai CDN migration and bundle delivery work; introduced Redis caching for frequently accessed API data.}
+        \resumeItem{Implemented Resilience4j circuit breaker and retry patterns across 5+ microservices, improving system availability by 15\%.}
+        \resumeItem{Owned Jenkins CI/CD pipelines and used Splunk, Grafana, and Dynatrace to diagnose production incidents, reducing mean time to resolution from days to hours.}
+        \resumeItem{Owned frontend observability with Grafana and OpenTelemetry and ran k6 performance tests with InfluxDB to expose regressions during release cycles.}
+        \resumeItem{Led cross-country delivery as de facto frontend/backend architect, UX designer, and product manager, translating PM requirements into specifications, user stories, and acceptance criteria.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Mastercard}{Vadodara, India}
+      {Software Engineer II}{March 2022 - February 2024}
+      \resumeItemListStart
+        \resumeItem{Built greenfield backend services in Spring and Oracle with Hibernate and greenfield frontend services in React and TypeScript with Redux and RTK Query.}
+        \resumeItem{Wrote Jest, React Testing Library, Playwright, and Cypress tests, achieving 95\% test coverage and reducing the CI end-to-end suite from eight hours to three through splitting, parallel execution, retries, and caching.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Mastercard}{Vadodara, India}
+      {Software Engineer I}{July 2019 - February 2022}
+      \resumeItemListStart
+        \resumeItem{Developed and maintained Hardware Security Module integration for mobile encryption using MDES tokenisation, securing card data transmission across payment flows.}
+        \resumeItem{Designed REST APIs for Camunda workflow automation and modelled business logic with BPMN, DMN, and CMMN.}
+        \resumeItem{Designed a Jenkins CI/CD pipeline for an Angular.js application using Grunt.js.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Mastercard}{Vadodara, India}
+      {Software Engineering Intern}{January 2019 - June 2019}
+      \resumeItemListStart
+        \resumeItem{Built a backend image-serving service for MDES CardArt, using ImageMagick compression, Spring WebFlux, Reactive Streams, and test-driven development.}
+      \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\section{Personal Projects}
+\resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\href{https://github.com/aymanapatel/qmul-all-projects/blob/main/data-analytics/coursework1/credit-card-report.pdf}{Credit Card Fraud Analytics}}{Python, Scikit-learn, Random Forest, SMOTE}
+      \resumeItemListStart
+        \resumeItem{Analysed 590,540 IEEE-CIS transactions across 434 features; the best Random Forest model achieved 96.9\% accuracy, 0.503 F1, and 0.879 ROC-AUC on a chronological test split.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\href{https://github.com/aymanapatel/golang-microservices}{Go Microservices}}{Go, gRPC, Kubernetes, Envoy, OpenAPI}
+      \resumeItemListStart
+        \resumeItem{Built REST and gRPC services with Gorilla Mux validation, Swagger/OpenAPI, Envoy service mesh and load balancing, and Kubernetes/WASM filters.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\href{https://github.com/aymanapatel/java-graphql}{Java GraphQL}}{Java, Spring Boot, GraphQL, JUnit 5}
+      \resumeItemListStart
+        \resumeItem{Built query-depth protection, cursor pagination, file upload mutations, DataLoader batching, execution tracing, and JUnit 5 integration tests.}
+      \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Queen Mary University of London}{London, UK}
+    {MSc Advanced Computer Science}{September 2025 - September 2026}
+  \resumeSubheading
+    {Sardar Vallabhbhai Institute of Technology}{Vadodara, India}
+    {Bachelor of Computer Science; GPA: 7.9/10}{July 2015 - May 2019}
+\resumeSubHeadingListEnd
+
+\section{Technical Skills}
+{\small
+    \textbf{Backend:} Java, Spring, Spring Data JPA, Hibernate, Python, FastAPI, Django, Go, REST APIs, Microservices, Event Sourcing, CQRS \\
+    \textbf{Data and Events:} PostgreSQL, Oracle, MongoDB, Redis, Kafka, RabbitMQ, Debezium, Change Data Capture \\
+    \textbf{Cloud and DevOps:} AWS (S3, Lambda, EC2), Docker, Kubernetes, Terraform, Jenkins, Gradle, SkyPilot \\
+    \textbf{Testing:} JUnit, Mockito, Jest, React Testing Library, Cypress, Playwright, Testcontainers \\
+    \textbf{Observability:} Grafana, Prometheus, Splunk, Dynatrace, OpenTelemetry, eBPF \\
+    \textbf{Frontend:} React, TypeScript, Redux Toolkit, RTK Query, Next.js, Vite, Webpack, Module Federation, Figma \\
+    \textbf{AI and ML:} PyTorch, Transformers, LoRA, Mixture of Experts, RoPE, KV Cache, Scikit-learn, Random Forest, SMOTE \\
+}
+
+\end{document}

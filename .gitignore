@@ -5,7 +5,6 @@ data/pipeline.md
 data/scan-history.tsv
 reports/*.md
 !reports/.gitkeep
-output/*pdf
 output/*html
 !output/.gitkeep
 batch/logs/*
@@ -22,7 +21,7 @@ writing-samples/*
 !writing-samples/README.md
 
 # User config and customization (never auto-updated)
-config/profile.yml
+# config/profile.yml
 portals.yml
 modes/_profile.md
 .update-dismissed
@@ -50,3 +49,9 @@ package-lock.json
 
 # output pdf ignore
 *cover-letter.pdf
+
+
+# PDFs
+
+# *pdf
+
