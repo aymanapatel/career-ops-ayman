@@ -103,7 +103,8 @@ July 2019 - February 2022
 - Designed and implemented RESTful APIs to automate BPM workflows using Camunda
 - Modelled complex business logic using BPMN, DMN, and CMMN standards
 - Designed CI/CD pipeline to deploy Angular.js application using Grunt.js and Jenkins
-- Developed and maintained Hardware Security Module (HSM) integration for mobile encryption using MDES tokenisation, securing card data transmission across payment flows
+- Developed and maintained a Hardware Security Module (HSM) integration for mobile encryption using MDES tokenisation, securing card data transmission across payment flows
+- Reviewed penetration-testing reports, prioritized findings by risk, and delivered remediation to keep applications compliant with enterprise security standards
 
 ### Mastercard -- Vadodara, India
 **Software Engineering Intern**  
