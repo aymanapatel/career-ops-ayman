@@ -31,9 +31,9 @@ Secondly, I have a sense of learning and also helping others on things I have le
 Lastly, in the last year, AI has been a forefront in improving productivity. But it comes with its negatives. The rising token cost, hallucinations and context management makes AI and LLMs less reliable. I have employed patterns in using the best model for the job, enforcing guardrails and other techniques to make AIs more reliable.
 
 
+In backend, I have primarily worked on Java/Spring APIs. I have strong foundations in OOPs, Design patterns and have developed resilient microservices that serves multiple clients for Mastercard.
+In terms of frontend, I have build production applications with React and Redux. I have also architected micrro-frontend architecture at Mastercard to build composable UI components. 
 
-In terms of technolgies, for frontend, I have build production applications with React, Typescript, HTML and CSS. I have also architected micrro-frontend architecture at Mastercard to build composable UI components. 
-In backend, I have primarily worked on Java/Spring APIs. Even though I do not have experience in .NET and C#, I have strong foundations in OOPs, Design patterns that are transferable. At multiple instances, I also helped one of the teams issues such as performance and EntityCore code in spite of me not having experience in .NET.
 For delivery, I worked with DevOps to do improvements in our application such as moving our frontend to CDNs, production deployment scripts etc. I also took complete ownership in releasing to production from lower environment. 
 For operations, I was also part of production support by looking into Splunk alerts and Splunk logging to find root causes of issues.
 For security, I was owner of finding alternatives to vulnerable libraries and also upgrading our software with the lastest version. In one insteance, I had to find an alternative to XSS attack and introduced DOMPurify to the whole organziation to help santize the inputs. 

@@ -596,56 +596,8 @@ tracked_companies:
     notes: "FDE roles. Mostly US/London."
     enabled: true
 
-  # -- Canada / Vancouver tech & AI --
-
-  - name: Later
-    careers_url: https://job-boards.greenhouse.io/later
-    api: https://boards-api.greenhouse.io/v1/boards/later/jobs
-    notes: "Vancouver/Toronto. Social media and creator platform."
-    enabled: true
-
-  - name: Safari AI
-    careers_url: https://job-boards.greenhouse.io/safariai
-    api: https://boards-api.greenhouse.io/v1/boards/safariai/jobs
-    notes: "Miami HQ / Vancouver engineering. Computer vision AI for operations in the physical economy."
-    enabled: true
-
-  - name: Hootsuite
-    careers_url: https://job-boards.greenhouse.io/hootsuite
-    api: https://boards-api.greenhouse.io/v1/boards/hootsuite/jobs
-    notes: "Vancouver. Social media management platform."
-    enabled: true
-
-  - name: Klue
-    careers_url: https://jobs.ashbyhq.com/klue
-    notes: "Vancouver. Competitive intelligence SaaS."
-    enabled: true
-
-  - name: Glacis AI
-    careers_url: https://jobs.ashbyhq.com/glacis-ai
-    notes: "Ho Chi Minh City. AI agents for supply chain and logistics workflows."
-    enabled: true
-
-  - name: Sanctuary AI
-    careers_url: https://jobs.lever.co/sanctuary
-    notes: "Vancouver. Humanoid robotics and embodied AI."
-    enabled: true
-
-  - name: Semios
-    careers_url: https://apply.workable.com/semios/
-    scan_method: websearch
-    scan_query: 'site:apply.workable.com/semios'
-    notes: "Vancouver. Agtech and crop intelligence platform."
-    enabled: true
-
   # -- European tech (EMEA-friendly) --
 
-  - name: Factorial
-    careers_url: https://job-boards.greenhouse.io/factorial
-    scan_method: websearch
-    scan_query: 'site:jobs.greenhouse.io/factorial'
-    notes: "Barcelona. HR SaaS unicorn."
-    enabled: true
 
   - name: Attio
     careers_url: https://jobs.ashbyhq.com/attio
@@ -675,14 +627,6 @@ tracked_companies:
     notes: "Barcelona. Business travel unicorn."
     enabled: true
 
-  # -- DACH & European AI ecosystem --
-  # All entries below have been verified against the Greenhouse / Ashby /
-  # Lever / Workable APIs or live job boards. Greenhouse boards expose a
-  # JSON API at https://boards-api.greenhouse.io/v1/boards/{slug}/jobs which
-  # the scanner can hit directly via the api: field.
-
-  # -- DACH AI labs & frontier model providers --
-
   - name: Aleph Alpha
     careers_url: https://jobs.ashbyhq.com/AlephAlpha
     scan_method: websearch
@@ -709,63 +653,7 @@ tracked_companies:
     notes: "Munich / Berlin / London / Paris. Defence AI unicorn. 100+ roles, ML & FDE."
     enabled: true
 
-  # -- DACH enterprise & SaaS (AI-heavy) --
 
-  - name: Celonis
-    careers_url: https://job-boards.greenhouse.io/celonis
-    api: https://boards-api.greenhouse.io/v1/boards/celonis/jobs
-    notes: "Munich / NYC. Process intelligence, Applied AI Engineer roles, Field CTOs."
-    enabled: true
-
-  - name: Contentful
-    careers_url: https://job-boards.greenhouse.io/contentful
-    api: https://boards-api.greenhouse.io/v1/boards/contentful/jobs
-    notes: "Berlin / Denver. Headless CMS, AI content workflows."
-    enabled: true
-
-  - name: GetYourGuide
-    careers_url: https://job-boards.greenhouse.io/getyourguide
-    api: https://boards-api.greenhouse.io/v1/boards/getyourguide/jobs
-    notes: "Berlin. Travel marketplace, ML & data platform roles."
-    enabled: true
-
-  - name: HelloFresh
-    careers_url: https://job-boards.greenhouse.io/hellofresh
-    api: https://boards-api.greenhouse.io/v1/boards/hellofresh/jobs
-    notes: "Berlin. Meal kit unicorn, large data/ML org."
-    enabled: true
-
-  # -- DACH fintech --
-
-  - name: N26
-    careers_url: https://job-boards.greenhouse.io/n26
-    api: https://boards-api.greenhouse.io/v1/boards/n26/jobs
-    notes: "Berlin / Barcelona. Mobile bank, ~50 roles, ML & risk."
-    enabled: true
-
-  - name: Trade Republic
-    careers_url: https://job-boards.greenhouse.io/traderepublicbank
-    api: https://boards-api.greenhouse.io/v1/boards/traderepublicbank/jobs
-    notes: "Berlin / London / Paris. Neobroker, ~50 roles, platform & data."
-    enabled: true
-
-  - name: SumUp
-    careers_url: https://job-boards.greenhouse.io/sumup
-    api: https://boards-api.greenhouse.io/v1/boards/sumup/jobs
-    notes: "Berlin / London. Payments fintech, EU + LATAM hiring."
-    enabled: true
-
-  - name: Qonto
-    careers_url: https://jobs.lever.co/qonto
-    notes: "Paris / Berlin / Barcelona / Milan. SMB neobank, MLOps for AI Product roles."
-    enabled: true
-
-  # -- DACH logistics / mobility --
-
-  - name: Forto
-    careers_url: https://jobs.lever.co/forto
-    notes: "Berlin DE. Digital freight forwarder, product & data roles, German + English."
-    enabled: true
 
   # -- Switzerland / Austria AI --
 
@@ -854,41 +742,12 @@ tracked_companies:
     careers_url: https://jobs.ashbyhq.com/causaly
     scan_method: websearch
     scan_query: 'site:jobs.ashbyhq.com/causaly'
-    notes: "London / Athens. Biomedical knowledge graph + AI."
-    enabled: true
-
-  # -- Nordics AI --
-
-  - name: Lovable
-    careers_url: https://jobs.ashbyhq.com/lovable
-    scan_method: websearch
-    scan_query: 'site:jobs.ashbyhq.com/lovable'
-    notes: "Stockholm SE. AI app builder (text-to-app), 80+ open roles."
-    enabled: true
-
-  - name: Legora
-    careers_url: https://jobs.ashbyhq.com/legora
-    scan_method: websearch
-    scan_query: 'site:jobs.ashbyhq.com/legora'
-    notes: "Stockholm SE / NYC / London. AI-native legal workspace."
+    notes: "London. Biomedical knowledge graph + AI."
     enabled: true
 
   - name: Spotify
     careers_url: https://jobs.lever.co/spotify
-    notes: "Stockholm SE / NYC / London. Audio platform, large ML/personalization org."
-    enabled: true
-
-  - name: Vinted
-    careers_url: https://jobs.lever.co/vinted
-    notes: "Vilnius LT / Berlin. C2C marketplace unicorn, data science & ML roles."
-    enabled: true
-
-  # -- Iberia AI --
-
-  - name: Amplemarket
-    careers_url: https://job-boards.greenhouse.io/amplemarket
-    api: https://boards-api.greenhouse.io/v1/boards/amplemarket/jobs
-    notes: "Lisbon PT / Remote. AI-native sales platform."
+    notes: "London. Audio platform, large ML/personalization org."
     enabled: true
 
   # -- AI / Developer Tools --
@@ -962,16 +821,4 @@ tracked_companies:
     notes: "Serverless MySQL platform. Customer Engineering, Engineering, Sales."
     enabled: true
 
-  - name: Zep AI
-    careers_url: https://www.getzep.com/careers
-    scan_method: websearch
-    scan_query: '"Zep" "Forward Deployed" OR "Developer Relations" OR "Founding" site:workatastartup.com OR site:getzep.com'
-    notes: "Context engineering platform for AI agents. YC W24. Lead FDE + DevRel Lead roles. US-only currently."
-    enabled: true
 
-  - name: Maxim AI
-    careers_url: https://www.getmaxim.ai/careers
-    scan_method: websearch
-    scan_query: '"Maxim AI" OR "getmaxim" careers "engineer" OR "product"'
-    notes: "AI evaluation and observability platform. Bangalore-based, mostly on-site."
-    enabled: true
