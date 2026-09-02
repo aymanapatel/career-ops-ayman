@@ -1,9 +1,9 @@
 # Career-Ops Profile -- Dual-Track Example (Backend + AI/ML Engineer)
 #
-# Adapted from Ayman Patel's CV. Demonstrates how to configure a profile when
-# you are optimizing for TWO engineering archetypes at the same time -- e.g.
-# Senior Backend Engineer AND Senior AI/ML Engineer. See README.md in this
-# folder for the rationale and the interview-objection playbook.
+# Fictional persona. Demonstrates how to configure a profile when you are
+# optimizing for TWO archetypes at the same time -- e.g. Senior AI Engineer
+# AND Senior Technical Instructor. See README.md in this folder for the
+# rationale and the interview-objection playbook.
 #
 # Copy this file to config/profile.yml and edit before using.
 
@@ -30,22 +30,22 @@ target_roles:
     - name: "Senior Backend Engineer"
       level: "Senior/Staff"
       fit: "primary"
-      track: "backend"
+      track: "engineering"
       sell_when: "JD emphasizes Spring Boot, microservices, payment systems, API design, caching (Redis), observability, CI/CD, Resilience4j, event sourcing with Kafka"
     - name: "Senior AI/ML Engineer"
       level: "Senior"
       fit: "primary"
-      track: "ai"
+      track: "engineering"
       sell_when: "JD emphasizes LLM engineering, agent systems (LangGraph/ReAct), fine-tuning (LoRA), inference optimization (KV caching), RAG, MLOps, distributed training, GPU performance"
     - name: "Senior Full-Stack Engineer"
       level: "Senior"
       fit: "secondary"
-      track: "fullstack"
+      track: "engineering"
       sell_when: "JD wants someone who can ship both backend (Spring/Java) AND frontend (React/TypeScript) -- the natural Mastercard-era landing zone"
     - name: "ML Platform / MLOps Engineer"
       level: "Senior"
       fit: "secondary"
-      track: "mlops"
+      track: "engineering"
       sell_when: "JD wants distributed training infra, Kubernetes, Docker, CI/CD for ML, observability, containerized pipelines -- bridges backend and AI tracks"
     - name: "Forward Deployed AI Engineer"
       level: "Senior"
@@ -97,7 +97,6 @@ narrative:
       track: "backend"
   # Optional dashboard / live demo
   # dashboard:
-  #   url: "https://ayman.example.dev/demo"
   #   password: "demo-2026"
 
 compensation:
